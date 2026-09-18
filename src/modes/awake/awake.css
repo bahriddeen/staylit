@@ -1,0 +1,227 @@
+/* Awake mode layout. Shared content-page primitives (.awake, .section, .faq,
+   .site-footer, etc.) live in src/styles/content.css, loaded globally. */
+
+.main--page {
+  display: block;
+  place-items: initial;
+  padding: clamp(1rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+}
+
+/* Awake as a full page (top padding clears the fixed toolbar). */
+.awake-page {
+  padding: clamp(4rem, 9vh, 6rem) clamp(1rem, 3vw, 2rem) clamp(2rem, 6vw, 4rem);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  /* Match the content column width (the base .card caps at 560px). */
+  width: 100%;
+  max-width: none;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
+}
+
+.hero__title {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 700;
+  text-align: center;
+}
+
+.hero__subtitle {
+  color: var(--text-muted);
+  max-width: 52ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero__row .segmented {
+  align-self: center;
+}
+
+.hero__row--toggle {
+  padding: 1rem 1.15rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.hero__row-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+/* Custom hours/minutes inputs */
+.hero__custom {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Status area */
+.hero__status {
+  min-height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__status-off {
+  color: var(--text-muted);
+}
+
+.hero__active {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero__countdown {
+  font-size: clamp(2rem, 7vw, 3rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.pulse-dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background: var(--success);
+  flex: none;
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--success) 60%, transparent);
+  animation: pulse 1.8s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--success) 55%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-dot {
+    animation: none;
+  }
+}
+
+.hero__notice {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ---------- More ways cards ---------- */
+
+/* Break out of the 720px content column so the cards get more room. The
+   720px column is itself centered on the viewport, so anchoring to its own
+   center (left: 50%) and re-centering the wider box on that point
+   (translateX(-50%)) lands this section back on the viewport center too —
+   plain viewport-relative margins don't work here since percentages resolve
+   against the 720px parent, not the viewport. */
+.more-ways {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 1100px;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+  box-sizing: border-box;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  box-shadow: var(--shadow);
+}
+
+.info-card__media {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  background: var(--surface-2);
+}
+
+.info-card__media svg {
+  width: 100%;
+  height: 100%;
+}
+
+.info-card__badge {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--warning) 90%, #000);
+  color: #1a1205;
+}
+
+.info-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 1rem 1.15rem 1.25rem;
+  flex: 1;
+  text-align: center;
+}
+
+.info-card__title {
+  font-size: 1.1rem;
+}
+
+.info-card__desc {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+.info-card__cta {
+  align-self: center;
+  margin-top: 0.4rem;
+  white-space: nowrap;
+}

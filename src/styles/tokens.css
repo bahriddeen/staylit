@@ -1,0 +1,58 @@
+/* Design tokens. Dark is the base; light overrides via [data-theme="light"] and
+   prefers-color-scheme. The data-theme attribute (set from JS/localStorage)
+   always wins over the media query. */
+
+:root {
+  --bg: #0b0d10;
+  --surface: #15181d;
+  --surface-2: #1d2128;
+  --border: #2a2f37;
+  --text: #e8eaed;
+  --text-muted: #9aa0a6;
+  --accent: rgb(102, 126, 247);
+  --accent-on: #ffffff;
+  --success: #22c55e;
+  --warning: #f59e0b;
+
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  --font-ui:
+    "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    sans-serif;
+  --nav-h: 56px;
+
+  /* Motion — zeroed out under prefers-reduced-motion (see base.css). */
+  --transition-fast: 120ms ease;
+  --transition: 200ms ease;
+}
+
+/* Light theme via explicit attribute. */
+:root[data-theme="light"] {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #eef1f5;
+  --border: #e3e6ea;
+  --text: #111418;
+  --text-muted: #5f6570;
+  --accent: rgb(102, 126, 247);
+  --accent-on: #ffffff;
+  --shadow: 0 10px 30px rgba(17, 20, 24, 0.12);
+}
+
+/* Follow the OS when no explicit theme has been chosen. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --surface-2: #eef1f5;
+    --border: #e3e6ea;
+    --text: #111418;
+    --text-muted: #5f6570;
+    --accent: rgb(102, 126, 247);
+    --accent-on: #ffffff;
+    --shadow: 0 10px 30px rgba(17, 20, 24, 0.12);
+  }
+}

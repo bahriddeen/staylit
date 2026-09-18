@@ -1,0 +1,507 @@
+/* Clock mode: shell, stage, nav, digital + flip views, settings tiles, guide. */
+
+.clock {
+  position: relative;
+  min-height: 100dvh;
+}
+
+/* ---------- Stage ---------- */
+
+.clock-stage {
+  position: relative;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none; /* enable custom pinch handling */
+}
+
+.clock-face {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ---------- Top nav ---------- */
+
+.clock-nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 clamp(0.75rem, 2vw, 1.5rem);
+  z-index: 50;
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.clock-nav--hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.clock-nav__left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.clock-nav__logo {
+  display: inline-flex;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.clock-nav__view {
+  font-weight: 650;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.clock-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.clock-nav__link {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.clock-nav__link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.clock-nav__link--active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.clock-nav__link--soon {
+  opacity: 0.55;
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.clock-nav__soon {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.05rem 0.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.clock-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.clock-nav__btn {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.clock-nav__btn:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Compound selector so this wins over the generic .icon-button--active rule
+   (base.css) — same yellow, but the glass background matches the dark stage. */
+.clock-nav__btn.icon-button--active {
+  color: #ffd23f;
+  border-color: #ffd23f;
+  background: rgba(255, 210, 63, 0.16);
+}
+
+@media (max-width: 520px) {
+  .clock-nav__view {
+    display: none;
+  }
+  .clock-nav__link--soon {
+    display: none;
+  }
+}
+
+/* ---------- Digital view ---------- */
+
+.digital {
+  --dg-size: calc(clamp(2rem, 13vw, 16rem) * var(--clock-scale, 1));
+  /* Background is painted by the app-bg layer (so switches cross-fade). */
+  color: var(--clock-fg);
+}
+
+.digital__time {
+  position: relative;
+  display: inline-grid;
+  font-size: var(--dg-size);
+  font-family: var(--clock-font);
+  font-weight: var(--clock-weight);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.digital__ghost,
+.digital__live {
+  grid-area: 1 / 1;
+}
+
+.digital__live {
+  display: inline-flex;
+  text-shadow: var(--clock-glow);
+}
+
+.digital__ghost {
+  font-family: "DSEG7 Classic", monospace;
+  color: var(--clock-fg);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.digital[data-seg="false"] .digital__ghost {
+  display: none;
+}
+
+.dg-colon {
+  animation: colon-blink 1s steps(1, end) infinite;
+}
+
+@keyframes colon-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0.25;
+  }
+}
+
+.digital[data-seconds="false"] .dg--s,
+.digital[data-seconds="false"] .dg-colon--sec {
+  display: none;
+}
+
+.digital__ampm {
+  position: absolute;
+  top: 0.05em;
+  right: 0;
+  transform: translateX(115%);
+  font-family: var(--font-ui);
+  font-size: 0.24em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+.digital[data-format="24"] .digital__ampm {
+  display: none;
+}
+
+.digital__date {
+  font-family: var(--font-ui);
+  font-weight: 400;
+  color: var(--clock-fg);
+  opacity: 0.7;
+  font-size: clamp(0.9rem, 2.4vw, 1.6rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dg-colon {
+    animation: none;
+  }
+}
+
+/* ---------- Flip view ---------- */
+
+.flip {
+  --card-w: calc(clamp(48px, 11vw, 180px) * var(--clock-scale, 1));
+  --card-h: calc(var(--card-w) * 1.45);
+  /* Background is painted by the app-bg layer (so switches cross-fade). */
+}
+
+.flip__row {
+  display: flex;
+  align-items: center;
+}
+
+.flip-group {
+  position: relative;
+  display: flex;
+  gap: calc(var(--card-w) * 0.06);
+}
+
+.flip-card {
+  position: relative;
+  width: var(--card-w);
+  height: var(--card-h);
+  perspective: 400px;
+  border-radius: calc(var(--card-w) * 0.08);
+  font-family: "Oswald Variable", "Oswald", sans-serif;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.flip-card__upper,
+.flip-card__lower,
+.flip-card__flap-top,
+.flip-card__flap-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--card-bg);
+  color: var(--card-fg);
+  backface-visibility: hidden;
+}
+
+.flip-card__upper,
+.flip-card__flap-top {
+  top: 0;
+  align-items: flex-start;
+  border-radius: calc(var(--card-w) * 0.08) calc(var(--card-w) * 0.08) 0 0;
+}
+
+.flip-card__lower,
+.flip-card__flap-bottom {
+  bottom: 0;
+  align-items: flex-end;
+  border-radius: 0 0 calc(var(--card-w) * 0.08) calc(var(--card-w) * 0.08);
+}
+
+.flip-card__flap-top {
+  transform-origin: bottom center;
+  z-index: 2;
+}
+
+.flip-card__flap-bottom {
+  transform-origin: top center;
+  z-index: 2;
+}
+
+.flip-card span {
+  display: block;
+  width: 100%;
+  height: var(--card-h);
+  line-height: var(--card-h);
+  font-size: calc(var(--card-h) * 0.72);
+  text-align: center;
+}
+
+/* Split line + hinge notches */
+.flip-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-1px);
+  background: var(--split);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.flip-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 6px;
+  transform: translateY(-3px);
+  z-index: 4;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 0 50%, var(--split) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 100% 50%, var(--split) 0 2.5px, transparent 3px);
+}
+
+/* Rotation shading */
+.flip-card__shade {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flip[data-shadow="true"] .flip-card {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.flip-colon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(var(--card-h) * 0.16);
+  margin: 0 calc(var(--card-w) * 0.14);
+}
+
+.flip-colon__dot {
+  width: calc(var(--card-w) * 0.12);
+  height: calc(var(--card-w) * 0.12);
+  border-radius: 50%;
+  background: var(--card-fg);
+  opacity: 0.85;
+}
+
+.flip__ampm {
+  position: absolute;
+  top: calc(var(--card-w) * -0.28);
+  left: 0;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: calc(var(--card-w) * 0.16);
+  color: var(--card-fg);
+  opacity: 0.85;
+}
+
+/* ---------- Settings drawer (template picker; generic .settings* is in base.css) ---------- */
+
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+
+.template-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.4rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.template-tile--selected {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.template-tile__preview {
+  height: 54px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.template-tile__preview--digital {
+  background: var(--clock-bg);
+}
+
+.template-tile__time {
+  font-family: var(--clock-font);
+  font-weight: var(--clock-weight);
+  color: var(--clock-fg);
+  text-shadow: var(--clock-glow);
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(0.7rem, 3.4vw, 1rem);
+}
+
+.template-tile__preview--flip {
+  background: var(--page-bg);
+  gap: 2px;
+}
+
+.template-tile__chip {
+  background: var(--card-bg);
+  color: var(--card-fg);
+  font-family: "Oswald Variable", sans-serif;
+  font-weight: 600;
+  padding: 2px 3px;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.template-tile__colon {
+  color: var(--card-fg);
+  font-size: 0.72rem;
+}
+
+.template-tile__name {
+  font-size: 0.78rem;
+  text-align: center;
+  color: var(--text);
+}
+
+/* ---------- Guide modal ---------- */
+
+.guide__steps {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.guide__step {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.guide__num {
+  display: inline-grid;
+  place-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  flex: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-on);
+  font-weight: 700;
+}
+
+.guide__footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+}
+
+/* ---------- Below-fold content ---------- */
+
+.clock-below {
+  background: var(--bg);
+  color: var(--text);
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem);
+}
+
+.clock[data-fullscreen="true"] .clock-below {
+  display: none;
+}

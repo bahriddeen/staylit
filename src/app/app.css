@@ -1,0 +1,133 @@
+/* App shell: cross-fading background layer + fixed top-left toolbar/switcher. */
+
+.app-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--bg);
+  transition: background-color 300ms ease;
+}
+
+.app-content {
+  min-height: 100dvh;
+}
+
+/* ---------- Toolbar: mode switcher (top-left) + action icons (top-right) ----------
+   These are two independently fixed-positioned groups. `.app-toolbar` itself is
+   just a non-blocking anchor (pointer-events: none) so clicks pass through to the
+   page except where the two groups opt back in with pointer-events: auto. */
+
+.app-toolbar {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.app-toolbar--hidden .app-toolbar__actions,
+.app-toolbar--hidden .mode-switcher {
+  transform: translateY(calc(-100% - 16px));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.app-toolbar__actions {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: auto;
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.app-toolbar__actions:empty {
+  display: none;
+}
+
+/* ---------- Mode switcher pill (top-left) ---------- */
+
+.mode-switcher {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  pointer-events: auto;
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.mode-switcher__thumb {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  width: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  z-index: 0;
+  transition:
+    transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    width 250ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.mode-switcher__tab {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.7rem;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.mode-switcher__tab:hover:not(.mode-switcher__tab--active) {
+  color: var(--text);
+}
+
+.mode-switcher__tab--active {
+  color: var(--accent-on);
+}
+
+.mode-switcher__icon {
+  display: inline-flex;
+  font-size: 1.05rem;
+}
+
+.mode-switcher__badge {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.05rem 0.3rem;
+  border-radius: 999px;
+  background: var(--success);
+  color: #04140a;
+  margin-left: 0.1rem;
+}
+
+@media (max-width: 480px) {
+  .mode-switcher__label {
+    display: none;
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "app": {
+    "title": "Awake Clock",
+    "tagline": "Ekraningiz o'chib qolishiga yo'l qo'ymang."
+  },
+  "theme": {
+    "toggle": "Mavzuni almashtirish",
+    "light": "Yorug'",
+    "dark": "Qorong'i"
+  },
+  "common": {
+    "close": "Yopish",
+    "settings": "Sozlamalar",
+    "fullscreen": "Butun ekran",
+    "exitFullscreen": "Butun ekrandan chiqish",
+    "none": "Yo'q",
+    "learnMore": "Batafsil",
+    "back": "Awake Clock'ga qaytish"
+  },
+  "awake": {
+    "hero": {
+      "title": "Ekraningizni yoniq saqlang",
+      "subtitle": "Displeyingiz xiralashishi yoki uxlashiga yo'l qo'ymang. O'rnatishsiz, ro'yxatdan o'tishsiz. Taymer qo'ying yoki cheksiz yoniq saqlang.",
+      "durationLabel": "Davomiylik",
+      "keepAwakeLabel": "Yoniq saqlash"
+    },
+    "duration": {
+      "always": "Doim yoniq",
+      "m10": "10 daq",
+      "m30": "30 daq",
+      "h1": "1 soat",
+      "h2": "2 soat",
+      "custom": "Boshqa",
+      "hoursLabel": "Soat",
+      "minutesLabel": "Daqiqa",
+      "hoursSuffix": "h",
+      "minutesSuffix": "m"
+    },
+    "status": {
+      "off": "Ekran odatdagidek uxlashi mumkin",
+      "alwaysOn": "∞ Doim yoniq",
+      "pausedTitle": "To'xtatildi",
+      "pausedBody": "Ekranni yoniq saqlashni davom ettirish uchun ushbu varaqqa qayting.",
+      "unsupportedTitle": "Wake Lock bu yerda qo'llab-quvvatlanmaydi",
+      "unsupportedBody": "Brauzeringiz ekranni yoniq saqlay olmaydi. Chrome, Edge yoki Safari'ning yangi versiyasini sinab ko'ring."
+    },
+    "notice": "Bu sahifani ochiq va ko'rinadigan holda saqlang. Varaqlarni almashtirish yoki kichraytirish ta'sirni to'xtatadi.",
+    "toast": {
+      "finished": "Taymer tugadi"
+    },
+    "docTitle": {
+      "active": "Ekran yoniq",
+      "always": "Awake"
+    },
+    "moreWays": {
+      "heading": "Yoniq turishning boshqa yo'llari",
+      "subtitle": "Bu varaqni butun ekranli soatga aylantiring yoki brauzeringizga qo'shing.",
+      "digital": {
+        "title": "Raqamli soat",
+        "description": "Ekranni yoniq saqlaydigan toza, butun ekranli raqamli soat. Ish stoli va tumba uchun ajoyib.",
+        "cta": "Raqamlini ochish"
+      },
+      "flip": {
+        "title": "Varaqlanuvchi soat",
+        "description": "Silliq animatsiyali kartochkali retro varaqlanuvchi soat. Minimalist, tinch va doim yoniq.",
+        "cta": "Varaqlanuvchini ochish"
+      },
+      "extension": {
+        "badge": "Tez orada",
+        "title": "Brauzer kengaytmasi",
+        "description": "Istalgan varaqni bir marta bosish bilan yoniq saqlang — to'g'ridan-to'g'ri asboblar panelidan. Ishga tushganda xabar olish uchun ro'yxatga yoziling.",
+        "cta": "Menga xabar bering"
+      }
+    },
+    "what": {
+      "heading": "Keep Awake nima?",
+      "body": "Keep Awake — bu ekraningiz xiralashishi, qulflanishi yoki uxlashiga yo'l qo'ymaydigan bepul brauzer vositasi. U o'rnatilgan Screen Wake Lock API'dan foydalanadi, shuning uchun hech narsa o'rnatish shart emas va fon rejimida hech narsa ishlamaydi. Shunchaki sahifani oching, yoqing — va displeyingiz kerak bo'lgancha yoniq turadi."
+    },
+    "why": {
+      "heading": "Nega Keep Awake'ni tanlash kerak",
+      "items": [
+        {
+          "icon": "bolt",
+          "title": "Bir zumda, o'rnatishsiz",
+          "description": "To'g'ridan-to'g'ri brauzeringizda ishlaydi. Hech qanday yuklab olish, hisob yoki ruxsatlar shart emas."
+        },
+        {
+          "icon": "lock",
+          "title": "Dizayni bo'yicha maxfiy",
+          "description": "Hammasi qurilmangizda mahalliy ishlaydi. Kuzatuv yo'q, ma'lumotlar brauzeringizdan chiqmaydi."
+        },
+        {
+          "icon": "clock",
+          "title": "Aniq taymerlar",
+          "description": "Aniq davomiylik qo'ying yoki abadiy yoniq qoldiring. Teskari sanoq cheklovlar ostida ham aniq qoladi."
+        },
+        {
+          "icon": "battery",
+          "title": "Batareyaga do'st",
+          "description": "Faqat displey yoniq turadi. Protsessorni yuklaydigan hiylalar yoki fon rejimida soxta faoliyat yo'q."
+        },
+        {
+          "icon": "devices",
+          "title": "Hamma joyda ishlaydi",
+          "description": "Noutbuklar, kompyuterlar, planshetlar va telefonlar — Wake Lock'ni qo'llab-quvvatlaydigan har qanday zamonaviy brauzerda."
+        },
+        {
+          "icon": "moon",
+          "title": "Ko'zga qulay",
+          "description": "Standart holda qorong'i mavzu va yorug' mavzu — uzoq mashg'ulotlar va xira xonalar uchun moslangan."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Odamlar buni nima uchun ishlatadi",
+      "items": [
+        {
+          "icon": "download",
+          "title": "Yuklab olish va yuklash",
+          "description": "Ekran uxlab, sessiyangizni to'xtatmasdan fayl uzatishni davom ettiring."
+        },
+        {
+          "icon": "code",
+          "title": "Kod va SI mashg'ulotlari",
+          "description": "Sichqonchaga tegmasdan build'lar, loglar yoki uzoq davom etadigan SI vazifalarini kuzating."
+        },
+        {
+          "icon": "present",
+          "title": "Taqdimotlar va o'qish",
+          "description": "Slaydlar, dashboardlar, retseptlar va notalar qo'lsiz ko'rinib turadi."
+        }
+      ]
+    },
+    "how": {
+      "heading": "Qanday foydalanish",
+      "steps": [
+        {
+          "title": "Davomiylikni tanlang",
+          "description": "«Doim yoniq», tayyor variant yoki o'z vaqtingizni tanlang."
+        },
+        {
+          "title": "Tugmani yoqing",
+          "description": "Keep Awake'ni yoqing. Brauzeringiz tasdiqlashni so'rashi mumkin."
+        },
+        {
+          "title": "Varaqni ochiq qoldiring",
+          "description": "Bu varaqni ko'rinadigan holda saqlang. Yashirilsa to'xtaydi va qaytganingizda davom etadi."
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Ko'p beriladigan savollar",
+      "items": [
+        {
+          "question": "Keep Awake bepulmi?",
+          "answer": "Ha. Butunlay bepul, hisobsiz va sizni ta'qib qiladigan reklamalarsiz."
+        },
+        {
+          "question": "Varaqlarni almashtirsam yoki oynani kichraytirsam ishlaydimi?",
+          "answer": "Yo'q. Brauzerlar wake lock'ga faqat varaq ko'rinib turganda ruxsat beradi. Boshqasiga o'tsangiz yoki kichraytirsangiz, u to'xtaydi va qaytganingizda avtomatik davom etadi."
+        },
+        {
+          "question": "Batareyamni tez tugatadimi?",
+          "answer": "U faqat displeyni yoniq saqlaydi, bu har qanday yoniq ekran kabi biroz quvvat sarflaydi. Fon rejimida og'ir ishlar bajarilmaydi, shuning uchun ta'siri minimal."
+        },
+        {
+          "question": "Qaysi brauzerlar qo'llab-quvvatlanadi?",
+          "answer": "Chrome, Edge va Safari'ning yangi versiyalari Screen Wake Lock API'ni qo'llab-quvvatlaydi. Eski brauzerlar yengil video usuliga o'tishi yoki qo'llab-quvvatlanmasligi mumkin."
+        },
+        {
+          "question": "Mening ma'lumotlarim to'planadimi?",
+          "answer": "Yo'q. Hammasi brauzeringizda mahalliy ishlaydi. Sozlamalaringiz qurilmangizda saqlanadi va hech qayerga yuborilmaydi."
+        }
+      ]
+    },
+    "footer": {
+      "privacy": "Maxfiylik",
+      "terms": "Shartlar",
+      "contact": "Aloqa",
+      "changelog": "O'zgarishlar tarixi",
+      "rights": "Barcha huquqlar himoyalangan."
+    }
+  },
+  "switcher": {
+    "label": "Rejimni almashtirish",
+    "awake": "Ekran",
+    "digital": "Raqamli",
+    "flip": "Varaqlanuvchi",
+    "timer": "Taymer"
+  },
+  "clock": {
+    "view": {
+      "digital": "Raqamli",
+      "flip": "Varaqlanuvchi",
+      "timer": "Taymer",
+      "worldClock": "Jahon soati",
+      "soon": "tez orada"
+    },
+    "buttons": {
+      "settings": "Sozlamalar",
+      "keepOn": "Ekranni yoniq saqlash",
+      "keepOnActive": "Ekran yoniq",
+      "fullscreen": "Butun ekran",
+      "exitFullscreen": "Butun ekrandan chiqish"
+    },
+    "settings": {
+      "title": "Sozlamalar",
+      "format": "Format",
+      "format24": "24H",
+      "format12": "12H",
+      "second": "Soniyalar",
+      "dayYear": "Kun va yil",
+      "template": "Soat ko'rinishi"
+    },
+    "guide": {
+      "title": "Soatga xush kelibsiz",
+      "step1": "Format, soniyalar va ko'rinishni o'zgartirish uchun sozlamalarni oching.",
+      "step2": "Ekranni yoniq saqlash uchun quyoshni bosing.",
+      "step3": "Soatni kattalashtirish uchun barmoqlaringizni siljiting; qayta tiklash uchun ikki marta bosing.",
+      "gotIt": "Tushunarli"
+    },
+    "digital": {
+      "seo": {
+        "title": "Raqamli soat: butun ekranli, ekraningizni yoniq saqlaydi",
+        "description": "Yetti segmentli va minimalist mavzulardagi toza butun ekranli raqamli soat. Ekraningizni yoniq saqlaydi, o'rnatishsiz."
+      },
+      "heading": "Butun ekranli raqamli soat",
+      "intro": "Ish stoli, tumba va studiyalar uchun katta, o'qish oson raqamli soat. Yetti segmentli LCD ko'rinishi yoki minimalist mavzuni tanlang, 12 yoki 24 soatlik formatni belgilang — va ekraningizni yoniq saqlang."
+    },
+    "flip": {
+      "seo": {
+        "title": "Varaqlanuvchi soat: animatsiyali butun ekranli varaqlanuvchi soat",
+        "description": "O'nta mavzudagi retro animatsiyali varaqlanuvchi soat. Butun ekranli, ekraningizni yoniq saqlaydi, oflayn ishlaydi, o'rnatishsiz."
+      },
+      "heading": "Animatsiyali varaqlanuvchi soat",
+      "intro": "Silliq kartochka animatsiyalari va o'nta rang mavzusi bilan tinch, retro varaqlanuvchi soat. Diqqatni jamlash uchun ajoyib — va ekraningizni yoniq saqlaydi."
+    },
+    "sections": {
+      "useCases": {
+        "heading": "Ajoyib mos keladi",
+        "items": [
+          {
+            "icon": "moon",
+            "title": "Tumba va stol",
+            "description": "Xonaning narigi burchagidan o'qish mumkin bo'lgan katta, yorug'lik aks etmaydigan soat."
+          },
+          {
+            "icon": "present",
+            "title": "Studiyalar va streamlar",
+            "description": "Yozib olish, vaqtni belgilash va overleylar uchun ozoda ekran soati."
+          },
+          {
+            "icon": "code",
+            "title": "Diqqatni jamlash mashg'ulotlari",
+            "description": "Ekran uxlamasdan, ishlayotganingizda vaqtni ko'rinib turing."
+          }
+        ]
+      },
+      "how": {
+        "heading": "Qanday foydalanish",
+        "steps": [
+          {
+            "title": "Ko'rinishingizni tanlang",
+            "description": "Sozlamalarni oching va shablon, 12/24 soat va soniyalarni tanlang."
+          },
+          {
+            "title": "Ekranni yoniq saqlang",
+            "description": "Quyoshni bosing yoki butun ekranga o'ting. Ikkalasi ham displeyingizni yoniq saqlaydi."
+          },
+          {
+            "title": "Kattalashtiring",
+            "description": "Butun ekranga o'ting; mobilda o'lchamini to'g'rilash uchun barmoqlaringizni siljiting."
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Ko'p beriladigan savollar",
+        "items": [
+          {
+            "question": "Soat ekranimni yoniq saqlaydimi?",
+            "answer": "Ha. Quyosh belgisini bosing yoki butun ekranga o'ting — varaq ko'rinib turganda ekran yoniq qoladi."
+          },
+          {
+            "question": "Raqamli va varaqlanuvchi uslublar orasida almashishim mumkinmi?",
+            "answer": "Ha. Yuqori paneldagi «Raqamli» va «Varaqlanuvchi» havolalaridan foydalaning; har biri o'z sozlamalarini eslab qoladi."
+          },
+          {
+            "question": "U bepul va maxfiymi?",
+            "answer": "Butunlay. U to'liq brauzeringizda ishlaydi, sozlamalarni qurilmangizda saqlaydi va hisob talab qilmaydi."
+          },
+          {
+            "question": "Oflayn ishlaydimi?",
+            "answer": "Ha. Bir marta yuklangach, soat internet aloqasisiz ishlashda davom etadi."
+          }
+        ]
+      }
+    }
+  },
+  "timer": {
+    "seo": {
+      "title": "Taymer — teskari sanoq va sekundomer",
+      "description": "Bepul onlayn taymer: oddiy teskari sanoq, ish/dam olish intervallari, interval qo'ng'irog'i va sekundomer. Ishlaganda ekranni yoniq saqlaydi."
+    },
+    "heading": "Taymer",
+    "intro": "Ishlaganda ekranni yoniq saqlaydigan teskari sanoq va sekundomer. Oddiy sanoq qo'ying, ish va dam olish raundlarini almashtiring, intervallarda qo'ng'iroq chaling yoki shunchaki o'tgan vaqtni kuzating.",
+    "mode": {
+      "countdown": "Teskari sanoq",
+      "stopwatch": "Sekundomer"
+    },
+    "type": {
+      "simple": "Oddiy",
+      "interval": "Interval",
+      "bell": "Qo'ng'iroq"
+    },
+    "fields": {
+      "mode": "Rejim",
+      "type": "Turi",
+      "setTime": "Vaqtni belgilash",
+      "workTime": "Ish vaqti",
+      "restTime": "Dam olish",
+      "rounds": "Raundlar",
+      "roundsSuffix": "×",
+      "longBreakEvery": "Har nechada uzoq tanaffus",
+      "longBreakEverySuffix": "×",
+      "longBreakTime": "Uzoq tanaffus",
+      "totalTime": "Umumiy vaqt",
+      "bellInterval": "Interval qo'ng'irog'i",
+      "alarmSound": "Signal ovozi",
+      "milliseconds": "Millisekundlar",
+      "hoursSuffix": "h",
+      "minutesSuffix": "m",
+      "secondsSuffix": "s"
+    },
+    "phase": {
+      "work": "FOKUS",
+      "rest": "DAM OLISH",
+      "longBreak": "UZOQ TANAFFUS"
+    },
+    "buttons": {
+      "start": "Boshlash",
+      "pause": "Pauza",
+      "reset": "Qayta boshlash",
+      "split": "Aylana"
+    },
+    "laps": {
+      "label": "Aylana vaqtlari"
+    },
+    "toast": {
+      "finished": "Taymer tugadi"
+    },
+    "docTitle": "Taymer",
+    "sections": {
+      "useCases": {
+        "heading": "Ajoyib mos keladi",
+        "items": [
+          {
+            "icon": "code",
+            "title": "Diqqatni jamlash",
+            "description": "Kod yozayotganda, yozayotganda yoki o'qiyotganda ish/dam olish raundlarini bajaring — ekran bilan birga."
+          },
+          {
+            "icon": "present",
+            "title": "Mashqlar",
+            "description": "Har raundda qo'ng'iroqli interval mashqlari — telefon qulf ekrani xalaqit bermaydi."
+          },
+          {
+            "icon": "clock",
+            "title": "Ovqat pishirish va tanaffuslar",
+            "description": "Oshxona, tanaffus yoki vaqtga bog'liq boshqa har qanday narsa uchun oddiy teskari sanoq."
+          }
+        ]
+      },
+      "how": {
+        "heading": "Qanday foydalanish",
+        "steps": [
+          {
+            "title": "Rejimni tanlang",
+            "description": "Sozlamalardan teskari sanoq (oddiy, interval yoki qo'ng'iroq) yoki sekundomer."
+          },
+          {
+            "title": "Vaqtingizni belgilang",
+            "description": "Soat, daqiqa va soniyalarni yoki interval uchun raundlarni kiriting."
+          },
+          {
+            "title": "Boshlashni bosing",
+            "description": "Taymer ishlaydi va siz pauza qilguningizcha yoki u tugaguncha ekranni yoniq saqlaydi."
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Ko'p beriladigan savollar",
+        "items": [
+          {
+            "question": "Interval va Qo'ng'iroq o'rtasidagi farq nima?",
+            "answer": "Interval belgilangan miqdordagi raundlar davomida to'liq ish va dam olish davrlarini almashtiradi, klassik mashq taymeri kabi. Qo'ng'iroq bitta umumiy davomiylikni teskari sanaydi va yo'l davomida vaqti-vaqti bilan jiringlaydi, alohida fazalarga bo'lmasdan."
+          },
+          {
+            "question": "Taymer ekranimni yoniq saqlaydimi?",
+            "answer": "Ha, taymerni ishga tushirish ishlagan vaqtida ekranni yoniq saqlaydi — saytning qolgan qismida ishlatiladigan xuddi shu Screen Wake Lock."
+          },
+          {
+            "question": "Varaqlarni almashtirsam ham jiringlaydimi?",
+            "answer": "Teskari sanoq fon rejimida aniq vaqtni saqlaydi, lekin brauzerlar nofaol varaqlarni sekinlashtirishi mumkin, shuning uchun varaqqa qaytmaguningizcha ko'rsatuv va ovoz biroz kechikishi mumkin."
+          },
+          {
+            "question": "Ovozni o'chirsam bo'ladimi?",
+            "answer": "Ha, sozlamalarda «Signal ovozi»ni o'chiring. Bu sekundomerga ta'sir qilmaydi — u hech qachon ovoz chiqarmaydi."
+          }
+        ]
+      }
+    }
+  },
+  "legal": {
+    "privacy": {
+      "seo": {
+        "title": "Maxfiylik siyosati · Awake Clock",
+        "description": "Awake Clock ma'lumotlaringiz bilan qanday ishlaydi: hisoblarsiz, kuzatuvsiz, hammasi qurilmangizda qoladi."
+      },
+      "heading": "Maxfiylik siyosati",
+      "intro": "Awake Clock ma'lumotlaringizdan imkon qadar kam foydalanish uchun yaratilgan. Ushbu sahifa nima sodir bo'lishini va nima sodir bo'lmasligini aniq tushuntiradi.",
+      "sections": [
+        {
+          "title": "Biz nimani to'playmiz",
+          "body": "Hech narsa. Awake Clock'da hisoblar, analitika va kuzatuv skriptlari yo'q. Biz sizning tashrifingizni bilmaymiz va bila olmaymiz, chunki hech narsa serverga yuborilmaydi."
+        },
+        {
+          "title": "Qurilmangizda nima saqlanadi",
+          "body": "Mavzu, davomiylik, soat shabloni va taymer sozlamalari kabi afzalliklaringiz brauzeringizning mahalliy xotirasida saqlanadi, shunda ular keyingi tashrifingizda joyida bo'ladi. Bu ma'lumotlar hech qachon qurilmangizdan chiqmaydi va biz uchun mavjud emas."
+        },
+        {
+          "title": "Screen Wake Lock",
+          "body": "Ekranni yoniq saqlash brauzeringizning o'rnatilgan Screen Wake Lock API'sidan (yoki qo'llab-quvvatlamaydigan brauzerlarda ovozsiz takrorlanuvchi videodan) foydalanadi. Hech bir usul hech narsani o'qimaydi, yozib olmaydi yoki uzatmaydi — u faqat qurilmangizga uxlamaslikni aytadi."
+        },
+        {
+          "title": "Uchinchi tomon xizmatlari",
+          "body": "Bu saytda «Buy Me a Coffee» qo'llab-quvvatlash tugmasi — buymeacoffee.com'dan resurslarni yuklashi mumkin bo'lgan uchinchi tomon vidjeti joylashtirilgan. Agar u bilan o'zaro aloqada bo'lsangiz, faoliyatingiz bizning emas, balki Buy Me a Coffee'ning o'z maxfiylik siyosatiga bo'ysunadi."
+        },
+        {
+          "title": "Ushbu siyosatdagi o'zgarishlar",
+          "body": "Agar ushbu siyosat o'zgarsa, yangilanish ushbu sahifada e'lon qilinadi. O'zgarishdan keyin saytdan foydalanishni davom ettirish yangilanishni qabul qilishingizni anglatadi."
+        },
+        {
+          "title": "Savollar",
+          "body": "Ushbu siyosat bo'yicha savollaringiz bo'lsa, «Aloqa» sahifasi orqali bog'laning."
+        }
+      ]
+    },
+    "terms": {
+      "seo": {
+        "title": "Foydalanish shartlari · Awake Clock",
+        "description": "Awake Clock'dan foydalanish shartlari: bepul, «qanday bo'lsa shunday», kafolatsiz."
+      },
+      "heading": "Foydalanish shartlari",
+      "intro": "Ushbu shartlar Awake Clock'dan foydalanishingizni qamrab oladi. Saytdan foydalanib, siz ularga rozilik bildirasiz.",
+      "sections": [
+        {
+          "title": "Xizmatdan foydalanish",
+          "body": "Awake Clock bepul, hisob talab qilinmaydi. Undan shaxsiy yoki tijorat maqsadlarida foydalanishingiz mumkin, jumladan ekranni yoniq saqlash, soat displeylarini ishlatish va taymerdan foydalanish."
+        },
+        {
+          "title": "Kafolat yo'q",
+          "body": "Sayt hech qanday kafolatsiz «qanday bo'lsa shunday» taqdim etiladi. Biz Screen Wake Lock API'ning har bir brauzer, operatsion tizim yoki quvvat tejash sozlamasida bir xil ishlashini kafolatlamaymiz — ba'zi qurilmalar ilova nima so'rashidan qat'i nazar uni bekor qiladi."
+        },
+        {
+          "title": "Maqbul foydalanish",
+          "body": "Awake Clock'dan qonunni buzish, boshqalar uchun xizmatni buzish yoki uning ishlashiga aralashishga urinish uchun foydalanmang."
+        },
+        {
+          "title": "Xizmatdagi o'zgarishlar",
+          "body": "Funksiyalar istalgan vaqtda qo'shilishi, o'zgartirilishi yoki olib tashlanishi mumkin. Biz ushbu sahifa va FAQ'ni dolzarb saqlashga harakat qilamiz, lekin mahsulot oldindan ogohlantirmasdan rivojlanishi mumkin."
+        },
+        {
+          "title": "Javobgarlikni cheklash",
+          "body": "Biz ushbu saytdan foydalanish yoki foydalana olmaslik natijasida yuzaga keladigan har qanday to'g'ridan-to'g'ri yoki bilvosita zarar uchun javobgar emasmiz."
+        },
+        {
+          "title": "Aloqa",
+          "body": "Ushbu shartlar bo'yicha savollarni «Aloqa» sahifasi orqali yuborishingiz mumkin."
+        }
+      ]
+    },
+    "contact": {
+      "seo": {
+        "title": "Aloqa · Awake Clock",
+        "description": "Awake Clock haqida bog'laning: fikr-mulohaza, xatolik haqida xabar yoki qo'llab-quvvatlash."
+      },
+      "heading": "Aloqa",
+      "intro": "Awake Clock — kichik, mustaqil loyiha. Fikr-mulohazalar, xatolik haqidagi xabarlar va g'oyalar mamnuniyat bilan qabul qilinadi.",
+      "emailLabel": "Elektron pochta",
+      "email": "bahriddin.me@gmail.com",
+      "supportLabel": "Loyihani qo'llab-quvvatlash",
+      "supportBody": "Agar Awake Clock siz uchun foydali bo'lsa, uning rivojlanishini bir chashka qahva bilan qo'llab-quvvatlashingiz mumkin.",
+      "supportCta": "Menga qahva oling"
+    }
+  }
+}

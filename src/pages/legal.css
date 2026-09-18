@@ -1,0 +1,104 @@
+/* Legal / info pages (Privacy, Terms, Contact). Reuses .awake, .section, and
+   .prose primitives from awake.css (imported alongside this file), so these
+   pages stay visually consistent with the rest of the site. */
+
+.legal-page {
+  padding: clamp(4rem, 9vh, 6rem) clamp(1rem, 3vw, 2rem) clamp(2rem, 6vw, 4rem);
+}
+
+.legal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.legal-back:hover {
+  color: var(--text);
+}
+
+.legal-back svg {
+  transform: rotate(180deg);
+}
+
+.legal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+  max-width: 68ch;
+  margin-inline: auto;
+}
+
+.legal-section__title {
+  font-size: 1.05rem;
+}
+
+.legal-section__body {
+  color: var(--text-muted);
+}
+
+.legal-contact {
+  width: min(480px, 100%);
+  margin-inline: auto;
+}
+
+.legal-contact__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.legal-contact__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  font-size: 1.3rem;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border-radius: var(--radius);
+}
+
+.legal-contact__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.legal-contact__label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.legal-contact__value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.legal-contact__value:hover {
+  text-decoration: underline;
+}
+
+.legal-contact__support {
+  color: var(--text-muted);
+}
+
+.legal-contact__cta {
+  margin-top: 0.35rem;
+}

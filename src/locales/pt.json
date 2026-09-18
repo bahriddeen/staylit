@@ -1,0 +1,496 @@
+{
+  "app": {
+    "title": "Awake Clock",
+    "tagline": "Mantenha sua tela acesa."
+  },
+  "theme": {
+    "toggle": "Alternar tema",
+    "light": "Claro",
+    "dark": "Escuro"
+  },
+  "common": {
+    "close": "Fechar",
+    "settings": "Configurações",
+    "fullscreen": "Tela cheia",
+    "exitFullscreen": "Sair da tela cheia",
+    "none": "Nenhum",
+    "learnMore": "Saiba mais",
+    "back": "Voltar ao Awake Clock"
+  },
+  "awake": {
+    "hero": {
+      "title": "Mantenha sua tela acesa",
+      "subtitle": "Impeça que sua tela escureça ou entre em suspensão. Sem instalação, sem cadastro. Defina um timer ou mantenha-a acesa indefinidamente.",
+      "durationLabel": "Duração",
+      "keepAwakeLabel": "Manter acesa"
+    },
+    "duration": {
+      "always": "Sempre ativa",
+      "m10": "10 min",
+      "m30": "30 min",
+      "h1": "1 h",
+      "h2": "2 h",
+      "custom": "Personalizado",
+      "hoursLabel": "Horas",
+      "minutesLabel": "Minutos",
+      "hoursSuffix": "h",
+      "minutesSuffix": "m"
+    },
+    "status": {
+      "off": "A tela pode entrar em suspensão normalmente",
+      "alwaysOn": "∞ Sempre ativa",
+      "pausedTitle": "Pausado",
+      "pausedBody": "Volte a esta aba para continuar mantendo a tela acesa.",
+      "unsupportedTitle": "Wake Lock não é compatível aqui",
+      "unsupportedBody": "Seu navegador não consegue manter a tela acesa. Tente uma versão recente do Chrome, Edge ou Safari."
+    },
+    "notice": "Mantenha esta página aberta e visível. Trocar de aba ou minimizar pausa o efeito.",
+    "toast": {
+      "finished": "Timer finalizado"
+    },
+    "docTitle": {
+      "active": "Tela acesa",
+      "always": "Awake"
+    },
+    "moreWays": {
+      "heading": "Outras formas de ficar acordado",
+      "subtitle": "Transforme esta aba em um relógio em tela cheia, ou adicione-a ao seu navegador.",
+      "digital": {
+        "title": "Relógio digital",
+        "description": "Um relógio digital nítido em tela cheia que mantém sua tela acesa. Ótimo para mesas e criados-mudos.",
+        "cta": "Abrir digital"
+      },
+      "flip": {
+        "title": "Relógio de pás",
+        "description": "Um relógio de pás retrô com cartões animados suaves. Minimalista, tranquilo e sempre ativo.",
+        "cta": "Abrir de pás"
+      },
+      "extension": {
+        "badge": "Em breve",
+        "title": "Extensão do navegador",
+        "description": "Mantenha qualquer aba acesa com um clique, direto da barra de ferramentas. Entre na lista de espera para saber quando for lançada.",
+        "cta": "Avisar-me"
+      }
+    },
+    "what": {
+      "heading": "O que é o Keep Awake?",
+      "body": "O Keep Awake é uma ferramenta gratuita baseada no navegador que impede que sua tela escureça, bloqueie ou entre em suspensão. Ele usa a API integrada Screen Wake Lock, então não há nada para instalar e nada roda em segundo plano. Basta abrir a página, ativá-lo, e seu monitor fica aceso pelo tempo que você precisar."
+    },
+    "why": {
+      "heading": "Por que escolher o Keep Awake",
+      "items": [
+        {
+          "icon": "bolt",
+          "title": "Instantâneo, sem instalação",
+          "description": "Funciona direto no seu navegador. Sem downloads, contas ou permissões a conceder."
+        },
+        {
+          "icon": "lock",
+          "title": "Privado por design",
+          "description": "Tudo roda localmente no seu dispositivo. Sem rastreamento, e nenhum dado sai do seu navegador."
+        },
+        {
+          "icon": "clock",
+          "title": "Timers precisos",
+          "description": "Defina uma duração exata ou mantenha aceso para sempre. As contagens regressivas continuam precisas mesmo com limitações."
+        },
+        {
+          "icon": "battery",
+          "title": "Amigo da bateria",
+          "description": "Só a tela fica acesa. Sem truques que sobrecarregam a CPU nem atividade falsa em segundo plano."
+        },
+        {
+          "icon": "devices",
+          "title": "Funciona em todo lugar",
+          "description": "Notebooks, desktops, tablets e celulares, em qualquer navegador moderno compatível com Wake Lock."
+        },
+        {
+          "icon": "moon",
+          "title": "Suave para os olhos",
+          "description": "Escuro por padrão com um tema claro, ajustado para sessões longas e ambientes com pouca luz."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Para que as pessoas usam",
+      "items": [
+        {
+          "icon": "download",
+          "title": "Downloads e uploads",
+          "description": "Mantenha as transferências em andamento sem que a tela entre em suspensão e pause sua sessão."
+        },
+        {
+          "icon": "code",
+          "title": "Programação e sessões de IA",
+          "description": "Acompanhe builds, logs ou tarefas de IA de longa duração sem tocar no mouse."
+        },
+        {
+          "icon": "present",
+          "title": "Apresentações e leitura",
+          "description": "Slides, painéis, receitas e partituras ficam visíveis, sem usar as mãos."
+        }
+      ]
+    },
+    "how": {
+      "heading": "Como usar",
+      "steps": [
+        {
+          "title": "Escolha uma duração",
+          "description": "Escolha «Sempre ativa», uma predefinição ou defina um tempo personalizado."
+        },
+        {
+          "title": "Acione o botão",
+          "description": "Ative o Keep Awake. Seu navegador pode pedir confirmação."
+        },
+        {
+          "title": "Deixe a aba aberta",
+          "description": "Mantenha esta aba visível. Ela pausa se ficar oculta e retoma quando você volta."
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O Keep Awake é gratuito?",
+          "answer": "Sim. Totalmente gratuito, sem conta e sem anúncios que te perseguem."
+        },
+        {
+          "question": "Funciona se eu trocar de aba ou minimizar a janela?",
+          "answer": "Não. Os navegadores só permitem um wake lock enquanto a aba está visível. Se você trocar ou minimizar, ele pausa e depois retoma automaticamente quando você volta."
+        },
+        {
+          "question": "Vai gastar minha bateria?",
+          "answer": "Ele só mantém a tela acesa, o que consome um pouco de energia como qualquer tela ligada. Não executa trabalho pesado em segundo plano, então o impacto é mínimo."
+        },
+        {
+          "question": "Quais navegadores são compatíveis?",
+          "answer": "Versões recentes do Chrome, Edge e Safari são compatíveis com a API Screen Wake Lock. Navegadores mais antigos podem recorrer a um método de vídeo leve ou não ser compatíveis."
+        },
+        {
+          "question": "Algum dado meu é coletado?",
+          "answer": "Não. Tudo roda localmente no seu navegador. Suas configurações são salvas no seu dispositivo e nunca são enviadas para lugar nenhum."
+        }
+      ]
+    },
+    "footer": {
+      "privacy": "Privacidade",
+      "terms": "Termos",
+      "contact": "Contato",
+      "changelog": "Registro de alterações",
+      "rights": "Todos os direitos reservados."
+    }
+  },
+  "switcher": {
+    "label": "Trocar modo",
+    "awake": "Ativa",
+    "digital": "Digital",
+    "flip": "De pás",
+    "timer": "Timer"
+  },
+  "clock": {
+    "view": {
+      "digital": "Digital",
+      "flip": "De pás",
+      "timer": "Timer",
+      "worldClock": "Relógio mundial",
+      "soon": "em breve"
+    },
+    "buttons": {
+      "settings": "Configurações",
+      "keepOn": "Manter a tela acesa",
+      "keepOnActive": "A tela permanece acesa",
+      "fullscreen": "Tela cheia",
+      "exitFullscreen": "Sair da tela cheia"
+    },
+    "settings": {
+      "title": "Configurações",
+      "format": "Formato",
+      "format24": "24H",
+      "format12": "12H",
+      "second": "Segundos",
+      "dayYear": "Dia e ano",
+      "template": "Estilo do relógio"
+    },
+    "guide": {
+      "title": "Bem-vindo ao relógio",
+      "step1": "Abra as configurações para mudar o formato, os segundos e a aparência.",
+      "step2": "Toque no sol para manter sua tela acesa.",
+      "step3": "Faça o gesto de pinça para ampliar o relógio; toque duas vezes para redefinir.",
+      "gotIt": "Entendi"
+    },
+    "digital": {
+      "seo": {
+        "title": "Relógio digital: em tela cheia, mantém sua tela acesa",
+        "description": "Um relógio digital nítido em tela cheia com temas de sete segmentos e minimalistas. Mantém sua tela acesa, sem instalação."
+      },
+      "heading": "Relógio digital em tela cheia",
+      "intro": "Um relógio digital grande e legível para mesas, criados-mudos e estúdios. Escolha um visual de LCD de sete segmentos ou um tema minimalista, escolha 12 ou 24 horas, e mantenha sua tela acesa."
+    },
+    "flip": {
+      "seo": {
+        "title": "Relógio de pás: relógio de pás animado em tela cheia",
+        "description": "Um relógio de pás retrô animado em dez temas. Em tela cheia, mantém sua tela acesa, funciona offline, sem instalação."
+      },
+      "heading": "Relógio de pás animado",
+      "intro": "Um relógio de pás retrô e tranquilo com animações de cartões suaves e dez temas de cor. Ótimo para sessões de foco, e mantém sua tela acesa."
+    },
+    "sections": {
+      "useCases": {
+        "heading": "Ótimo para",
+        "items": [
+          {
+            "icon": "moon",
+            "title": "Criado-mudo e mesa",
+            "description": "Um relógio grande e sem reflexos que você consegue ler do outro lado do cômodo."
+          },
+          {
+            "icon": "present",
+            "title": "Estúdios e transmissões",
+            "description": "Um relógio de tela organizado para gravações, cronometragem e sobreposições."
+          },
+          {
+            "icon": "code",
+            "title": "Sessões de foco",
+            "description": "Mantenha a hora visível enquanto trabalha, sem que a tela entre em suspensão."
+          }
+        ]
+      },
+      "how": {
+        "heading": "Como usar",
+        "steps": [
+          {
+            "title": "Escolha seu visual",
+            "description": "Abra as configurações e escolha um modelo, 12/24 horas e os segundos."
+          },
+          {
+            "title": "Mantenha a tela acesa",
+            "description": "Toque no sol ou entre em tela cheia. Ambos mantêm seu monitor aceso."
+          },
+          {
+            "title": "Aumente",
+            "description": "Entre em tela cheia; no celular, faça o gesto de pinça para ajustar o tamanho."
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Perguntas frequentes",
+        "items": [
+          {
+            "question": "O relógio mantém minha tela acesa?",
+            "answer": "Sim. Toque no ícone do sol ou entre em tela cheia e a tela permanece acesa enquanto a aba estiver visível."
+          },
+          {
+            "question": "Posso alternar entre os estilos digital e de pás?",
+            "answer": "Sim. Use os links «Digital» e «De pás» na barra superior; cada um lembra suas próprias configurações."
+          },
+          {
+            "question": "É gratuito e privado?",
+            "answer": "Totalmente. Roda inteiramente no seu navegador, salva as configurações no seu dispositivo e não precisa de conta."
+          },
+          {
+            "question": "Funciona offline?",
+            "answer": "Sim. Depois de carregado, o relógio continua funcionando sem conexão de rede."
+          }
+        ]
+      }
+    }
+  },
+  "timer": {
+    "seo": {
+      "title": "Timer — Contagem regressiva e cronômetro",
+      "description": "Um timer online gratuito: contagem regressiva simples, intervalos de trabalho/descanso, um sino de intervalo e um cronômetro. Mantém sua tela acesa enquanto funciona."
+    },
+    "heading": "Timer",
+    "intro": "Uma contagem regressiva e um cronômetro que mantêm sua tela acesa enquanto funcionam. Defina uma contagem regressiva simples, alterne rounds de trabalho e descanso, toque um sino em intervalos, ou apenas acompanhe o tempo decorrido.",
+    "mode": {
+      "countdown": "Contagem regressiva",
+      "stopwatch": "Cronômetro"
+    },
+    "type": {
+      "simple": "Simples",
+      "interval": "Intervalo",
+      "bell": "Sino"
+    },
+    "fields": {
+      "mode": "Modo",
+      "type": "Tipo",
+      "setTime": "Definir tempo",
+      "workTime": "Tempo de trabalho",
+      "restTime": "Tempo de descanso",
+      "rounds": "Rounds",
+      "roundsSuffix": "×",
+      "longBreakEvery": "Pausa longa a cada",
+      "longBreakEverySuffix": "×",
+      "longBreakTime": "Pausa longa",
+      "totalTime": "Tempo total",
+      "bellInterval": "Sino de intervalo",
+      "alarmSound": "Som do alarme",
+      "milliseconds": "Milissegundos",
+      "hoursSuffix": "h",
+      "minutesSuffix": "m",
+      "secondsSuffix": "s"
+    },
+    "phase": {
+      "work": "FOCO",
+      "rest": "DESCANSO",
+      "longBreak": "PAUSA LONGA"
+    },
+    "buttons": {
+      "start": "Iniciar",
+      "pause": "Pausar",
+      "reset": "Redefinir",
+      "split": "Volta"
+    },
+    "laps": {
+      "label": "Tempos de volta"
+    },
+    "toast": {
+      "finished": "Timer finalizado"
+    },
+    "docTitle": "Timer",
+    "sections": {
+      "useCases": {
+        "heading": "Ótimo para",
+        "items": [
+          {
+            "icon": "code",
+            "title": "Sessões de foco",
+            "description": "Execute rounds de trabalho/descanso enquanto programa, escreve ou estuda, tela incluída."
+          },
+          {
+            "icon": "present",
+            "title": "Treinos",
+            "description": "Treino intervalado com um sino a cada round, sem a tela de bloqueio do celular te interromper."
+          },
+          {
+            "icon": "clock",
+            "title": "Cozinha e pausas",
+            "description": "Uma contagem regressiva simples para a cozinha, uma pausa ou qualquer outra coisa no relógio."
+          }
+        ]
+      },
+      "how": {
+        "heading": "Como usar",
+        "steps": [
+          {
+            "title": "Escolha um modo",
+            "description": "Contagem regressiva (Simples, Intervalo ou Sino) ou Cronômetro, nas configurações."
+          },
+          {
+            "title": "Defina seu tempo",
+            "description": "Insira horas, minutos e segundos, ou os rounds para o Intervalo."
+          },
+          {
+            "title": "Pressione iniciar",
+            "description": "O timer funciona e mantém sua tela acesa até você pausar ou ele terminar."
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Perguntas frequentes",
+        "items": [
+          {
+            "question": "Qual é a diferença entre Intervalo e Sino?",
+            "answer": "O Intervalo alterna períodos completos de trabalho e descanso por um número definido de rounds, como um timer de treino clássico. O Sino faz a contagem regressiva de uma única duração total e toca periodicamente pelo caminho, sem dividir em fases separadas."
+          },
+          {
+            "question": "O timer mantém minha tela acesa?",
+            "answer": "Sim, iniciar o timer mantém sua tela acesa por todo o tempo em que funciona, o mesmo Screen Wake Lock usado no resto do site."
+          },
+          {
+            "question": "Vai tocar mesmo se eu trocar de aba?",
+            "answer": "A contagem regressiva mantém o tempo preciso em segundo plano, mas os navegadores podem limitar abas inativas, então a exibição e o som podem atrasar um pouco até você voltar à aba."
+          },
+          {
+            "question": "Posso desligar o som?",
+            "answer": "Sim, desative «Som do alarme» nas configurações. Não afeta o cronômetro, que nunca toca som."
+          }
+        ]
+      }
+    }
+  },
+  "legal": {
+    "privacy": {
+      "seo": {
+        "title": "Política de Privacidade · Awake Clock",
+        "description": "Como o Awake Clock lida com seus dados: sem contas, sem rastreamento, tudo fica no seu dispositivo."
+      },
+      "heading": "Política de Privacidade",
+      "intro": "O Awake Clock foi feito para precisar do mínimo possível dos seus dados. Esta página explica exatamente o que acontece e o que não acontece.",
+      "sections": [
+        {
+          "title": "O que coletamos",
+          "body": "Nada. O Awake Clock não tem contas, nem análises, nem scripts de rastreamento. Não sabemos que você visitou, e não podemos, porque nada é enviado a um servidor."
+        },
+        {
+          "title": "O que é armazenado no seu dispositivo",
+          "body": "Suas preferências, como tema, duração, modelo do relógio e configurações do timer, são salvas no armazenamento local do seu navegador para estarem lá na próxima visita. Esses dados nunca saem do seu dispositivo e não são acessíveis a nós."
+        },
+        {
+          "title": "O Screen Wake Lock",
+          "body": "Manter sua tela acesa usa a API Screen Wake Lock integrada do seu navegador (ou, em navegadores incompatíveis, um vídeo silencioso em loop). Nenhum dos métodos lê, grava ou transmite nada; apenas diz ao seu dispositivo para não entrar em suspensão."
+        },
+        {
+          "title": "Serviços de terceiros",
+          "body": "Este site incorpora um botão de apoio «Buy Me a Coffee», um widget de terceiros que pode carregar recursos de buymeacoffee.com. Se você interagir com ele, sua atividade fica sujeita à política de privacidade do próprio Buy Me a Coffee, não à nossa."
+        },
+        {
+          "title": "Alterações nesta política",
+          "body": "Se esta política mudar, a atualização será publicada nesta página. Continuar usando o site após uma alteração significa que você aceita a atualização."
+        },
+        {
+          "title": "Dúvidas",
+          "body": "Se você tiver dúvidas sobre esta política, entre em contato pela página de contato."
+        }
+      ]
+    },
+    "terms": {
+      "seo": {
+        "title": "Termos de Serviço · Awake Clock",
+        "description": "Os termos para usar o Awake Clock: de uso gratuito, fornecido como está, sem garantia."
+      },
+      "heading": "Termos de Serviço",
+      "intro": "Estes termos cobrem seu uso do Awake Clock. Ao usar o site, você os aceita.",
+      "sections": [
+        {
+          "title": "Uso do serviço",
+          "body": "O Awake Clock é de uso gratuito, sem necessidade de conta. Você pode usá-lo para fins pessoais ou comerciais, incluindo manter sua tela acesa, executar os visores de relógio e usar o timer."
+        },
+        {
+          "title": "Sem garantia",
+          "body": "O site é fornecido «como está», sem garantia de qualquer tipo. Não garantimos que a API Screen Wake Lock se comporte de forma idêntica em todos os navegadores, sistemas operacionais ou configurações de economia de energia; alguns dispositivos a substituem independentemente do que qualquer app solicite."
+        },
+        {
+          "title": "Uso aceitável",
+          "body": "Não use o Awake Clock para violar qualquer lei, interromper o serviço para outras pessoas ou tentar interferir em seu funcionamento."
+        },
+        {
+          "title": "Alterações no serviço",
+          "body": "Recursos podem ser adicionados, alterados ou removidos a qualquer momento. Tentaremos manter esta página e o FAQ atualizados, mas o produto pode evoluir sem aviso prévio."
+        },
+        {
+          "title": "Limitação de responsabilidade",
+          "body": "Não somos responsáveis por quaisquer danos, diretos ou indiretos, decorrentes do seu uso ou da incapacidade de usar este site."
+        },
+        {
+          "title": "Contato",
+          "body": "Dúvidas sobre estes termos podem ser enviadas pela página de contato."
+        }
+      ]
+    },
+    "contact": {
+      "seo": {
+        "title": "Contato · Awake Clock",
+        "description": "Entre em contato sobre o Awake Clock: feedback, relatórios de bugs ou suporte."
+      },
+      "heading": "Contato",
+      "intro": "O Awake Clock é um projeto pequeno e independente. Feedback, relatórios de bugs e ideias são todos bem-vindos.",
+      "emailLabel": "E-mail",
+      "email": "bahriddin.me@gmail.com",
+      "supportLabel": "Apoie o projeto",
+      "supportBody": "Se o Awake Clock é útil para você, você pode apoiar seu desenvolvimento com um café.",
+      "supportCta": "Pague-me um café"
+    }
+  }
+}

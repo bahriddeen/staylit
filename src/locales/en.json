@@ -1,0 +1,496 @@
+{
+  "app": {
+    "title": "Awake Clock",
+    "tagline": "Keep your screen awake."
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "common": {
+    "close": "Close",
+    "settings": "Settings",
+    "fullscreen": "Enter fullscreen",
+    "exitFullscreen": "Exit fullscreen",
+    "none": "None",
+    "learnMore": "Learn more",
+    "back": "Back to Awake Clock"
+  },
+  "awake": {
+    "hero": {
+      "title": "Keep Your Screen On",
+      "subtitle": "Stop your display from dimming or sleeping. No install, no sign-up. Set a timer or keep it on indefinitely.",
+      "durationLabel": "Duration",
+      "keepAwakeLabel": "Keep Awake"
+    },
+    "duration": {
+      "always": "Always On",
+      "m10": "10m",
+      "m30": "30m",
+      "h1": "1h",
+      "h2": "2h",
+      "custom": "Custom",
+      "hoursLabel": "Hours",
+      "minutesLabel": "Minutes",
+      "hoursSuffix": "h",
+      "minutesSuffix": "m"
+    },
+    "status": {
+      "off": "Screen can sleep normally",
+      "alwaysOn": "∞ Always on",
+      "pausedTitle": "Paused",
+      "pausedBody": "Return to this tab to resume keeping the screen awake.",
+      "unsupportedTitle": "Wake Lock isn’t supported here",
+      "unsupportedBody": "Your browser can’t keep the screen awake. Try a recent version of Chrome, Edge, or Safari."
+    },
+    "notice": "Keep this page open and visible. Switching tabs or minimizing pauses the effect.",
+    "toast": {
+      "finished": "Timer finished"
+    },
+    "docTitle": {
+      "active": "Keep Awake",
+      "always": "Awake"
+    },
+    "moreWays": {
+      "heading": "More ways to stay awake",
+      "subtitle": "Turn this tab into a full-screen clock, or add it to your browser.",
+      "digital": {
+        "title": "Digital Clock",
+        "description": "A clean, full-screen digital clock that keeps your screen on. Great for desks and nightstands.",
+        "cta": "Open Digital"
+      },
+      "flip": {
+        "title": "Flip Clock",
+        "description": "A retro flip-style clock with smooth animated cards. Minimal, calm, and always awake.",
+        "cta": "Open Flip"
+      },
+      "extension": {
+        "badge": "Coming soon",
+        "title": "Browser Extension",
+        "description": "Keep any tab awake with one click, right from your toolbar. Join the waitlist to hear when it launches.",
+        "cta": "Notify me"
+      }
+    },
+    "what": {
+      "heading": "What is Keep Awake?",
+      "body": "Keep Awake is a free, browser-based tool that prevents your screen from dimming, locking, or going to sleep. It uses the built-in Screen Wake Lock API, so there’s nothing to install and nothing runs in the background. Just open the page, turn it on, and your display stays lit for as long as you need."
+    },
+    "why": {
+      "heading": "Why choose Keep Awake",
+      "items": [
+        {
+          "icon": "bolt",
+          "title": "Instant, no install",
+          "description": "Works right in your browser. No downloads, accounts, or permissions to grant."
+        },
+        {
+          "icon": "lock",
+          "title": "Private by design",
+          "description": "Everything runs locally on your device. No tracking, no data leaves your browser."
+        },
+        {
+          "icon": "clock",
+          "title": "Precise timers",
+          "description": "Set an exact duration or keep it on forever. Countdowns stay accurate even when throttled."
+        },
+        {
+          "icon": "battery",
+          "title": "Battery-friendly",
+          "description": "Only the display stays on. No CPU-heavy tricks or fake activity in the background."
+        },
+        {
+          "icon": "devices",
+          "title": "Works everywhere",
+          "description": "Laptops, desktops, tablets, and phones, on any modern browser with Wake Lock support."
+        },
+        {
+          "icon": "moon",
+          "title": "Easy on the eyes",
+          "description": "Dark by default with a light theme, tuned for long sessions and dim rooms."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "What people use it for",
+      "items": [
+        {
+          "icon": "download",
+          "title": "Downloads & uploads",
+          "description": "Keep transfers going without the screen sleeping and pausing your session."
+        },
+        {
+          "icon": "code",
+          "title": "Coding & AI sessions",
+          "description": "Watch builds, logs, or long-running AI tasks without touching the mouse."
+        },
+        {
+          "icon": "present",
+          "title": "Presentations & reading",
+          "description": "Slides, dashboards, recipes, and sheet music stay visible, hands-free."
+        }
+      ]
+    },
+    "how": {
+      "heading": "How to use it",
+      "steps": [
+        {
+          "title": "Pick a duration",
+          "description": "Choose Always On, a preset, or set a custom time."
+        },
+        {
+          "title": "Flip the switch",
+          "description": "Turn on Keep Awake. Your browser may ask you to confirm."
+        },
+        {
+          "title": "Leave the tab open",
+          "description": "Keep this tab visible. It pauses if hidden and resumes when you return."
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Is Keep Awake free?",
+          "answer": "Yes. It’s completely free, with no account and no ads that follow you around."
+        },
+        {
+          "question": "Does it work if I switch tabs or minimize the window?",
+          "answer": "No. Browsers only allow a wake lock while the tab is visible. If you switch away or minimize, it pauses and then resumes automatically when you come back."
+        },
+        {
+          "question": "Will it drain my battery?",
+          "answer": "It only keeps the display awake, which uses some power like any lit screen. It doesn’t run heavy background work, so the impact is minimal."
+        },
+        {
+          "question": "Which browsers are supported?",
+          "answer": "Recent versions of Chrome, Edge, and Safari support the Screen Wake Lock API. Older browsers may fall back to a lightweight video method or may not be supported."
+        },
+        {
+          "question": "Is any of my data collected?",
+          "answer": "No. Everything runs locally in your browser. Your settings are stored on your device and never sent anywhere."
+        }
+      ]
+    },
+    "footer": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact",
+      "changelog": "Changelog",
+      "rights": "All rights reserved."
+    }
+  },
+  "switcher": {
+    "label": "Switch mode",
+    "awake": "Awake",
+    "digital": "Digital",
+    "flip": "Flip",
+    "timer": "Timer"
+  },
+  "clock": {
+    "view": {
+      "digital": "Digital",
+      "flip": "Flip",
+      "timer": "Timer",
+      "worldClock": "World Clock",
+      "soon": "soon"
+    },
+    "buttons": {
+      "settings": "Settings",
+      "keepOn": "Keep screen on",
+      "keepOnActive": "Screen stays on",
+      "fullscreen": "Enter fullscreen",
+      "exitFullscreen": "Exit fullscreen"
+    },
+    "settings": {
+      "title": "Settings",
+      "format": "Format",
+      "format24": "24H",
+      "format12": "12H",
+      "second": "Seconds",
+      "dayYear": "Day and Year",
+      "template": "Clock Template"
+    },
+    "guide": {
+      "title": "Welcome to the clock",
+      "step1": "Open Settings to change format, seconds, and the look.",
+      "step2": "Tap the sun to keep your screen awake.",
+      "step3": "Pinch to zoom the clock; double-tap to reset.",
+      "gotIt": "Got it"
+    },
+    "digital": {
+      "seo": {
+        "title": "Digital Clock: full-screen, keeps your screen on",
+        "description": "A clean full-screen digital clock with seven-segment and minimal themes. Keeps your screen awake, no install."
+      },
+      "heading": "Full-screen digital clock",
+      "intro": "A large, legible digital clock for desks, nightstands, and studios. Pick a seven-segment LCD look or a minimal theme, choose 12H or 24H, and keep your screen awake."
+    },
+    "flip": {
+      "seo": {
+        "title": "Flip Clock: animated full-screen flip clock",
+        "description": "A retro animated flip clock in ten themes. Full-screen, keeps your screen on, works offline, no install."
+      },
+      "heading": "Animated flip clock",
+      "intro": "A calm, retro flip clock with smooth card animations and ten color themes. Great for focus sessions, and it keeps your screen awake."
+    },
+    "sections": {
+      "useCases": {
+        "heading": "Great for",
+        "items": [
+          {
+            "icon": "moon",
+            "title": "Nightstand & desk",
+            "description": "A big, glare-friendly clock you can read across the room."
+          },
+          {
+            "icon": "present",
+            "title": "Studios & streams",
+            "description": "A tidy on-screen clock for recording, timing, and overlays."
+          },
+          {
+            "icon": "code",
+            "title": "Focus sessions",
+            "description": "Keep time visible while you work, without the screen sleeping."
+          }
+        ]
+      },
+      "how": {
+        "heading": "How to use it",
+        "steps": [
+          {
+            "title": "Choose your look",
+            "description": "Open Settings and pick a template, 12H/24H, and seconds."
+          },
+          {
+            "title": "Keep the screen on",
+            "description": "Tap the sun, or go fullscreen. Both keep your display awake."
+          },
+          {
+            "title": "Go big",
+            "description": "Enter fullscreen; on mobile, pinch to size it just right."
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Frequently asked questions",
+        "items": [
+          {
+            "question": "Does the clock keep my screen awake?",
+            "answer": "Yes. Tap the sun icon or enter fullscreen and the screen stays on while the tab is visible."
+          },
+          {
+            "question": "Can I switch between digital and flip styles?",
+            "answer": "Yes. Use the Digital and Flip links in the top bar; each remembers its own settings."
+          },
+          {
+            "question": "Is it free and private?",
+            "answer": "Completely. It runs entirely in your browser, stores settings on your device, and needs no account."
+          },
+          {
+            "question": "Does it work offline?",
+            "answer": "Yes. Once loaded, the clock keeps running without a network connection."
+          }
+        ]
+      }
+    }
+  },
+  "timer": {
+    "seo": {
+      "title": "Timer — Countdown & Stopwatch",
+      "description": "A free online timer: simple countdown, work/rest intervals, an interval bell, and a stopwatch. Keeps your screen on while it runs."
+    },
+    "heading": "Timer",
+    "intro": "A countdown and stopwatch that keeps your screen awake while it runs. Set a simple countdown, cycle work and rest rounds, ring a bell at intervals, or just track elapsed time.",
+    "mode": {
+      "countdown": "Countdown",
+      "stopwatch": "Stopwatch"
+    },
+    "type": {
+      "simple": "Simple",
+      "interval": "Interval",
+      "bell": "Bell"
+    },
+    "fields": {
+      "mode": "Mode",
+      "type": "Type",
+      "setTime": "Set Time",
+      "workTime": "Work Time",
+      "restTime": "Rest Time",
+      "rounds": "Rounds",
+      "roundsSuffix": "×",
+      "longBreakEvery": "Long Break Every",
+      "longBreakEverySuffix": "×",
+      "longBreakTime": "Long Break",
+      "totalTime": "Total Time",
+      "bellInterval": "Interval Bell",
+      "alarmSound": "Alarm Sound",
+      "milliseconds": "Milliseconds",
+      "hoursSuffix": "h",
+      "minutesSuffix": "m",
+      "secondsSuffix": "s"
+    },
+    "phase": {
+      "work": "FOCUS",
+      "rest": "REST",
+      "longBreak": "LONG BREAK"
+    },
+    "buttons": {
+      "start": "Start",
+      "pause": "Pause",
+      "reset": "Reset",
+      "split": "Split"
+    },
+    "laps": {
+      "label": "Lap times"
+    },
+    "toast": {
+      "finished": "Timer finished"
+    },
+    "docTitle": "Timer",
+    "sections": {
+      "useCases": {
+        "heading": "Great for",
+        "items": [
+          {
+            "icon": "code",
+            "title": "Focus sessions",
+            "description": "Run work/rest rounds while you code, write, or study, screen included."
+          },
+          {
+            "icon": "present",
+            "title": "Workouts",
+            "description": "Interval training with a bell every round, no phone lock screen interrupting you."
+          },
+          {
+            "icon": "clock",
+            "title": "Cooking & breaks",
+            "description": "A simple countdown for the kitchen, a break, or anything else on the clock."
+          }
+        ]
+      },
+      "how": {
+        "heading": "How to use it",
+        "steps": [
+          {
+            "title": "Pick a mode",
+            "description": "Countdown (Simple, Interval, or Bell) or Stopwatch, from Settings."
+          },
+          {
+            "title": "Set your time",
+            "description": "Enter hours, minutes, and seconds, or rounds for Interval."
+          },
+          {
+            "title": "Press start",
+            "description": "The timer runs and keeps your screen awake until you pause or it finishes."
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Frequently asked questions",
+        "items": [
+          {
+            "question": "What's the difference between Interval and Bell?",
+            "answer": "Interval alternates full Work and Rest periods for a set number of rounds, like a classic workout timer. Bell counts down one total duration and rings periodically along the way, without splitting into separate phases."
+          },
+          {
+            "question": "Does the timer keep my screen awake?",
+            "answer": "Yes, starting the timer keeps your screen on for as long as it runs, the same Screen Wake Lock used by the rest of the site."
+          },
+          {
+            "question": "Will it still ring if I switch tabs?",
+            "answer": "The countdown keeps accurate time in the background, but browsers can throttle inactive tabs, so the display and sound may lag slightly until you return to the tab."
+          },
+          {
+            "question": "Can I turn off the sound?",
+            "answer": "Yes, toggle Alarm Sound off in Settings. It has no effect on Stopwatch, which never plays a sound."
+          }
+        ]
+      }
+    }
+  },
+  "legal": {
+    "privacy": {
+      "seo": {
+        "title": "Privacy Policy · Awake Clock",
+        "description": "How Awake Clock handles your data: no accounts, no tracking, everything stays on your device."
+      },
+      "heading": "Privacy Policy",
+      "intro": "Awake Clock is built to need as little of your data as possible. This page explains exactly what happens, and what does not.",
+      "sections": [
+        {
+          "title": "What we collect",
+          "body": "Nothing. Awake Clock has no accounts, no analytics, and no tracking scripts. We don't know you visited, and we can't, because nothing is sent to a server."
+        },
+        {
+          "title": "What's stored on your device",
+          "body": "Your preferences, such as theme, duration, clock template, and timer settings, are saved in your browser's local storage so they're there next time you visit. This data never leaves your device and is not accessible to us."
+        },
+        {
+          "title": "The Screen Wake Lock",
+          "body": "Keeping your screen on uses your browser's built-in Screen Wake Lock API (or, on unsupported browsers, a silent looping video). Neither method reads, records, or transmits anything, it only tells your device not to sleep."
+        },
+        {
+          "title": "Third-party services",
+          "body": "This site embeds a 'Buy Me a Coffee' support button, a third-party widget that may load resources from buymeacoffee.com. If you interact with it, your activity is subject to Buy Me a Coffee's own privacy policy, not ours."
+        },
+        {
+          "title": "Changes to this policy",
+          "body": "If this policy changes, the update will be posted on this page. Continued use of the site after a change means you accept the update."
+        },
+        {
+          "title": "Questions",
+          "body": "If you have questions about this policy, reach out via the Contact page."
+        }
+      ]
+    },
+    "terms": {
+      "seo": {
+        "title": "Terms of Service · Awake Clock",
+        "description": "The terms for using Awake Clock: free to use, provided as is, no warranty."
+      },
+      "heading": "Terms of Service",
+      "intro": "These terms cover your use of Awake Clock. By using the site, you agree to them.",
+      "sections": [
+        {
+          "title": "Using the service",
+          "body": "Awake Clock is free to use, with no account required. You may use it for personal or commercial purposes, including keeping your screen awake, running the clock displays, and using the timer."
+        },
+        {
+          "title": "No warranty",
+          "body": "The site is provided \"as is,\" without warranty of any kind. We don't guarantee that the Screen Wake Lock API will behave identically across every browser, operating system, or power-saving setting, some devices override it regardless of what any app requests."
+        },
+        {
+          "title": "Acceptable use",
+          "body": "Don't use Awake Clock to violate any law, disrupt the service for others, or attempt to interfere with how it runs."
+        },
+        {
+          "title": "Changes to the service",
+          "body": "Features may be added, changed, or removed at any time. We'll try to keep this page and the FAQ current, but the product can evolve without prior notice."
+        },
+        {
+          "title": "Limitation of liability",
+          "body": "We're not liable for any damages, direct or indirect, arising from your use of, or inability to use, this site."
+        },
+        {
+          "title": "Contact",
+          "body": "Questions about these terms can be sent through the Contact page."
+        }
+      ]
+    },
+    "contact": {
+      "seo": {
+        "title": "Contact · Awake Clock",
+        "description": "Get in touch about Awake Clock: feedback, bug reports, or support."
+      },
+      "heading": "Contact",
+      "intro": "Awake Clock is a small, independent project. Feedback, bug reports, and ideas are all welcome.",
+      "emailLabel": "Email",
+      "email": "bahriddin.me@gmail.com",
+      "supportLabel": "Support the project",
+      "supportBody": "If Awake Clock is useful to you, you can support its development with a coffee.",
+      "supportCta": "Buy me a coffee"
+    }
+  }
+}

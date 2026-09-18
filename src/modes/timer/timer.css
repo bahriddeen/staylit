@@ -1,0 +1,240 @@
+/* Timer mode: stage (display + phase label + controls) and below-fold content
+   reuses the shared .awake / .section / .feature-grid / .faq primitives from
+   src/styles/content.css (loaded globally). Unlike Digital/Flip, Timer has no
+   color templates — it follows the site's normal light/dark theme. */
+
+.timer-stage {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 3vh, 2rem);
+  padding: clamp(1rem, 4vh, 3rem) 1rem;
+  background: var(--bg);
+  overflow-y: auto;
+}
+
+.timer-display {
+  font-family: var(--font-ui);
+  font-weight: 200;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(2.75rem, 13vw, 8rem);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  color: var(--text);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Last two millisecond digits, rendered smaller like a classic stopwatch. */
+.timer-display__ms {
+  font-size: 0.45em;
+  color: var(--text-muted);
+  vertical-align: bottom;
+}
+
+.timer-phase {
+  font-size: clamp(0.95rem, 2.4vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.timer-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timer-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.timer-btn:hover {
+  background: color-mix(in srgb, var(--surface-2) 70%, var(--text) 6%);
+}
+
+.timer-btn:active {
+  transform: translateY(1px);
+}
+
+.timer-btn--play {
+  background: var(--success);
+  border-color: var(--success);
+  color: #04140a;
+}
+
+.timer-btn--play:hover {
+  background: color-mix(in srgb, var(--success) 88%, #000);
+}
+
+/* ---------- Lap / split list (Stopwatch only) ---------- */
+
+.timer-laps {
+  --lap-row-h: 3.4rem;
+  --lap-gap: 0.6rem;
+  list-style: none;
+  padding: 0 0.35rem 0 0; /* room for the scrollbar so it doesn't sit on the text */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--lap-gap);
+  width: min(420px, 92vw);
+  /* Show at most 5 rows; beyond that, scroll. */
+  max-height: calc(5 * var(--lap-row-h) + 4 * var(--lap-gap));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.timer-laps::-webkit-scrollbar {
+  width: 6px;
+}
+
+.timer-laps::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.timer-laps__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--lap-row-h);
+  box-sizing: border-box;
+  padding: 0 1.1rem;
+  flex: none;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.timer-laps__row--latest {
+  background: color-mix(in srgb, var(--success) 14%, var(--surface-2));
+  border-color: color-mix(in srgb, var(--success) 45%, var(--border));
+}
+
+.timer-laps__index {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-laps__time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ---------- Settings panel (non-blocking, no backdrop) ---------- */
+
+.timer-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: min(380px, 100%);
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-top: calc(var(--nav-h) + 0.5rem);
+  transform: translateX(100%);
+  transition: transform var(--transition);
+}
+
+.timer-panel--in {
+  transform: none;
+}
+
+.timer-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 1.5rem 1rem;
+}
+
+.timer-panel__title {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 800;
+}
+
+.timer-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 0 1.5rem 2rem;
+}
+
+.timer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* H:M:S duration group: bold label on its own line, then a full-width row of
+   three equal-width boxed number fields below (matches the reference site). */
+.timer-hms-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.timer-hms {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.timer-hms .num-field {
+  flex: 1;
+}
+
+.timer-hms .num-field__box {
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.timer-row__label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Boxier segmented control (less rounded than the pill style used elsewhere),
+   matching the reference site's Mode/Type controls. Scoped to this panel only. */
+.timer-panel .segmented {
+  border-radius: var(--radius);
+}
+
+.timer-panel .segmented__pill {
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.1rem;
+}
+
+/* ---------- Below-fold content ---------- */
+
+.timer-below {
+  background: var(--bg);
+  color: var(--text);
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem);
+}

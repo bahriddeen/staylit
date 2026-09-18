@@ -1,0 +1,496 @@
+{
+  "app": {
+    "title": "Awake Clock",
+    "tagline": "让你的屏幕保持常亮。"
+  },
+  "theme": {
+    "toggle": "切换主题",
+    "light": "浅色",
+    "dark": "深色"
+  },
+  "common": {
+    "close": "关闭",
+    "settings": "设置",
+    "fullscreen": "全屏",
+    "exitFullscreen": "退出全屏",
+    "none": "无",
+    "learnMore": "了解更多",
+    "back": "返回 Awake Clock"
+  },
+  "awake": {
+    "hero": {
+      "title": "让屏幕保持常亮",
+      "subtitle": "防止显示屏变暗或进入睡眠。无需安装，无需注册。设置定时器，或让它一直常亮。",
+      "durationLabel": "时长",
+      "keepAwakeLabel": "保持常亮"
+    },
+    "duration": {
+      "always": "始终常亮",
+      "m10": "10分钟",
+      "m30": "30分钟",
+      "h1": "1小时",
+      "h2": "2小时",
+      "custom": "自定义",
+      "hoursLabel": "小时",
+      "minutesLabel": "分钟",
+      "hoursSuffix": "时",
+      "minutesSuffix": "分"
+    },
+    "status": {
+      "off": "屏幕可以正常进入睡眠",
+      "alwaysOn": "∞ 始终常亮",
+      "pausedTitle": "已暂停",
+      "pausedBody": "返回此标签页以继续保持屏幕常亮。",
+      "unsupportedTitle": "此处不支持 Wake Lock",
+      "unsupportedBody": "你的浏览器无法保持屏幕常亮。请尝试较新版本的 Chrome、Edge 或 Safari。"
+    },
+    "notice": "请保持此页面打开并可见。切换标签页或最小化会暂停该效果。",
+    "toast": {
+      "finished": "定时器已结束"
+    },
+    "docTitle": {
+      "active": "屏幕常亮",
+      "always": "Awake"
+    },
+    "moreWays": {
+      "heading": "保持清醒的更多方式",
+      "subtitle": "把此标签页变成全屏时钟，或将其添加到你的浏览器。",
+      "digital": {
+        "title": "数字时钟",
+        "description": "简洁的全屏数字时钟，让你的屏幕保持常亮。非常适合书桌和床头柜。",
+        "cta": "打开数字时钟"
+      },
+      "flip": {
+        "title": "翻页时钟",
+        "description": "带流畅翻页卡片动画的复古翻页时钟。简约、平静、始终常亮。",
+        "cta": "打开翻页时钟"
+      },
+      "extension": {
+        "badge": "即将推出",
+        "title": "浏览器扩展",
+        "description": "直接从工具栏一键让任何标签页保持常亮。加入候补名单，第一时间获知上线消息。",
+        "cta": "通知我"
+      }
+    },
+    "what": {
+      "heading": "什么是 Keep Awake？",
+      "body": "Keep Awake 是一款免费的基于浏览器的工具，可防止你的屏幕变暗、锁定或进入睡眠。它使用内置的 Screen Wake Lock API，因此无需安装任何东西，也不会在后台运行任何程序。只需打开页面并开启，屏幕就会按你需要的时长保持常亮。"
+    },
+    "why": {
+      "heading": "为什么选择 Keep Awake",
+      "items": [
+        {
+          "icon": "bolt",
+          "title": "即刻可用，无需安装",
+          "description": "直接在浏览器中运行。无需下载、账户或授予任何权限。"
+        },
+        {
+          "icon": "lock",
+          "title": "隐私优先设计",
+          "description": "一切都在你的设备本地运行。没有跟踪，数据不会离开你的浏览器。"
+        },
+        {
+          "icon": "clock",
+          "title": "精准定时器",
+          "description": "设置精确时长，或让它永久常亮。即使被限速，倒计时也依然准确。"
+        },
+        {
+          "icon": "battery",
+          "title": "省电友好",
+          "description": "只有显示屏保持常亮。没有占用 CPU 的花招，也没有后台的虚假活动。"
+        },
+        {
+          "icon": "devices",
+          "title": "随处可用",
+          "description": "笔记本、台式机、平板和手机，任何支持 Wake Lock 的现代浏览器都能使用。"
+        },
+        {
+          "icon": "moon",
+          "title": "护眼舒适",
+          "description": "默认深色并提供浅色主题，为长时间使用和昏暗房间进行了调校。"
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "人们用它来做什么",
+      "items": [
+        {
+          "icon": "download",
+          "title": "下载与上传",
+          "description": "让传输持续进行，屏幕不会睡眠而中断你的会话。"
+        },
+        {
+          "icon": "code",
+          "title": "编程与 AI 任务",
+          "description": "无需触碰鼠标，即可观察构建、日志或长时间运行的 AI 任务。"
+        },
+        {
+          "icon": "present",
+          "title": "演示与阅读",
+          "description": "幻灯片、仪表盘、菜谱和乐谱保持可见，无需动手。"
+        }
+      ]
+    },
+    "how": {
+      "heading": "使用方法",
+      "steps": [
+        {
+          "title": "选择时长",
+          "description": "选择“始终常亮”、预设，或设置自定义时间。"
+        },
+        {
+          "title": "打开开关",
+          "description": "开启 Keep Awake。你的浏览器可能会要求确认。"
+        },
+        {
+          "title": "保持标签页打开",
+          "description": "让此标签页保持可见。隐藏时会暂停，返回时会恢复。"
+        }
+      ]
+    },
+    "faq": {
+      "heading": "常见问题",
+      "items": [
+        {
+          "question": "Keep Awake 免费吗？",
+          "answer": "是的。完全免费，无需账户，也没有追着你的广告。"
+        },
+        {
+          "question": "切换标签页或最小化窗口后还能用吗？",
+          "answer": "不能。浏览器只在标签页可见时才允许 wake lock。如果你切走或最小化，它会暂停，返回时自动恢复。"
+        },
+        {
+          "question": "会耗电吗？",
+          "answer": "它只让显示屏保持常亮，像任何亮着的屏幕一样消耗一些电量。它不运行繁重的后台工作，所以影响很小。"
+        },
+        {
+          "question": "支持哪些浏览器？",
+          "answer": "较新版本的 Chrome、Edge 和 Safari 支持 Screen Wake Lock API。较旧的浏览器可能会退回到轻量的视频方式，或不受支持。"
+        },
+        {
+          "question": "会收集我的任何数据吗？",
+          "answer": "不会。一切都在你的浏览器本地运行。你的设置保存在你的设备上，绝不会发送到任何地方。"
+        }
+      ]
+    },
+    "footer": {
+      "privacy": "隐私",
+      "terms": "条款",
+      "contact": "联系",
+      "changelog": "更新日志",
+      "rights": "保留所有权利。"
+    }
+  },
+  "switcher": {
+    "label": "切换模式",
+    "awake": "常亮",
+    "digital": "数字",
+    "flip": "翻页",
+    "timer": "定时器"
+  },
+  "clock": {
+    "view": {
+      "digital": "数字",
+      "flip": "翻页",
+      "timer": "定时器",
+      "worldClock": "世界时钟",
+      "soon": "即将推出"
+    },
+    "buttons": {
+      "settings": "设置",
+      "keepOn": "保持屏幕常亮",
+      "keepOnActive": "屏幕保持常亮",
+      "fullscreen": "全屏",
+      "exitFullscreen": "退出全屏"
+    },
+    "settings": {
+      "title": "设置",
+      "format": "格式",
+      "format24": "24H",
+      "format12": "12H",
+      "second": "秒",
+      "dayYear": "日期与年份",
+      "template": "时钟样式"
+    },
+    "guide": {
+      "title": "欢迎使用时钟",
+      "step1": "打开设置以更改格式、秒数和外观。",
+      "step2": "点按太阳图标以保持屏幕常亮。",
+      "step3": "双指捏合缩放时钟；双击重置。",
+      "gotIt": "知道了"
+    },
+    "digital": {
+      "seo": {
+        "title": "数字时钟：全屏，保持屏幕常亮",
+        "description": "简洁的全屏数字时钟，提供七段和极简主题。保持屏幕常亮，无需安装。"
+      },
+      "heading": "全屏数字时钟",
+      "intro": "适合书桌、床头柜和工作室的大号、易读数字时钟。选择七段 LCD 外观或极简主题，选择 12 或 24 小时制，让屏幕保持常亮。"
+    },
+    "flip": {
+      "seo": {
+        "title": "翻页时钟：全屏动画翻页时钟",
+        "description": "十种主题的复古动画翻页时钟。全屏，保持屏幕常亮，可离线运行，无需安装。"
+      },
+      "heading": "动画翻页时钟",
+      "intro": "带流畅卡片动画和十种配色主题的平静复古翻页时钟。非常适合专注时段，并让屏幕保持常亮。"
+    },
+    "sections": {
+      "useCases": {
+        "heading": "适用于",
+        "items": [
+          {
+            "icon": "moon",
+            "title": "床头柜与书桌",
+            "description": "一款无眩光的大号时钟，隔着房间也能看清。"
+          },
+          {
+            "icon": "present",
+            "title": "工作室与直播",
+            "description": "整洁的屏上时钟，用于录制、计时和叠加显示。"
+          },
+          {
+            "icon": "code",
+            "title": "专注时段",
+            "description": "工作时让时间保持可见，屏幕不会睡眠。"
+          }
+        ]
+      },
+      "how": {
+        "heading": "使用方法",
+        "steps": [
+          {
+            "title": "选择外观",
+            "description": "打开设置，选择模板、12/24 小时制和秒数。"
+          },
+          {
+            "title": "保持屏幕常亮",
+            "description": "点按太阳图标或进入全屏。两者都能让屏幕保持常亮。"
+          },
+          {
+            "title": "放大显示",
+            "description": "进入全屏；在手机上双指捏合以调整大小。"
+          }
+        ]
+      },
+      "faq": {
+        "heading": "常见问题",
+        "items": [
+          {
+            "question": "时钟会让我的屏幕保持常亮吗？",
+            "answer": "会。点按太阳图标或进入全屏，只要标签页可见，屏幕就会保持常亮。"
+          },
+          {
+            "question": "我可以在数字和翻页样式之间切换吗？",
+            "answer": "可以。使用顶部栏中的“数字”和“翻页”链接；每种样式都会记住各自的设置。"
+          },
+          {
+            "question": "它免费且注重隐私吗？",
+            "answer": "完全如此。它完全在你的浏览器中运行，将设置保存在你的设备上，无需账户。"
+          },
+          {
+            "question": "可以离线运行吗？",
+            "answer": "可以。加载后，时钟无需网络连接即可继续运行。"
+          }
+        ]
+      }
+    }
+  },
+  "timer": {
+    "seo": {
+      "title": "定时器 — 倒计时与秒表",
+      "description": "免费在线定时器：简单倒计时、工作/休息间隔、间隔铃声和秒表。运行时保持屏幕常亮。"
+    },
+    "heading": "定时器",
+    "intro": "运行时保持屏幕常亮的倒计时和秒表。设置简单倒计时、循环进行工作和休息回合、按间隔响铃，或只是记录已用时间。",
+    "mode": {
+      "countdown": "倒计时",
+      "stopwatch": "秒表"
+    },
+    "type": {
+      "simple": "简单",
+      "interval": "间隔",
+      "bell": "铃声"
+    },
+    "fields": {
+      "mode": "模式",
+      "type": "类型",
+      "setTime": "设置时间",
+      "workTime": "工作时间",
+      "restTime": "休息时间",
+      "rounds": "回合",
+      "roundsSuffix": "×",
+      "longBreakEvery": "长休息间隔",
+      "longBreakEverySuffix": "×",
+      "longBreakTime": "长休息",
+      "totalTime": "总时间",
+      "bellInterval": "间隔铃声",
+      "alarmSound": "提示音",
+      "milliseconds": "毫秒",
+      "hoursSuffix": "时",
+      "minutesSuffix": "分",
+      "secondsSuffix": "秒"
+    },
+    "phase": {
+      "work": "专注",
+      "rest": "休息",
+      "longBreak": "长休息"
+    },
+    "buttons": {
+      "start": "开始",
+      "pause": "暂停",
+      "reset": "重置",
+      "split": "计次"
+    },
+    "laps": {
+      "label": "计次时间"
+    },
+    "toast": {
+      "finished": "定时器已结束"
+    },
+    "docTitle": "定时器",
+    "sections": {
+      "useCases": {
+        "heading": "适用于",
+        "items": [
+          {
+            "icon": "code",
+            "title": "专注时段",
+            "description": "在编程、写作或学习时进行工作/休息回合，屏幕也一并常亮。"
+          },
+          {
+            "icon": "present",
+            "title": "健身",
+            "description": "每回合响铃的间隔训练，不会被手机锁屏打断。"
+          },
+          {
+            "icon": "clock",
+            "title": "烹饪与休息",
+            "description": "用于厨房、休息或任何按时计时事项的简单倒计时。"
+          }
+        ]
+      },
+      "how": {
+        "heading": "使用方法",
+        "steps": [
+          {
+            "title": "选择模式",
+            "description": "在设置中选择倒计时（简单、间隔或铃声）或秒表。"
+          },
+          {
+            "title": "设置你的时间",
+            "description": "输入小时、分钟和秒，或间隔模式的回合数。"
+          },
+          {
+            "title": "按下开始",
+            "description": "定时器运行，并在你暂停或它结束之前保持屏幕常亮。"
+          }
+        ]
+      },
+      "faq": {
+        "heading": "常见问题",
+        "items": [
+          {
+            "question": "间隔和铃声有什么区别？",
+            "answer": "间隔会在设定的回合数内交替进行完整的工作和休息时段，就像经典的健身定时器。铃声则对一个总时长进行倒计时，并在过程中定期响铃，不会拆分成独立的阶段。"
+          },
+          {
+            "question": "定时器会让我的屏幕保持常亮吗？",
+            "answer": "会，启动定时器会在其运行期间保持屏幕常亮，使用的是与网站其他部分相同的 Screen Wake Lock。"
+          },
+          {
+            "question": "如果我切换标签页，它还会响吗？",
+            "answer": "倒计时在后台仍会精确计时，但浏览器可能会限制非活动标签页，因此在你返回标签页之前，显示和声音可能会略有延迟。"
+          },
+          {
+            "question": "我可以关闭声音吗？",
+            "answer": "可以，在设置中关闭“提示音”。这对秒表没有影响，秒表从不播放声音。"
+          }
+        ]
+      }
+    }
+  },
+  "legal": {
+    "privacy": {
+      "seo": {
+        "title": "隐私政策 · Awake Clock",
+        "description": "Awake Clock 如何处理你的数据：没有账户、没有跟踪，一切都留在你的设备上。"
+      },
+      "heading": "隐私政策",
+      "intro": "Awake Clock 的设计尽可能少地需要你的数据。本页面准确说明会发生什么，以及不会发生什么。",
+      "sections": [
+        {
+          "title": "我们收集什么",
+          "body": "什么都不收集。Awake Clock 没有账户、没有分析，也没有跟踪脚本。我们不知道你访问过，也无法知道，因为没有任何内容发送到服务器。"
+        },
+        {
+          "title": "你的设备上存储了什么",
+          "body": "你的偏好设置，例如主题、时长、时钟模板和定时器设置，会保存在浏览器的本地存储中，以便你下次访问时仍在。这些数据绝不会离开你的设备，我们也无法访问。"
+        },
+        {
+          "title": "Screen Wake Lock",
+          "body": "保持屏幕常亮使用的是浏览器内置的 Screen Wake Lock API（在不支持的浏览器上则使用无声循环视频）。两种方法都不会读取、记录或传输任何内容，只是告诉你的设备不要睡眠。"
+        },
+        {
+          "title": "第三方服务",
+          "body": "本网站嵌入了一个“Buy Me a Coffee”支持按钮，这是一个可能从 buymeacoffee.com 加载资源的第三方小组件。如果你与之交互，你的活动将受 Buy Me a Coffee 自身的隐私政策约束，而非我们的。"
+        },
+        {
+          "title": "本政策的变更",
+          "body": "如果本政策发生变更，更新将发布在本页面。变更后继续使用本网站即表示你接受该更新。"
+        },
+        {
+          "title": "疑问",
+          "body": "如果你对本政策有疑问，请通过联系页面与我们联系。"
+        }
+      ]
+    },
+    "terms": {
+      "seo": {
+        "title": "服务条款 · Awake Clock",
+        "description": "使用 Awake Clock 的条款：免费使用，按原样提供，不作担保。"
+      },
+      "heading": "服务条款",
+      "intro": "这些条款涵盖你对 Awake Clock 的使用。使用本网站即表示你同意这些条款。",
+      "sections": [
+        {
+          "title": "使用服务",
+          "body": "Awake Clock 免费使用，无需账户。你可以将其用于个人或商业用途，包括保持屏幕常亮、运行时钟显示以及使用定时器。"
+        },
+        {
+          "title": "不作担保",
+          "body": "本网站按“原样”提供，不作任何形式的担保。我们不保证 Screen Wake Lock API 在每种浏览器、操作系统或省电设置下都表现一致——无论应用请求什么，有些设备都会将其覆盖。"
+        },
+        {
+          "title": "可接受的使用",
+          "body": "请勿使用 Awake Clock 违反任何法律、干扰他人的服务或试图干预其运行。"
+        },
+        {
+          "title": "服务的变更",
+          "body": "功能可能随时添加、更改或移除。我们会尽力保持本页面和常见问题为最新，但产品可能在不事先通知的情况下演进。"
+        },
+        {
+          "title": "责任限制",
+          "body": "对于因你使用或无法使用本网站而产生的任何直接或间接损害，我们概不负责。"
+        },
+        {
+          "title": "联系",
+          "body": "有关这些条款的问题可通过联系页面发送。"
+        }
+      ]
+    },
+    "contact": {
+      "seo": {
+        "title": "联系 · Awake Clock",
+        "description": "就 Awake Clock 联系我们：反馈、错误报告或支持。"
+      },
+      "heading": "联系",
+      "intro": "Awake Clock 是一个小型独立项目。欢迎提供反馈、错误报告和想法。",
+      "emailLabel": "电子邮件",
+      "email": "bahriddin.me@gmail.com",
+      "supportLabel": "支持本项目",
+      "supportBody": "如果 Awake Clock 对你有用，你可以请我喝杯咖啡来支持它的开发。",
+      "supportCta": "请我喝杯咖啡"
+    }
+  }
+}

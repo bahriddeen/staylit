@@ -1,0 +1,496 @@
+{
+  "app": {
+    "title": "Awake Clock",
+    "tagline": "Halten Sie Ihren Bildschirm wach."
+  },
+  "theme": {
+    "toggle": "Design wechseln",
+    "light": "Hell",
+    "dark": "Dunkel"
+  },
+  "common": {
+    "close": "Schließen",
+    "settings": "Einstellungen",
+    "fullscreen": "Vollbild",
+    "exitFullscreen": "Vollbild beenden",
+    "none": "Keine",
+    "learnMore": "Mehr erfahren",
+    "back": "Zurück zu Awake Clock"
+  },
+  "awake": {
+    "hero": {
+      "title": "Halten Sie Ihren Bildschirm an",
+      "subtitle": "Verhindern Sie, dass Ihr Display abdunkelt oder in den Ruhezustand geht. Keine Installation, keine Anmeldung. Stellen Sie einen Timer ein oder lassen Sie ihn unbegrenzt an.",
+      "durationLabel": "Dauer",
+      "keepAwakeLabel": "Wach halten"
+    },
+    "duration": {
+      "always": "Immer an",
+      "m10": "10 Min",
+      "m30": "30 Min",
+      "h1": "1 Std",
+      "h2": "2 Std",
+      "custom": "Eigene",
+      "hoursLabel": "Stunden",
+      "minutesLabel": "Minuten",
+      "hoursSuffix": "h",
+      "minutesSuffix": "m"
+    },
+    "status": {
+      "off": "Der Bildschirm kann normal in den Ruhezustand gehen",
+      "alwaysOn": "∞ Immer an",
+      "pausedTitle": "Pausiert",
+      "pausedBody": "Kehren Sie zu diesem Tab zurück, um den Bildschirm weiter wach zu halten.",
+      "unsupportedTitle": "Wake Lock wird hier nicht unterstützt",
+      "unsupportedBody": "Ihr Browser kann den Bildschirm nicht wach halten. Versuchen Sie eine aktuelle Version von Chrome, Edge oder Safari."
+    },
+    "notice": "Lassen Sie diese Seite geöffnet und sichtbar. Beim Wechseln von Tabs oder Minimieren wird der Effekt pausiert.",
+    "toast": {
+      "finished": "Timer beendet"
+    },
+    "docTitle": {
+      "active": "Bildschirm an",
+      "always": "Awake"
+    },
+    "moreWays": {
+      "heading": "Weitere Wege, wach zu bleiben",
+      "subtitle": "Verwandeln Sie diesen Tab in eine Vollbild-Uhr oder fügen Sie ihn Ihrem Browser hinzu.",
+      "digital": {
+        "title": "Digitaluhr",
+        "description": "Eine klare, bildschirmfüllende Digitaluhr, die Ihren Bildschirm anlässt. Ideal für Schreibtische und Nachttische.",
+        "cta": "Digital öffnen"
+      },
+      "flip": {
+        "title": "Fallblattuhr",
+        "description": "Eine Retro-Fallblattuhr mit sanft animierten Karten. Minimalistisch, ruhig und immer wach.",
+        "cta": "Fallblatt öffnen"
+      },
+      "extension": {
+        "badge": "Demnächst",
+        "title": "Browser-Erweiterung",
+        "description": "Halten Sie jeden Tab mit einem Klick direkt aus der Symbolleiste wach. Tragen Sie sich in die Warteliste ein, um vom Start zu erfahren.",
+        "cta": "Benachrichtigen"
+      }
+    },
+    "what": {
+      "heading": "Was ist Keep Awake?",
+      "body": "Keep Awake ist ein kostenloses, browserbasiertes Tool, das verhindert, dass Ihr Bildschirm abdunkelt, sperrt oder in den Ruhezustand geht. Es nutzt die integrierte Screen Wake Lock API, sodass nichts installiert werden muss und nichts im Hintergrund läuft. Öffnen Sie einfach die Seite, schalten Sie es ein, und Ihr Display bleibt so lange an, wie Sie möchten."
+    },
+    "why": {
+      "heading": "Warum Keep Awake",
+      "items": [
+        {
+          "icon": "bolt",
+          "title": "Sofort, keine Installation",
+          "description": "Läuft direkt im Browser. Keine Downloads, Konten oder Berechtigungen nötig."
+        },
+        {
+          "icon": "lock",
+          "title": "Privat by Design",
+          "description": "Alles läuft lokal auf Ihrem Gerät. Kein Tracking, keine Daten verlassen Ihren Browser."
+        },
+        {
+          "icon": "clock",
+          "title": "Präzise Timer",
+          "description": "Legen Sie eine genaue Dauer fest oder lassen Sie es dauerhaft an. Countdowns bleiben auch bei Drosselung genau."
+        },
+        {
+          "icon": "battery",
+          "title": "Batteriefreundlich",
+          "description": "Nur das Display bleibt an. Keine CPU-lastigen Tricks oder vorgetäuschte Aktivität im Hintergrund."
+        },
+        {
+          "icon": "devices",
+          "title": "Funktioniert überall",
+          "description": "Laptops, Desktops, Tablets und Smartphones in jedem modernen Browser mit Wake-Lock-Unterstützung."
+        },
+        {
+          "icon": "moon",
+          "title": "Augenschonend",
+          "description": "Standardmäßig dunkel mit hellem Design, abgestimmt auf lange Sitzungen und dunkle Räume."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "Wofür man es nutzt",
+      "items": [
+        {
+          "icon": "download",
+          "title": "Downloads & Uploads",
+          "description": "Halten Sie Übertragungen am Laufen, ohne dass der Bildschirm in den Ruhezustand geht und Ihre Sitzung pausiert."
+        },
+        {
+          "icon": "code",
+          "title": "Coding & KI-Sitzungen",
+          "description": "Verfolgen Sie Builds, Logs oder lang laufende KI-Aufgaben, ohne die Maus zu berühren."
+        },
+        {
+          "icon": "present",
+          "title": "Präsentationen & Lesen",
+          "description": "Folien, Dashboards, Rezepte und Notenblätter bleiben freihändig sichtbar."
+        }
+      ]
+    },
+    "how": {
+      "heading": "So funktioniert's",
+      "steps": [
+        {
+          "title": "Dauer wählen",
+          "description": "Wählen Sie „Immer an“, eine Voreinstellung oder eine eigene Zeit."
+        },
+        {
+          "title": "Schalter umlegen",
+          "description": "Schalten Sie Keep Awake ein. Ihr Browser fragt möglicherweise nach einer Bestätigung."
+        },
+        {
+          "title": "Tab offen lassen",
+          "description": "Halten Sie diesen Tab sichtbar. Er pausiert, wenn er ausgeblendet ist, und setzt fort, wenn Sie zurückkehren."
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Häufig gestellte Fragen",
+      "items": [
+        {
+          "question": "Ist Keep Awake kostenlos?",
+          "answer": "Ja. Völlig kostenlos, ohne Konto und ohne Werbung, die Ihnen folgt."
+        },
+        {
+          "question": "Funktioniert es, wenn ich Tabs wechsle oder das Fenster minimiere?",
+          "answer": "Nein. Browser erlauben ein Wake Lock nur, solange der Tab sichtbar ist. Wenn Sie wechseln oder minimieren, pausiert es und setzt automatisch fort, wenn Sie zurückkommen."
+        },
+        {
+          "question": "Verbraucht es meinen Akku?",
+          "answer": "Es hält nur das Display an, was wie jeder leuchtende Bildschirm etwas Strom verbraucht. Es läuft keine aufwändige Hintergrundarbeit, daher ist der Einfluss minimal."
+        },
+        {
+          "question": "Welche Browser werden unterstützt?",
+          "answer": "Aktuelle Versionen von Chrome, Edge und Safari unterstützen die Screen Wake Lock API. Ältere Browser greifen möglicherweise auf eine leichte Videomethode zurück oder werden nicht unterstützt."
+        },
+        {
+          "question": "Werden Daten von mir erfasst?",
+          "answer": "Nein. Alles läuft lokal in Ihrem Browser. Ihre Einstellungen werden auf Ihrem Gerät gespeichert und nie irgendwohin gesendet."
+        }
+      ]
+    },
+    "footer": {
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen",
+      "contact": "Kontakt",
+      "changelog": "Änderungsprotokoll",
+      "rights": "Alle Rechte vorbehalten."
+    }
+  },
+  "switcher": {
+    "label": "Modus wechseln",
+    "awake": "Wach",
+    "digital": "Digital",
+    "flip": "Fallblatt",
+    "timer": "Timer"
+  },
+  "clock": {
+    "view": {
+      "digital": "Digital",
+      "flip": "Fallblatt",
+      "timer": "Timer",
+      "worldClock": "Weltuhr",
+      "soon": "bald"
+    },
+    "buttons": {
+      "settings": "Einstellungen",
+      "keepOn": "Bildschirm anlassen",
+      "keepOnActive": "Bildschirm bleibt an",
+      "fullscreen": "Vollbild",
+      "exitFullscreen": "Vollbild beenden"
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "format": "Format",
+      "format24": "24H",
+      "format12": "12H",
+      "second": "Sekunden",
+      "dayYear": "Tag und Jahr",
+      "template": "Uhrdesign"
+    },
+    "guide": {
+      "title": "Willkommen bei der Uhr",
+      "step1": "Öffnen Sie die Einstellungen, um Format, Sekunden und Aussehen zu ändern.",
+      "step2": "Tippen Sie auf die Sonne, um Ihren Bildschirm wach zu halten.",
+      "step3": "Zoomen Sie die Uhr per Pinch; doppeltippen zum Zurücksetzen.",
+      "gotIt": "Verstanden"
+    },
+    "digital": {
+      "seo": {
+        "title": "Digitaluhr: Vollbild, hält Ihren Bildschirm an",
+        "description": "Eine klare Vollbild-Digitaluhr mit Siebensegment- und minimalistischen Designs. Hält Ihren Bildschirm wach, keine Installation."
+      },
+      "heading": "Vollbild-Digitaluhr",
+      "intro": "Eine große, gut lesbare Digitaluhr für Schreibtische, Nachttische und Studios. Wählen Sie einen Siebensegment-LCD-Look oder ein minimalistisches Design, 12 oder 24 Stunden, und halten Sie Ihren Bildschirm wach."
+    },
+    "flip": {
+      "seo": {
+        "title": "Fallblattuhr: animierte Vollbild-Fallblattuhr",
+        "description": "Eine animierte Retro-Fallblattuhr in zehn Designs. Vollbild, hält Ihren Bildschirm an, funktioniert offline, keine Installation."
+      },
+      "heading": "Animierte Fallblattuhr",
+      "intro": "Eine ruhige, retro Fallblattuhr mit sanften Kartenanimationen und zehn Farbdesigns. Ideal für Fokussitzungen und hält Ihren Bildschirm wach."
+    },
+    "sections": {
+      "useCases": {
+        "heading": "Ideal für",
+        "items": [
+          {
+            "icon": "moon",
+            "title": "Nachttisch & Schreibtisch",
+            "description": "Eine große, blendfreie Uhr, die Sie durch den ganzen Raum lesen können."
+          },
+          {
+            "icon": "present",
+            "title": "Studios & Streams",
+            "description": "Eine aufgeräumte Bildschirmuhr für Aufnahmen, Timing und Overlays."
+          },
+          {
+            "icon": "code",
+            "title": "Fokussitzungen",
+            "description": "Halten Sie die Zeit im Blick, während Sie arbeiten, ohne dass der Bildschirm in den Ruhezustand geht."
+          }
+        ]
+      },
+      "how": {
+        "heading": "So funktioniert's",
+        "steps": [
+          {
+            "title": "Aussehen wählen",
+            "description": "Öffnen Sie die Einstellungen und wählen Sie eine Vorlage, 12/24 Stunden und Sekunden."
+          },
+          {
+            "title": "Bildschirm anlassen",
+            "description": "Tippen Sie auf die Sonne oder gehen Sie in den Vollbildmodus. Beides hält Ihr Display wach."
+          },
+          {
+            "title": "Groß machen",
+            "description": "Wechseln Sie in den Vollbildmodus; am Handy per Pinch auf die passende Größe bringen."
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Häufig gestellte Fragen",
+        "items": [
+          {
+            "question": "Hält die Uhr meinen Bildschirm wach?",
+            "answer": "Ja. Tippen Sie auf das Sonnensymbol oder gehen Sie in den Vollbildmodus, und der Bildschirm bleibt an, solange der Tab sichtbar ist."
+          },
+          {
+            "question": "Kann ich zwischen Digital- und Fallblattstil wechseln?",
+            "answer": "Ja. Nutzen Sie die Links „Digital“ und „Fallblatt“ in der oberen Leiste; jeder merkt sich seine eigenen Einstellungen."
+          },
+          {
+            "question": "Ist es kostenlos und privat?",
+            "answer": "Vollständig. Es läuft komplett in Ihrem Browser, speichert Einstellungen auf Ihrem Gerät und benötigt kein Konto."
+          },
+          {
+            "question": "Funktioniert es offline?",
+            "answer": "Ja. Einmal geladen, läuft die Uhr auch ohne Netzwerkverbindung weiter."
+          }
+        ]
+      }
+    }
+  },
+  "timer": {
+    "seo": {
+      "title": "Timer — Countdown & Stoppuhr",
+      "description": "Ein kostenloser Online-Timer: einfacher Countdown, Arbeits-/Pausenintervalle, eine Intervallglocke und eine Stoppuhr. Hält Ihren Bildschirm an, während er läuft."
+    },
+    "heading": "Timer",
+    "intro": "Ein Countdown und eine Stoppuhr, die Ihren Bildschirm während des Betriebs wach halten. Stellen Sie einen einfachen Countdown ein, wechseln Sie zwischen Arbeits- und Pausenrunden, lassen Sie in Intervallen eine Glocke läuten oder verfolgen Sie einfach die verstrichene Zeit.",
+    "mode": {
+      "countdown": "Countdown",
+      "stopwatch": "Stoppuhr"
+    },
+    "type": {
+      "simple": "Einfach",
+      "interval": "Intervall",
+      "bell": "Glocke"
+    },
+    "fields": {
+      "mode": "Modus",
+      "type": "Typ",
+      "setTime": "Zeit einstellen",
+      "workTime": "Arbeitszeit",
+      "restTime": "Pausenzeit",
+      "rounds": "Runden",
+      "roundsSuffix": "×",
+      "longBreakEvery": "Lange Pause alle",
+      "longBreakEverySuffix": "×",
+      "longBreakTime": "Lange Pause",
+      "totalTime": "Gesamtzeit",
+      "bellInterval": "Intervallglocke",
+      "alarmSound": "Alarmton",
+      "milliseconds": "Millisekunden",
+      "hoursSuffix": "h",
+      "minutesSuffix": "m",
+      "secondsSuffix": "s"
+    },
+    "phase": {
+      "work": "FOKUS",
+      "rest": "PAUSE",
+      "longBreak": "LANGE PAUSE"
+    },
+    "buttons": {
+      "start": "Start",
+      "pause": "Pause",
+      "reset": "Zurücksetzen",
+      "split": "Runde"
+    },
+    "laps": {
+      "label": "Rundenzeiten"
+    },
+    "toast": {
+      "finished": "Timer beendet"
+    },
+    "docTitle": "Timer",
+    "sections": {
+      "useCases": {
+        "heading": "Ideal für",
+        "items": [
+          {
+            "icon": "code",
+            "title": "Fokussitzungen",
+            "description": "Absolvieren Sie Arbeits-/Pausenrunden beim Programmieren, Schreiben oder Lernen – Bildschirm inklusive."
+          },
+          {
+            "icon": "present",
+            "title": "Workouts",
+            "description": "Intervalltraining mit einer Glocke pro Runde, ohne dass der Sperrbildschirm des Handys Sie unterbricht."
+          },
+          {
+            "icon": "clock",
+            "title": "Kochen & Pausen",
+            "description": "Ein einfacher Countdown für die Küche, eine Pause oder alles andere nach der Uhr."
+          }
+        ]
+      },
+      "how": {
+        "heading": "So funktioniert's",
+        "steps": [
+          {
+            "title": "Modus wählen",
+            "description": "Countdown (Einfach, Intervall oder Glocke) oder Stoppuhr, über die Einstellungen."
+          },
+          {
+            "title": "Zeit einstellen",
+            "description": "Geben Sie Stunden, Minuten und Sekunden ein oder Runden für Intervall."
+          },
+          {
+            "title": "Start drücken",
+            "description": "Der Timer läuft und hält Ihren Bildschirm wach, bis Sie pausieren oder er endet."
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Häufig gestellte Fragen",
+        "items": [
+          {
+            "question": "Was ist der Unterschied zwischen Intervall und Glocke?",
+            "answer": "Intervall wechselt für eine festgelegte Anzahl von Runden zwischen vollständigen Arbeits- und Pausenphasen, wie ein klassischer Workout-Timer. Glocke zählt eine Gesamtdauer herunter und läutet unterwegs regelmäßig, ohne in separate Phasen aufzuteilen."
+          },
+          {
+            "question": "Hält der Timer meinen Bildschirm wach?",
+            "answer": "Ja, der Start des Timers hält Ihren Bildschirm während der gesamten Laufzeit an – dasselbe Screen Wake Lock wie im Rest der Website."
+          },
+          {
+            "question": "Läutet es auch, wenn ich Tabs wechsle?",
+            "answer": "Der Countdown hält die Zeit im Hintergrund genau, aber Browser können inaktive Tabs drosseln, sodass Anzeige und Ton leicht verzögert sein können, bis Sie zum Tab zurückkehren."
+          },
+          {
+            "question": "Kann ich den Ton ausschalten?",
+            "answer": "Ja, schalten Sie „Alarmton“ in den Einstellungen aus. Auf die Stoppuhr hat das keinen Einfluss, sie spielt nie einen Ton ab."
+          }
+        ]
+      }
+    }
+  },
+  "legal": {
+    "privacy": {
+      "seo": {
+        "title": "Datenschutzerklärung · Awake Clock",
+        "description": "Wie Awake Clock mit Ihren Daten umgeht: keine Konten, kein Tracking, alles bleibt auf Ihrem Gerät."
+      },
+      "heading": "Datenschutzerklärung",
+      "intro": "Awake Clock ist so gebaut, dass es so wenig Ihrer Daten wie möglich benötigt. Diese Seite erklärt genau, was passiert und was nicht.",
+      "sections": [
+        {
+          "title": "Was wir erfassen",
+          "body": "Nichts. Awake Clock hat keine Konten, keine Analyse und keine Tracking-Skripte. Wir wissen nicht, dass Sie da waren, und können es nicht, weil nichts an einen Server gesendet wird."
+        },
+        {
+          "title": "Was auf Ihrem Gerät gespeichert wird",
+          "body": "Ihre Einstellungen wie Design, Dauer, Uhrvorlage und Timer-Einstellungen werden im lokalen Speicher Ihres Browsers gespeichert, damit sie beim nächsten Besuch vorhanden sind. Diese Daten verlassen Ihr Gerät nie und sind für uns nicht zugänglich."
+        },
+        {
+          "title": "Das Screen Wake Lock",
+          "body": "Ihren Bildschirm anzulassen nutzt die integrierte Screen Wake Lock API Ihres Browsers (oder in nicht unterstützten Browsern ein stummes, in Schleife laufendes Video). Keine der Methoden liest, zeichnet auf oder überträgt etwas, sie sagt Ihrem Gerät nur, dass es nicht in den Ruhezustand gehen soll."
+        },
+        {
+          "title": "Dienste von Drittanbietern",
+          "body": "Diese Website bindet einen „Buy Me a Coffee“-Support-Button ein, ein Widget von Drittanbietern, das Ressourcen von buymeacoffee.com laden kann. Wenn Sie damit interagieren, unterliegt Ihre Aktivität der eigenen Datenschutzerklärung von Buy Me a Coffee, nicht unserer."
+        },
+        {
+          "title": "Änderungen dieser Erklärung",
+          "body": "Wenn sich diese Erklärung ändert, wird die Aktualisierung auf dieser Seite veröffentlicht. Die weitere Nutzung der Website nach einer Änderung bedeutet, dass Sie die Aktualisierung akzeptieren."
+        },
+        {
+          "title": "Fragen",
+          "body": "Wenn Sie Fragen zu dieser Erklärung haben, wenden Sie sich über die Kontaktseite an uns."
+        }
+      ]
+    },
+    "terms": {
+      "seo": {
+        "title": "Nutzungsbedingungen · Awake Clock",
+        "description": "Die Bedingungen für die Nutzung von Awake Clock: kostenlos nutzbar, wie besehen bereitgestellt, keine Gewährleistung."
+      },
+      "heading": "Nutzungsbedingungen",
+      "intro": "Diese Bedingungen gelten für Ihre Nutzung von Awake Clock. Durch die Nutzung der Website stimmen Sie ihnen zu.",
+      "sections": [
+        {
+          "title": "Nutzung des Dienstes",
+          "body": "Awake Clock ist kostenlos nutzbar, ohne dass ein Konto erforderlich ist. Sie dürfen es für private oder kommerzielle Zwecke verwenden, einschließlich Bildschirm wach halten, Uhranzeigen ausführen und den Timer verwenden."
+        },
+        {
+          "title": "Keine Gewährleistung",
+          "body": "Die Website wird „wie besehen“ ohne jegliche Gewährleistung bereitgestellt. Wir garantieren nicht, dass sich die Screen Wake Lock API in jedem Browser, Betriebssystem oder jeder Energiespareinstellung identisch verhält – manche Geräte überschreiben sie unabhängig davon, was eine App anfordert."
+        },
+        {
+          "title": "Zulässige Nutzung",
+          "body": "Verwenden Sie Awake Clock nicht, um gegen Gesetze zu verstoßen, den Dienst für andere zu stören oder in seinen Betrieb einzugreifen."
+        },
+        {
+          "title": "Änderungen des Dienstes",
+          "body": "Funktionen können jederzeit hinzugefügt, geändert oder entfernt werden. Wir versuchen, diese Seite und die FAQ aktuell zu halten, aber das Produkt kann sich ohne vorherige Ankündigung weiterentwickeln."
+        },
+        {
+          "title": "Haftungsbeschränkung",
+          "body": "Wir haften nicht für direkte oder indirekte Schäden, die aus Ihrer Nutzung oder Nichtnutzbarkeit dieser Website entstehen."
+        },
+        {
+          "title": "Kontakt",
+          "body": "Fragen zu diesen Bedingungen können über die Kontaktseite gesendet werden."
+        }
+      ]
+    },
+    "contact": {
+      "seo": {
+        "title": "Kontakt · Awake Clock",
+        "description": "Kontakt zu Awake Clock: Feedback, Fehlerberichte oder Support."
+      },
+      "heading": "Kontakt",
+      "intro": "Awake Clock ist ein kleines, unabhängiges Projekt. Feedback, Fehlerberichte und Ideen sind alle willkommen.",
+      "emailLabel": "E-Mail",
+      "email": "bahriddin.me@gmail.com",
+      "supportLabel": "Das Projekt unterstützen",
+      "supportBody": "Wenn Awake Clock für Sie nützlich ist, können Sie die Entwicklung mit einem Kaffee unterstützen.",
+      "supportCta": "Spendier mir einen Kaffee"
+    }
+  }
+}

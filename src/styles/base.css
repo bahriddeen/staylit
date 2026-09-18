@@ -1,0 +1,743 @@
+/* Reset, typography, layout, and shared component styles. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/* The [hidden] attribute must win over author `display` rules (e.g. flex/grid
+   components toggled via `.hidden = true`). */
+[hidden] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--font-ui);
+  font-size: clamp(15px, 0.9rem + 0.2vw, 17px);
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* Visible focus ring for keyboard users everywhere. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition: 0ms;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Layout ---------- */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.topbar {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 clamp(1rem, 2vw, 2rem);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+}
+
+.topbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 650;
+}
+
+.topbar__brand .brand-mark {
+  color: var(--accent);
+  font-size: 1.35rem;
+  display: inline-flex;
+}
+
+.topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 4vw, 3rem);
+}
+
+.card {
+  width: min(560px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card__header h1 {
+  font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem);
+}
+
+.card__header p {
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* ---------- Status list ---------- */
+
+.status {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.status__heading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding: 0.75rem 1rem;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.status__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+}
+
+.status__row + .status__row {
+  border-top: 1px solid var(--border);
+}
+
+.status__key {
+  color: var(--text-muted);
+}
+
+.status__value {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+.badge--on {
+  color: var(--success);
+  border-color: color-mix(in srgb, var(--success) 40%, var(--border));
+}
+
+.badge--warn {
+  color: var(--warning);
+  border-color: color-mix(in srgb, var(--warning) 40%, var(--border));
+}
+
+.badge__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* ---------- Buttons ---------- */
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.15rem;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.icon-button:hover {
+  background: var(--surface-2);
+}
+
+.language-select {
+  appearance: none;
+  height: 40px;
+  padding: 0 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  /* No native dropdown arrow, so center the label instead of leaving the
+     space the arrow would have occupied on the right. */
+  text-align: center;
+  text-align-last: center;
+}
+
+.language-select:hover {
+  background: var(--surface-2);
+}
+
+.language-select option {
+  color: var(--text);
+  background: var(--surface);
+}
+
+/* Generic "on" state for a toggling icon button (e.g. keep-screen-on). Modes
+   that overlay icons on a dark stage regardless of theme (Digital/Flip) may
+   layer a more specific selector on top; see .clock-nav__btn in clock.css. */
+.icon-button--active {
+  color: #ffd23f;
+  border-color: #ffd23f;
+  background: rgba(255, 210, 63, 0.16);
+}
+
+/* ---------- Toggle switch ---------- */
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.toggle__label {
+  font-weight: 550;
+}
+
+.toggle__switch {
+  --w: 52px;
+  --h: 30px;
+  position: relative;
+  flex: none;
+  width: var(--w);
+  height: var(--h);
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-2);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.toggle__switch[aria-checked="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.toggle__thumb {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: calc(var(--h) - 8px);
+  height: calc(var(--h) - 8px);
+  border-radius: 50%;
+  background: #fff;
+  transform: translateY(-50%);
+  transition: transform var(--transition-fast);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.toggle__switch[aria-checked="true"] .toggle__thumb {
+  transform: translate(calc(var(--w) - var(--h)), -50%);
+}
+
+.toggle--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Large variant (72×40) with a success track and soft glow when on. */
+.toggle--lg .toggle__switch {
+  --w: 72px;
+  --h: 40px;
+}
+
+.toggle--lg .toggle__label {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.toggle--success .toggle__switch[aria-checked="true"] {
+  background: var(--success);
+  border-color: var(--success);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--success) 22%, transparent);
+}
+
+.toggle__switch,
+.toggle__thumb {
+  transition-duration: var(--transition);
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.button:hover {
+  background: color-mix(in srgb, var(--surface-2) 70%, var(--text) 6%);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-on);
+}
+
+.button--primary:hover {
+  background: color-mix(in srgb, var(--accent) 88%, #000);
+}
+
+.button__icon {
+  display: inline-flex;
+  font-size: 1.1em;
+}
+
+/* ---------- Segmented control ---------- */
+
+.segmented {
+  display: inline-flex;
+  align-self: flex-start; /* don't stretch to fill a column-flex parent */
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.segmented__pill {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.segmented__pill:hover {
+  color: var(--text);
+}
+
+.segmented__pill--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  min-width: 2.4rem;
+}
+
+.segmented__pill--on {
+  background: var(--accent);
+  color: var(--accent-on);
+}
+
+/* ---------- Settings drawer body (generic; mode-specific fields like the
+   clock template grid live in that mode's own stylesheet) ---------- */
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.settings__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settings__label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.settings__row {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label-left / control-right settings row (e.g. "Format" next to its
+   segmented control), matching the toggle rows visually. */
+.settings-inline-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.settings-inline-row__label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ---------- Number field (boxed input with a unit suffix) ---------- */
+
+.num-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.num-field__label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.num-field__box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.85rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.num-field__input {
+  width: 2.4em;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.05rem;
+  text-align: center;
+  /* Hide native spin buttons; they eat into the box and clip the digits. */
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.num-field__input::-webkit-outer-spin-button,
+.num-field__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.num-field__input:focus {
+  outline: none;
+}
+
+.num-field__box:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.num-field__suffix {
+  color: var(--text-muted);
+}
+
+/* ---------- Banner ---------- */
+
+.banner {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.banner--warn {
+  border-color: color-mix(in srgb, var(--warning) 45%, var(--border));
+  background: color-mix(in srgb, var(--warning) 12%, var(--surface));
+}
+
+.banner__icon {
+  color: var(--warning);
+  font-size: 1.25rem;
+  flex: none;
+  line-height: 1;
+}
+
+.banner__title {
+  display: block;
+}
+
+.banner__body {
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+/* ---------- Icon badge ---------- */
+
+.icon-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  font-size: 1.2rem;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border-radius: var(--radius-sm);
+}
+
+/* ---------- Toasts ---------- */
+
+.toast-region {
+  position: fixed;
+  left: 50%;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
+}
+
+.toast--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast__icon {
+  display: inline-flex;
+  color: var(--success);
+  font-size: 1.1rem;
+}
+
+/* ---------- Modal / drawer ---------- */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.modal--open .modal__backdrop {
+  opacity: 1;
+}
+
+.modal__dialog {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.modal--modal {
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal--modal .modal__dialog {
+  width: min(480px, 100%);
+  border-radius: var(--radius-lg);
+  transform: scale(0.96);
+  opacity: 0;
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.modal--drawer {
+  place-items: stretch end;
+}
+
+.modal--drawer .modal__dialog {
+  width: min(360px, 100%);
+  height: 100%;
+  border-radius: 0;
+  transform: translateX(100%);
+  transition: transform var(--transition);
+  /* Clear the fixed top toolbar (which stays above the drawer) and let long
+     template lists scroll. */
+  padding-top: calc(var(--nav-h) + 0.75rem);
+  overflow-y: auto;
+}
+
+.modal--open .modal__dialog {
+  transform: none;
+  opacity: 1;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.modal__title {
+  font-size: 1.15rem;
+}
+
+/* ---------- Utilities ---------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

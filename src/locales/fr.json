@@ -1,0 +1,496 @@
+{
+  "app": {
+    "title": "Awake Clock",
+    "tagline": "Gardez votre écran allumé."
+  },
+  "theme": {
+    "toggle": "Changer de thème",
+    "light": "Clair",
+    "dark": "Sombre"
+  },
+  "common": {
+    "close": "Fermer",
+    "settings": "Paramètres",
+    "fullscreen": "Plein écran",
+    "exitFullscreen": "Quitter le plein écran",
+    "none": "Aucun",
+    "learnMore": "En savoir plus",
+    "back": "Retour à Awake Clock"
+  },
+  "awake": {
+    "hero": {
+      "title": "Gardez votre écran allumé",
+      "subtitle": "Empêchez votre écran de s'assombrir ou de se mettre en veille. Sans installation, sans inscription. Réglez une minuterie ou gardez-le allumé indéfiniment.",
+      "durationLabel": "Durée",
+      "keepAwakeLabel": "Garder allumé"
+    },
+    "duration": {
+      "always": "Toujours actif",
+      "m10": "10 min",
+      "m30": "30 min",
+      "h1": "1 h",
+      "h2": "2 h",
+      "custom": "Personnalisé",
+      "hoursLabel": "Heures",
+      "minutesLabel": "Minutes",
+      "hoursSuffix": "h",
+      "minutesSuffix": "min"
+    },
+    "status": {
+      "off": "L'écran peut se mettre en veille normalement",
+      "alwaysOn": "∞ Toujours actif",
+      "pausedTitle": "En pause",
+      "pausedBody": "Revenez à cet onglet pour continuer à garder l'écran allumé.",
+      "unsupportedTitle": "Wake Lock n'est pas pris en charge ici",
+      "unsupportedBody": "Votre navigateur ne peut pas garder l'écran allumé. Essayez une version récente de Chrome, Edge ou Safari."
+    },
+    "notice": "Gardez cette page ouverte et visible. Changer d'onglet ou réduire la fenêtre met l'effet en pause.",
+    "toast": {
+      "finished": "Minuterie terminée"
+    },
+    "docTitle": {
+      "active": "Écran allumé",
+      "always": "Awake"
+    },
+    "moreWays": {
+      "heading": "D'autres façons de rester éveillé",
+      "subtitle": "Transformez cet onglet en horloge plein écran, ou ajoutez-le à votre navigateur.",
+      "digital": {
+        "title": "Horloge numérique",
+        "description": "Une horloge numérique nette en plein écran qui garde votre écran allumé. Parfaite pour les bureaux et les tables de chevet.",
+        "cta": "Ouvrir la numérique"
+      },
+      "flip": {
+        "title": "Horloge à volets",
+        "description": "Une horloge à volets rétro avec des cartes animées en douceur. Minimaliste, calme et toujours active.",
+        "cta": "Ouvrir à volets"
+      },
+      "extension": {
+        "badge": "Bientôt",
+        "title": "Extension de navigateur",
+        "description": "Gardez n'importe quel onglet allumé d'un seul clic, directement depuis votre barre d'outils. Inscrivez-vous à la liste d'attente pour être informé du lancement.",
+        "cta": "Me prévenir"
+      }
+    },
+    "what": {
+      "heading": "Qu'est-ce que Keep Awake ?",
+      "body": "Keep Awake est un outil gratuit basé sur le navigateur qui empêche votre écran de s'assombrir, de se verrouiller ou de se mettre en veille. Il utilise l'API intégrée Screen Wake Lock, donc il n'y a rien à installer et rien ne s'exécute en arrière-plan. Ouvrez simplement la page, activez-le, et votre écran reste allumé aussi longtemps que nécessaire."
+    },
+    "why": {
+      "heading": "Pourquoi choisir Keep Awake",
+      "items": [
+        {
+          "icon": "bolt",
+          "title": "Instantané, sans installation",
+          "description": "Fonctionne directement dans votre navigateur. Aucun téléchargement, compte ou autorisation à accorder."
+        },
+        {
+          "icon": "lock",
+          "title": "Confidentiel par conception",
+          "description": "Tout s'exécute localement sur votre appareil. Aucun suivi, aucune donnée ne quitte votre navigateur."
+        },
+        {
+          "icon": "clock",
+          "title": "Minuteries précises",
+          "description": "Réglez une durée exacte ou gardez-le allumé pour toujours. Les comptes à rebours restent précis même en cas de limitation."
+        },
+        {
+          "icon": "battery",
+          "title": "Économe en batterie",
+          "description": "Seul l'écran reste allumé. Aucune astuce gourmande en CPU ni fausse activité en arrière-plan."
+        },
+        {
+          "icon": "devices",
+          "title": "Fonctionne partout",
+          "description": "Ordinateurs portables, de bureau, tablettes et téléphones, sur tout navigateur moderne compatible avec Wake Lock."
+        },
+        {
+          "icon": "moon",
+          "title": "Reposant pour les yeux",
+          "description": "Sombre par défaut avec un thème clair, optimisé pour les longues sessions et les pièces peu éclairées."
+        }
+      ]
+    },
+    "useCases": {
+      "heading": "À quoi ça sert",
+      "items": [
+        {
+          "icon": "download",
+          "title": "Téléchargements et envois",
+          "description": "Poursuivez les transferts sans que l'écran se mette en veille et interrompe votre session."
+        },
+        {
+          "icon": "code",
+          "title": "Programmation et sessions d'IA",
+          "description": "Suivez les compilations, les journaux ou les tâches d'IA de longue durée sans toucher la souris."
+        },
+        {
+          "icon": "present",
+          "title": "Présentations et lecture",
+          "description": "Diapositives, tableaux de bord, recettes et partitions restent visibles, sans les mains."
+        }
+      ]
+    },
+    "how": {
+      "heading": "Comment l'utiliser",
+      "steps": [
+        {
+          "title": "Choisissez une durée",
+          "description": "Choisissez « Toujours actif », un préréglage ou définissez une durée personnalisée."
+        },
+        {
+          "title": "Actionnez l'interrupteur",
+          "description": "Activez Keep Awake. Votre navigateur peut vous demander de confirmer."
+        },
+        {
+          "title": "Laissez l'onglet ouvert",
+          "description": "Gardez cet onglet visible. Il se met en pause s'il est masqué et reprend à votre retour."
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Questions fréquentes",
+      "items": [
+        {
+          "question": "Keep Awake est-il gratuit ?",
+          "answer": "Oui. Entièrement gratuit, sans compte et sans publicités qui vous suivent."
+        },
+        {
+          "question": "Fonctionne-t-il si je change d'onglet ou réduis la fenêtre ?",
+          "answer": "Non. Les navigateurs n'autorisent un wake lock que lorsque l'onglet est visible. Si vous changez ou réduisez, il se met en pause puis reprend automatiquement à votre retour."
+        },
+        {
+          "question": "Va-t-il vider ma batterie ?",
+          "answer": "Il garde uniquement l'écran allumé, ce qui consomme un peu d'énergie comme tout écran allumé. Il n'exécute pas de tâches lourdes en arrière-plan, l'impact est donc minime."
+        },
+        {
+          "question": "Quels navigateurs sont pris en charge ?",
+          "answer": "Les versions récentes de Chrome, Edge et Safari prennent en charge l'API Screen Wake Lock. Les navigateurs plus anciens peuvent se rabattre sur une méthode vidéo légère ou ne pas être pris en charge."
+        },
+        {
+          "question": "Certaines de mes données sont-elles collectées ?",
+          "answer": "Non. Tout s'exécute localement dans votre navigateur. Vos paramètres sont enregistrés sur votre appareil et ne sont jamais envoyés où que ce soit."
+        }
+      ]
+    },
+    "footer": {
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "contact": "Contact",
+      "changelog": "Journal des modifications",
+      "rights": "Tous droits réservés."
+    }
+  },
+  "switcher": {
+    "label": "Changer de mode",
+    "awake": "Éveil",
+    "digital": "Numérique",
+    "flip": "À volets",
+    "timer": "Minuterie"
+  },
+  "clock": {
+    "view": {
+      "digital": "Numérique",
+      "flip": "À volets",
+      "timer": "Minuterie",
+      "worldClock": "Horloge mondiale",
+      "soon": "bientôt"
+    },
+    "buttons": {
+      "settings": "Paramètres",
+      "keepOn": "Garder l'écran allumé",
+      "keepOnActive": "L'écran reste allumé",
+      "fullscreen": "Plein écran",
+      "exitFullscreen": "Quitter le plein écran"
+    },
+    "settings": {
+      "title": "Paramètres",
+      "format": "Format",
+      "format24": "24H",
+      "format12": "12H",
+      "second": "Secondes",
+      "dayYear": "Jour et année",
+      "template": "Style de l'horloge"
+    },
+    "guide": {
+      "title": "Bienvenue sur l'horloge",
+      "step1": "Ouvrez les paramètres pour changer le format, les secondes et l'apparence.",
+      "step2": "Touchez le soleil pour garder votre écran allumé.",
+      "step3": "Pincez pour zoomer l'horloge ; touchez deux fois pour réinitialiser.",
+      "gotIt": "Compris"
+    },
+    "digital": {
+      "seo": {
+        "title": "Horloge numérique : plein écran, garde votre écran allumé",
+        "description": "Une horloge numérique nette en plein écran avec des thèmes sept segments et minimalistes. Garde votre écran allumé, sans installation."
+      },
+      "heading": "Horloge numérique plein écran",
+      "intro": "Une grande horloge numérique lisible pour les bureaux, les tables de chevet et les studios. Choisissez un look LCD sept segments ou un thème minimaliste, choisissez 12 ou 24 heures, et gardez votre écran allumé."
+    },
+    "flip": {
+      "seo": {
+        "title": "Horloge à volets : horloge à volets animée en plein écran",
+        "description": "Une horloge à volets rétro animée en dix thèmes. Plein écran, garde votre écran allumé, fonctionne hors ligne, sans installation."
+      },
+      "heading": "Horloge à volets animée",
+      "intro": "Une horloge à volets rétro et apaisante avec des animations de cartes fluides et dix thèmes de couleur. Parfaite pour les sessions de concentration, et elle garde votre écran allumé."
+    },
+    "sections": {
+      "useCases": {
+        "heading": "Idéale pour",
+        "items": [
+          {
+            "icon": "moon",
+            "title": "Table de chevet et bureau",
+            "description": "Une grande horloge sans reflets, lisible à travers la pièce."
+          },
+          {
+            "icon": "present",
+            "title": "Studios et streams",
+            "description": "Une horloge à l'écran soignée pour l'enregistrement, le chronométrage et les incrustations."
+          },
+          {
+            "icon": "code",
+            "title": "Sessions de concentration",
+            "description": "Gardez l'heure visible pendant que vous travaillez, sans que l'écran se mette en veille."
+          }
+        ]
+      },
+      "how": {
+        "heading": "Comment l'utiliser",
+        "steps": [
+          {
+            "title": "Choisissez votre look",
+            "description": "Ouvrez les paramètres et choisissez un modèle, 12/24 heures et les secondes."
+          },
+          {
+            "title": "Gardez l'écran allumé",
+            "description": "Touchez le soleil ou passez en plein écran. Les deux gardent votre écran allumé."
+          },
+          {
+            "title": "Voir en grand",
+            "description": "Passez en plein écran ; sur mobile, pincez pour ajuster la taille."
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Questions fréquentes",
+        "items": [
+          {
+            "question": "L'horloge garde-t-elle mon écran allumé ?",
+            "answer": "Oui. Touchez l'icône du soleil ou passez en plein écran et l'écran reste allumé tant que l'onglet est visible."
+          },
+          {
+            "question": "Puis-je basculer entre les styles numérique et à volets ?",
+            "answer": "Oui. Utilisez les liens « Numérique » et « À volets » dans la barre du haut ; chacun mémorise ses propres paramètres."
+          },
+          {
+            "question": "Est-ce gratuit et privé ?",
+            "answer": "Totalement. Tout s'exécute dans votre navigateur, les paramètres sont enregistrés sur votre appareil, et aucun compte n'est nécessaire."
+          },
+          {
+            "question": "Fonctionne-t-il hors ligne ?",
+            "answer": "Oui. Une fois chargée, l'horloge continue de fonctionner sans connexion réseau."
+          }
+        ]
+      }
+    }
+  },
+  "timer": {
+    "seo": {
+      "title": "Minuterie — Compte à rebours et chronomètre",
+      "description": "Une minuterie en ligne gratuite : compte à rebours simple, intervalles travail/repos, une cloche d'intervalle et un chronomètre. Garde votre écran allumé pendant son fonctionnement."
+    },
+    "heading": "Minuterie",
+    "intro": "Un compte à rebours et un chronomètre qui gardent votre écran allumé pendant leur fonctionnement. Réglez un compte à rebours simple, alternez des rounds de travail et de repos, faites sonner une cloche à intervalles, ou suivez simplement le temps écoulé.",
+    "mode": {
+      "countdown": "Compte à rebours",
+      "stopwatch": "Chronomètre"
+    },
+    "type": {
+      "simple": "Simple",
+      "interval": "Intervalle",
+      "bell": "Cloche"
+    },
+    "fields": {
+      "mode": "Mode",
+      "type": "Type",
+      "setTime": "Régler le temps",
+      "workTime": "Temps de travail",
+      "restTime": "Temps de repos",
+      "rounds": "Rounds",
+      "roundsSuffix": "×",
+      "longBreakEvery": "Longue pause tous les",
+      "longBreakEverySuffix": "×",
+      "longBreakTime": "Longue pause",
+      "totalTime": "Temps total",
+      "bellInterval": "Cloche d'intervalle",
+      "alarmSound": "Son d'alarme",
+      "milliseconds": "Millisecondes",
+      "hoursSuffix": "h",
+      "minutesSuffix": "min",
+      "secondsSuffix": "s"
+    },
+    "phase": {
+      "work": "CONCENTRATION",
+      "rest": "REPOS",
+      "longBreak": "LONGUE PAUSE"
+    },
+    "buttons": {
+      "start": "Démarrer",
+      "pause": "Pause",
+      "reset": "Réinitialiser",
+      "split": "Tour"
+    },
+    "laps": {
+      "label": "Temps au tour"
+    },
+    "toast": {
+      "finished": "Minuterie terminée"
+    },
+    "docTitle": "Minuterie",
+    "sections": {
+      "useCases": {
+        "heading": "Idéale pour",
+        "items": [
+          {
+            "icon": "code",
+            "title": "Sessions de concentration",
+            "description": "Enchaînez des rounds travail/repos pendant que vous programmez, écrivez ou étudiez, écran compris."
+          },
+          {
+            "icon": "present",
+            "title": "Entraînements",
+            "description": "Entraînement par intervalles avec une cloche à chaque round, sans que l'écran de verrouillage du téléphone vous interrompe."
+          },
+          {
+            "icon": "clock",
+            "title": "Cuisine et pauses",
+            "description": "Un compte à rebours simple pour la cuisine, une pause ou tout ce qui se chronomètre."
+          }
+        ]
+      },
+      "how": {
+        "heading": "Comment l'utiliser",
+        "steps": [
+          {
+            "title": "Choisissez un mode",
+            "description": "Compte à rebours (Simple, Intervalle ou Cloche) ou Chronomètre, depuis les paramètres."
+          },
+          {
+            "title": "Réglez votre temps",
+            "description": "Saisissez les heures, minutes et secondes, ou les rounds pour l'Intervalle."
+          },
+          {
+            "title": "Appuyez sur démarrer",
+            "description": "La minuterie fonctionne et garde votre écran allumé jusqu'à ce que vous fassiez pause ou qu'elle se termine."
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Questions fréquentes",
+        "items": [
+          {
+            "question": "Quelle est la différence entre Intervalle et Cloche ?",
+            "answer": "L'Intervalle alterne des périodes complètes de travail et de repos pour un nombre défini de rounds, comme une minuterie d'entraînement classique. La Cloche décompte une durée totale unique et sonne périodiquement en chemin, sans la diviser en phases distinctes."
+          },
+          {
+            "question": "La minuterie garde-t-elle mon écran allumé ?",
+            "answer": "Oui, démarrer la minuterie garde votre écran allumé pendant toute sa durée, le même Screen Wake Lock que le reste du site."
+          },
+          {
+            "question": "Sonnera-t-elle si je change d'onglet ?",
+            "answer": "Le compte à rebours garde l'heure précise en arrière-plan, mais les navigateurs peuvent limiter les onglets inactifs, donc l'affichage et le son peuvent être légèrement retardés jusqu'à votre retour sur l'onglet."
+          },
+          {
+            "question": "Puis-je désactiver le son ?",
+            "answer": "Oui, désactivez « Son d'alarme » dans les paramètres. Cela n'a aucun effet sur le chronomètre, qui n'émet jamais de son."
+          }
+        ]
+      }
+    }
+  },
+  "legal": {
+    "privacy": {
+      "seo": {
+        "title": "Politique de confidentialité · Awake Clock",
+        "description": "Comment Awake Clock traite vos données : aucun compte, aucun suivi, tout reste sur votre appareil."
+      },
+      "heading": "Politique de confidentialité",
+      "intro": "Awake Clock est conçu pour avoir besoin du moins de vos données possible. Cette page explique exactement ce qui se passe et ce qui ne se passe pas.",
+      "sections": [
+        {
+          "title": "Ce que nous collectons",
+          "body": "Rien. Awake Clock n'a ni comptes, ni analyses, ni scripts de suivi. Nous ne savons pas que vous êtes venu, et nous ne pouvons pas le savoir, car rien n'est envoyé à un serveur."
+        },
+        {
+          "title": "Ce qui est stocké sur votre appareil",
+          "body": "Vos préférences, comme le thème, la durée, le modèle d'horloge et les paramètres de minuterie, sont enregistrées dans le stockage local de votre navigateur afin d'être là lors de votre prochaine visite. Ces données ne quittent jamais votre appareil et ne nous sont pas accessibles."
+        },
+        {
+          "title": "Le Screen Wake Lock",
+          "body": "Garder votre écran allumé utilise l'API Screen Wake Lock intégrée à votre navigateur (ou, sur les navigateurs non pris en charge, une vidéo silencieuse en boucle). Aucune des deux méthodes ne lit, n'enregistre ni ne transmet quoi que ce soit ; elle indique simplement à votre appareil de ne pas se mettre en veille."
+        },
+        {
+          "title": "Services tiers",
+          "body": "Ce site intègre un bouton de soutien « Buy Me a Coffee », un widget tiers qui peut charger des ressources depuis buymeacoffee.com. Si vous interagissez avec lui, votre activité est soumise à la propre politique de confidentialité de Buy Me a Coffee, et non à la nôtre."
+        },
+        {
+          "title": "Modifications de cette politique",
+          "body": "Si cette politique change, la mise à jour sera publiée sur cette page. Continuer à utiliser le site après une modification signifie que vous acceptez la mise à jour."
+        },
+        {
+          "title": "Questions",
+          "body": "Si vous avez des questions sur cette politique, contactez-nous via la page de contact."
+        }
+      ]
+    },
+    "terms": {
+      "seo": {
+        "title": "Conditions d'utilisation · Awake Clock",
+        "description": "Les conditions d'utilisation d'Awake Clock : gratuit, fourni tel quel, sans garantie."
+      },
+      "heading": "Conditions d'utilisation",
+      "intro": "Ces conditions couvrent votre utilisation d'Awake Clock. En utilisant le site, vous les acceptez.",
+      "sections": [
+        {
+          "title": "Utilisation du service",
+          "body": "Awake Clock est gratuit, sans compte requis. Vous pouvez l'utiliser à des fins personnelles ou commerciales, y compris garder votre écran allumé, faire fonctionner les affichages d'horloge et utiliser la minuterie."
+        },
+        {
+          "title": "Aucune garantie",
+          "body": "Le site est fourni « tel quel », sans garantie d'aucune sorte. Nous ne garantissons pas que l'API Screen Wake Lock se comporte de manière identique sur tous les navigateurs, systèmes d'exploitation ou réglages d'économie d'énergie ; certains appareils la remplacent quelle que soit la demande d'une application."
+        },
+        {
+          "title": "Utilisation acceptable",
+          "body": "N'utilisez pas Awake Clock pour enfreindre une loi, perturber le service pour les autres ou tenter d'interférer avec son fonctionnement."
+        },
+        {
+          "title": "Modifications du service",
+          "body": "Des fonctionnalités peuvent être ajoutées, modifiées ou supprimées à tout moment. Nous essaierons de tenir cette page et la FAQ à jour, mais le produit peut évoluer sans préavis."
+        },
+        {
+          "title": "Limitation de responsabilité",
+          "body": "Nous ne sommes pas responsables des dommages, directs ou indirects, résultant de votre utilisation ou de votre incapacité à utiliser ce site."
+        },
+        {
+          "title": "Contact",
+          "body": "Les questions concernant ces conditions peuvent être envoyées via la page de contact."
+        }
+      ]
+    },
+    "contact": {
+      "seo": {
+        "title": "Contact · Awake Clock",
+        "description": "Contactez-nous à propos d'Awake Clock : commentaires, rapports de bugs ou assistance."
+      },
+      "heading": "Contact",
+      "intro": "Awake Clock est un petit projet indépendant. Les commentaires, rapports de bugs et idées sont tous les bienvenus.",
+      "emailLabel": "E-mail",
+      "email": "bahriddin.me@gmail.com",
+      "supportLabel": "Soutenir le projet",
+      "supportBody": "Si Awake Clock vous est utile, vous pouvez soutenir son développement avec un café.",
+      "supportCta": "Offrez-moi un café"
+    }
+  }
+}
