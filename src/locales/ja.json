@@ -507,6 +507,52 @@
       "supportLabel": "プロジェクトを支援する",
       "supportBody": "Awake Clock が役に立ったら、コーヒー1杯で開発を支援できます。",
       "supportCta": "コーヒーをおごる"
+    },
+    "changelog": {
+      "seo": {
+        "title": "変更履歴 · Awake Clock",
+        "description": "Awake Clock の新機能：アラーム、共有リンク、オフライン対応、多言語、時計テーマ。"
+      },
+      "heading": "変更履歴",
+      "intro": "Awake Clock の新機能と改善点。",
+      "entries": [
+        {
+          "date": "September 19, 2026",
+          "title": "Alarms, sharing & offline",
+          "changes": [
+            "New Alarm mode — set a time and it rings.",
+            "Five alarm tones with a volume control.",
+            "Copy a shareable link that restores your timer or clock setup.",
+            "Install Awake Clock to your device and use it fully offline.",
+            "Calmer, refreshed landing page design."
+          ]
+        },
+        {
+          "date": "September 18, 2026",
+          "title": "Twelve languages",
+          "changes": [
+            "Added a language switcher with 12 languages, including right-to-left support for Arabic."
+          ]
+        },
+        {
+          "date": "September 17, 2026",
+          "title": "Timer & clock upgrades",
+          "changes": [
+            "Pomodoro-style long breaks in interval timers.",
+            "Stopwatch lap (split) times.",
+            "More digital and flip clock themes."
+          ]
+        },
+        {
+          "date": "September 16, 2026",
+          "title": "Launch",
+          "changes": [
+            "Keep your screen awake with a timer or indefinitely.",
+            "Full-screen digital and flip clocks.",
+            "Countdown, interval, and bell timers, plus a stopwatch."
+          ]
+        }
+      ]
     }
   }
 }

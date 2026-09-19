@@ -72,6 +72,12 @@ const routes = [
     desc: en.legal.contact.seo.description,
     faq: [],
   },
+  {
+    path: "/changelog",
+    title: en.legal.changelog.seo.title,
+    desc: en.legal.changelog.seo.description,
+    faq: [],
+  },
 ];
 
 const esc = (s) =>

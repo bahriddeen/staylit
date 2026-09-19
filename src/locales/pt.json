@@ -507,6 +507,52 @@
       "supportLabel": "Apoie o projeto",
       "supportBody": "Se o Awake Clock é útil para você, você pode apoiar seu desenvolvimento com um café.",
       "supportCta": "Pague-me um café"
+    },
+    "changelog": {
+      "seo": {
+        "title": "Registro de alterações · Awake Clock",
+        "description": "Novidades do Awake Clock: alarmes, links compartilháveis, suporte offline, idiomas e temas de relógio."
+      },
+      "heading": "Registro de alterações",
+      "intro": "Novidades e melhorias do Awake Clock.",
+      "entries": [
+        {
+          "date": "September 19, 2026",
+          "title": "Alarms, sharing & offline",
+          "changes": [
+            "New Alarm mode — set a time and it rings.",
+            "Five alarm tones with a volume control.",
+            "Copy a shareable link that restores your timer or clock setup.",
+            "Install Awake Clock to your device and use it fully offline.",
+            "Calmer, refreshed landing page design."
+          ]
+        },
+        {
+          "date": "September 18, 2026",
+          "title": "Twelve languages",
+          "changes": [
+            "Added a language switcher with 12 languages, including right-to-left support for Arabic."
+          ]
+        },
+        {
+          "date": "September 17, 2026",
+          "title": "Timer & clock upgrades",
+          "changes": [
+            "Pomodoro-style long breaks in interval timers.",
+            "Stopwatch lap (split) times.",
+            "More digital and flip clock themes."
+          ]
+        },
+        {
+          "date": "September 16, 2026",
+          "title": "Launch",
+          "changes": [
+            "Keep your screen awake with a timer or indefinitely.",
+            "Full-screen digital and flip clocks.",
+            "Countdown, interval, and bell timers, plus a stopwatch."
+          ]
+        }
+      ]
     }
   }
 }

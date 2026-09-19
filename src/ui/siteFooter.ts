@@ -18,7 +18,7 @@ export function createSiteFooter(): HTMLElement {
     [t("awake.footer.privacy"), "/privacy", true],
     [t("awake.footer.terms"), "/terms", true],
     [t("awake.footer.contact"), "/contact", true],
-    [t("awake.footer.changelog"), "#/changelog", false],
+    [t("awake.footer.changelog"), "/changelog", true],
   ];
   for (const [label, href, isRoute] of links) {
     const a = document.createElement("a");

@@ -173,7 +173,7 @@ session.onChange((s) => {
   toolbar.setBadge(s.timed && s.wake.wanted ? formatHMS(s.remainingMs) : null);
 });
 
-const LEGAL_PAGES: LegalPage[] = ["privacy", "terms", "contact"];
+const LEGAL_PAGES: LegalPage[] = ["privacy", "terms", "contact", "changelog"];
 
 function legalPageFor(path: string): LegalPage | null {
   const slug = path.slice(1);

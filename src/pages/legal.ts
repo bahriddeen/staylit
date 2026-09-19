@@ -13,7 +13,7 @@ import { createSiteFooter } from "../ui/siteFooter";
 
 const CONTACT_LINK_TEXT = "Contact page";
 
-export type LegalPage = "privacy" | "terms" | "contact";
+export type LegalPage = "privacy" | "terms" | "contact" | "changelog";
 
 export interface LegalPageMount {
   destroy(): void;
@@ -22,6 +22,12 @@ export interface LegalPageMount {
 interface LegalSection {
   title: string;
   body: string;
+}
+
+interface ChangelogEntry {
+  date: string;
+  title: string;
+  changes: string[];
 }
 
 function backLink(): HTMLElement {
@@ -135,6 +141,38 @@ function contactContent(): HTMLElement {
   return wrap;
 }
 
+function changelogContent(): HTMLElement {
+  const wrap = document.createElement("div");
+  wrap.className = "section legal-changelog";
+
+  for (const entry of tRaw<ChangelogEntry[]>("legal.changelog.entries")) {
+    const item = document.createElement("article");
+    item.className = "changelog-entry";
+
+    const head = document.createElement("div");
+    head.className = "changelog-entry__head";
+    const title = document.createElement("h2");
+    title.className = "changelog-entry__title";
+    title.textContent = entry.title;
+    const date = document.createElement("span");
+    date.className = "changelog-entry__date";
+    date.textContent = entry.date;
+    head.append(title, date);
+
+    const list = document.createElement("ul");
+    list.className = "changelog-entry__list";
+    for (const change of entry.changes) {
+      const li = document.createElement("li");
+      li.textContent = change;
+      list.appendChild(li);
+    }
+
+    item.append(head, list);
+    wrap.appendChild(item);
+  }
+  return wrap;
+}
+
 export function mountLegalPage(
   root: HTMLElement,
   page: LegalPage,
@@ -142,7 +180,12 @@ export function mountLegalPage(
   const wrapper = document.createElement("div");
   wrapper.className = "awake legal-page";
 
-  const content = page === "contact" ? contactContent() : sectionsFor(page);
+  const content =
+    page === "contact"
+      ? contactContent()
+      : page === "changelog"
+        ? changelogContent()
+        : sectionsFor(page);
 
   wrapper.append(
     backLink(),

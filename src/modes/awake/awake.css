@@ -1,6 +1,17 @@
 /* Awake mode layout. Shared content-page primitives (.awake, .section, .faq,
    .site-footer, etc.) live in src/styles/content.css, loaded globally. */
 
+/* Seven-segment font for the Digital Clock preview card (see cardArt() in
+   content.ts). Self-hosted, mirrors src/modes/clock/fonts.css — the clock
+   fonts aren't otherwise loaded on the landing page. */
+@font-face {
+  font-family: "DSEG7 Classic";
+  src: url("../../assets/fonts/DSEG7Classic-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .main--page {
   display: block;
   place-items: initial;

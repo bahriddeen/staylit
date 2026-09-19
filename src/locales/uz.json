@@ -507,6 +507,52 @@
       "supportLabel": "Loyihani qo'llab-quvvatlash",
       "supportBody": "Agar Awake Clock siz uchun foydali bo'lsa, uning rivojlanishini bir chashka qahva bilan qo'llab-quvvatlashingiz mumkin.",
       "supportCta": "Menga qahva oling"
+    },
+    "changelog": {
+      "seo": {
+        "title": "O'zgarishlar · Awake Clock",
+        "description": "Awake Clock'dagi yangiliklar: budilniklar, ulashish havolalari, oflayn rejim, tillar va soat mavzulari."
+      },
+      "heading": "O'zgarishlar tarixi",
+      "intro": "Awake Clock'dagi yangiliklar va yaxshilanishlar.",
+      "entries": [
+        {
+          "date": "September 19, 2026",
+          "title": "Alarms, sharing & offline",
+          "changes": [
+            "New Alarm mode — set a time and it rings.",
+            "Five alarm tones with a volume control.",
+            "Copy a shareable link that restores your timer or clock setup.",
+            "Install Awake Clock to your device and use it fully offline.",
+            "Calmer, refreshed landing page design."
+          ]
+        },
+        {
+          "date": "September 18, 2026",
+          "title": "Twelve languages",
+          "changes": [
+            "Added a language switcher with 12 languages, including right-to-left support for Arabic."
+          ]
+        },
+        {
+          "date": "September 17, 2026",
+          "title": "Timer & clock upgrades",
+          "changes": [
+            "Pomodoro-style long breaks in interval timers.",
+            "Stopwatch lap (split) times.",
+            "More digital and flip clock themes."
+          ]
+        },
+        {
+          "date": "September 16, 2026",
+          "title": "Launch",
+          "changes": [
+            "Keep your screen awake with a timer or indefinitely.",
+            "Full-screen digital and flip clocks.",
+            "Countdown, interval, and bell timers, plus a stopwatch."
+          ]
+        }
+      ]
     }
   }
 }

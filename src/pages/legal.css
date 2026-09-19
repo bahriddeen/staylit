@@ -102,3 +102,56 @@
 .legal-contact__cta {
   margin-top: 0.35rem;
 }
+
+/* ---------- Changelog ---------- */
+
+.legal-changelog {
+  width: min(680px, 100%);
+  margin-inline: auto;
+  gap: 1.75rem;
+}
+
+.changelog-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+}
+
+.changelog-entry:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.changelog-entry__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.changelog-entry__title {
+  font-size: 1.15rem;
+}
+
+.changelog-entry__date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.changelog-entry__list {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.changelog-entry__list li {
+  padding-left: 0.15rem;
+}
