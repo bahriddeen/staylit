@@ -123,6 +123,15 @@
   line-height: 1;
 }
 
+/* "Always on" is a text label, not a numeric readout — keep it calm and small. */
+.hero__countdown--label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-variant-numeric: normal;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
 .pulse-dot {
   width: 0.85rem;
   height: 0.85rem;

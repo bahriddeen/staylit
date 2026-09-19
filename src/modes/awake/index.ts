@@ -146,7 +146,11 @@ export function mountAwakeMode(
     dot.className = "pulse-dot";
     dot.setAttribute("aria-hidden", "true");
     const value = document.createElement("span");
-    value.className = "hero__countdown";
+    // The countdown style is a big tabular-numeral display; the "Always on"
+    // label is text, so give it its own calmer, smaller treatment.
+    value.className = st.timed
+      ? "hero__countdown"
+      : "hero__countdown hero__countdown--label";
     value.textContent = st.timed
       ? formatHMS(st.remainingMs)
       : t("awake.status.alwaysOn");

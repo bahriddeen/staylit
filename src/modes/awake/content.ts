@@ -77,8 +77,10 @@ function cardArt(kind: "digital" | "flip" | "extension"): string {
   }
   if (kind === "flip") {
     // Four flip-card tiles with a split line, matching the real flip clock.
+    // Draw the digit, then the center split line on top, so the seam reads
+    // clearly across the tile (the giveaway that it's a flip clock).
     const tile = (x: number, digit: string): string =>
-      `<g><rect x="${x}" y="30" width="34" height="60" rx="8" fill="${screen}" stroke="rgba(255,255,255,0.08)"/><line x1="${x}" y1="60" x2="${x + 34}" y2="60" stroke="rgba(0,0,0,0.4)" stroke-width="2"/><text x="${x + 17}" y="72" text-anchor="middle" font-family="monospace" font-size="32" font-weight="700" fill="#f0f0f0">${digit}</text></g>`;
+      `<g><rect x="${x}" y="30" width="34" height="60" rx="8" fill="${screen}" stroke="rgba(255,255,255,0.08)"/><text x="${x + 17}" y="72" text-anchor="middle" font-family="monospace" font-size="32" font-weight="700" fill="#f0f0f0">${digit}</text><line x1="${x}" y1="60" x2="${x + 34}" y2="60" stroke="${bg}" stroke-width="2.5"/></g>`;
     return `<svg viewBox="0 0 200 120" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
       <rect width="200" height="120" fill="${bg}"/>
       ${tile(16, "1")}${tile(54, "2")}

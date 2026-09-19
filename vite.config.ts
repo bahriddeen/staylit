@@ -1,10 +1,11 @@
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
-// Static, client-only app. Relative base so it works on any static host
-// (Vercel / Netlify / Cloudflare Pages) and from a subpath.
+// Static, client-only app deployed at the domain root. Absolute base so that
+// per-route prerendered HTML (e.g. /clock/index.html) and the service worker
+// resolve assets from the root regardless of URL depth.
 export default defineConfig({
-  base: "./",
+  base: "/",
   build: {
     target: "es2022",
     cssMinify: true,
