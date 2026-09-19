@@ -71,27 +71,30 @@ export function createTimerView(handlers: TimerViewHandlers): TimerView {
   root.append(display, phase, controls, laps);
 
   // Stopwatch (iOS-style): running -> [Pause, Split]; paused -> [Play, Reset].
-  // Countdown: running -> [Pause, Reset]; paused -> [Play, Reset]. Either way,
-  // idle/finished is a single Play that (re)starts fresh.
+  // Countdown: running -> [Pause, Reset]; paused -> [Play, Reset]. Alarm can't
+  // be paused (it tracks wall-clock time), so running -> [Reset] cancels it.
+  // Either way, idle/finished is a single Play that (re)starts fresh.
   let lastKey = "";
   function renderControls(
     status: TimerState["status"],
-    isStopwatch: boolean,
+    mode: TimerSettings["mode"],
   ): void {
-    const key = `${status}:${isStopwatch}`;
+    const key = `${status}:${mode}`;
     if (key === lastKey) return;
     lastKey = key;
 
     controls.replaceChildren();
     if (status === "running") {
-      controls.append(pauseBtn, isStopwatch ? splitBtn : resetBtn);
+      if (mode === "alarm") controls.append(resetBtn);
+      else
+        controls.append(pauseBtn, mode === "stopwatch" ? splitBtn : resetBtn);
     } else if (status === "paused") {
       controls.append(playBtn, resetBtn);
     } else {
       controls.append(playBtn);
     }
   }
-  renderControls("idle", false);
+  renderControls("idle", "countdown");
 
   let lastLapsKey = "";
   function renderLaps(entries: TimerState["laps"], withMs: boolean): void {
@@ -148,12 +151,18 @@ export function createTimerView(handlers: TimerViewHandlers): TimerView {
       const label = `${t(`timer.phase.${state.phase}`)} ${state.round}/${state.totalRounds}`;
       if (phase.textContent !== label) phase.textContent = label;
       phase.hidden = false;
+    } else if (settings.mode === "alarm") {
+      const { hours, minutes } = settings.alarmTime;
+      const clock = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`;
+      const label = t("timer.alarm.ringsAt", { time: clock });
+      if (phase.textContent !== label) phase.textContent = label;
+      phase.hidden = false;
     } else {
       phase.hidden = true;
     }
 
     const isStopwatch = settings.mode === "stopwatch";
-    renderControls(state.status, isStopwatch);
+    renderControls(state.status, settings.mode);
     if (isStopwatch) renderLaps(state.laps, settings.milliseconds);
     else if (state.laps.length > 0 || laps.childElementCount > 0) {
       renderLaps([], settings.milliseconds);

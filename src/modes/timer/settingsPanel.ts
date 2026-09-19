@@ -22,11 +22,14 @@ import {
   clampHms,
   clampLongBreakEvery,
   clampRounds,
+  clampTimeOfDay,
   type CountdownType,
   type HMS,
+  type TimeOfDay,
   type TimerMode,
   type TimerSettings,
 } from "./logic";
+import { playAlarm, clampVolume, ALARM_TONES, type AlarmTone } from "./audio";
 
 export interface TimerSettingsPanel {
   readonly element: HTMLElement;
@@ -106,9 +109,97 @@ function hmsSection(
   return section;
 }
 
+/** Alarm "Ring at" HH:MM group, styled like the H:M:S sections. */
+function alarmTimeSection(
+  value: TimeOfDay,
+  onChange: (time: TimeOfDay) => void,
+): HTMLElement {
+  const section = document.createElement("div");
+  section.className = "timer-hms-section";
+  const label = document.createElement("span");
+  label.className = "timer-row__label";
+  label.textContent = t("timer.fields.alarmAt");
+
+  const fieldsRow = document.createElement("div");
+  fieldsRow.className = "hero__custom timer-hms";
+
+  const hours = createNumberField({
+    labelKey: "awake.duration.hoursLabel",
+    suffixKey: "timer.fields.hoursSuffix",
+    min: 0,
+    max: 23,
+    value: value.hours,
+  });
+  const minutes = createNumberField({
+    labelKey: "awake.duration.minutesLabel",
+    suffixKey: "timer.fields.minutesSuffix",
+    min: 0,
+    max: 59,
+    value: value.minutes,
+  });
+  for (const f of [hours, minutes]) {
+    f.wrap.querySelector(".num-field__label")?.classList.add("visually-hidden");
+  }
+
+  const emit = (): void => {
+    onChange(
+      clampTimeOfDay({
+        hours: Number.parseInt(hours.input.value, 10),
+        minutes: Number.parseInt(minutes.input.value, 10),
+      }),
+    );
+  };
+  hours.input.addEventListener("input", emit);
+  minutes.input.addEventListener("input", emit);
+
+  fieldsRow.append(hours.wrap, minutes.wrap);
+  section.append(label, fieldsRow);
+  return section;
+}
+
+/** Native dropdown of the synthesized alarm tones. */
+function toneSelect(
+  value: AlarmTone,
+  onChange: (tone: AlarmTone) => void,
+): HTMLSelectElement {
+  const select = document.createElement("select");
+  select.className = "timer-tone-select";
+  select.setAttribute("aria-label", t("timer.fields.tone"));
+  for (const tone of ALARM_TONES) {
+    const option = document.createElement("option");
+    option.value = tone;
+    option.textContent = t(`timer.tone.${tone}`);
+    select.appendChild(option);
+  }
+  select.value = value;
+  select.addEventListener("change", () => onChange(select.value as AlarmTone));
+  return select;
+}
+
+/** 0–100 range slider mapped to a 0–1 volume. */
+function volumeSlider(
+  value: number,
+  onInput: (volume: number) => void,
+): HTMLElement {
+  const wrap = document.createElement("div");
+  wrap.className = "timer-volume";
+  const range = document.createElement("input");
+  range.type = "range";
+  range.min = "0";
+  range.max = "100";
+  range.step = "5";
+  range.value = String(Math.round(clampVolume(value) * 100));
+  range.className = "timer-volume__range";
+  range.setAttribute("aria-label", t("timer.fields.volume"));
+  range.addEventListener("input", () => onInput(Number(range.value) / 100));
+  wrap.append(range);
+  return wrap;
+}
+
 export function createTimerSettingsPanel(
   initial: TimerSettings,
   onChange: (next: TimerSettings) => void,
+  onShare: () => void,
 ): TimerSettingsPanel {
   let cur: TimerSettings = { ...initial };
   const emit = (): void => onChange({ ...cur });
@@ -143,6 +234,7 @@ export function createTimerSettingsPanel(
     items: [
       { value: "countdown", label: t("timer.mode.countdown") },
       { value: "stopwatch", label: t("timer.mode.stopwatch") },
+      { value: "alarm", label: t("timer.mode.alarm") },
     ],
     onChange: (v) => {
       cur = { ...cur, mode: v };
@@ -156,11 +248,55 @@ export function createTimerSettingsPanel(
   dynamic.className = "timer-panel__body";
   body.append(dynamic);
 
+  const shareBtn = document.createElement("button");
+  shareBtn.type = "button";
+  shareBtn.className = "button timer-share-btn";
+  const shareIcon = document.createElement("span");
+  shareIcon.className = "button__icon";
+  shareIcon.setAttribute("aria-hidden", "true");
+  shareIcon.innerHTML = icons.share;
+  shareBtn.append(shareIcon, document.createTextNode(t("common.share")));
+  shareBtn.addEventListener("click", onShare);
+  body.append(shareBtn);
+
   let typeSeg: ReturnType<typeof createSegmented<CountdownType>> | null = null;
+
+  /** Tone dropdown + volume slider, previewing the tone on any change. */
+  function appendAlarmSoundControls(): void {
+    dynamic.append(
+      row(
+        t("timer.fields.tone"),
+        toneSelect(cur.alarmTone, (v) => {
+          cur = { ...cur, alarmTone: v };
+          emit();
+          playAlarm(v, cur.alarmVolume);
+        }),
+      ),
+      row(
+        t("timer.fields.volume"),
+        volumeSlider(cur.alarmVolume, (v) => {
+          cur = { ...cur, alarmVolume: v };
+          emit();
+          playAlarm(cur.alarmTone, v);
+        }),
+      ),
+    );
+  }
 
   function rebuildDynamic(): void {
     dynamic.replaceChildren();
     typeSeg = null;
+
+    if (cur.mode === "alarm") {
+      dynamic.append(
+        alarmTimeSection(cur.alarmTime, (time) => {
+          cur = { ...cur, alarmTime: time };
+          emit();
+        }),
+      );
+      appendAlarmSoundControls();
+      return;
+    }
 
     if (cur.mode === "stopwatch") {
       const msToggle = createToggle({
@@ -278,10 +414,12 @@ export function createTimerSettingsPanel(
       checked: cur.alarmSound,
       onChange: (v) => {
         cur = { ...cur, alarmSound: v };
+        rebuildDynamic();
         emit();
       },
     });
     dynamic.append(row(t("timer.fields.alarmSound"), alarmToggle.button));
+    if (cur.alarmSound) appendAlarmSoundControls();
   }
   rebuildDynamic();
 

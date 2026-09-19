@@ -25,6 +25,8 @@ import type { AppToolbar } from "../../app/switcher";
 import { createModeActions, type ModeActions } from "../../ui/modeActions";
 import { TimerEngine, type TimerState } from "./logic";
 import { loadTimerSettings, saveTimerSettings } from "./settings";
+import { timerToParams, timerFromParams, hasTimerParams } from "./share";
+import { buildShareUrl, copyToClipboard } from "../../ui/share";
 import { createTimerView, type TimerView } from "./view";
 import {
   createTimerSettingsPanel,
@@ -49,6 +51,13 @@ export function mountTimerMode(
   const { session, toolbar, setBackground } = options;
 
   let settings = loadTimerSettings();
+  // A shared link (/timer?...) overrides stored settings for this visit and is
+  // then persisted, so the config sticks.
+  const urlParams = new URLSearchParams(window.location.search);
+  if (hasTimerParams(urlParams)) {
+    settings = timerFromParams(settings, urlParams);
+    saveTimerSettings(settings);
+  }
   const engine = new TimerEngine(settings);
 
   const shell = document.createElement("div");
@@ -76,6 +85,12 @@ export function mountTimerMode(
       settings = next;
       saveTimerSettings(settings);
       engine.configure(settings);
+    },
+    () => {
+      const url = buildShareUrl("/timer", timerToParams(settings));
+      void copyToClipboard(url).then((ok) => {
+        if (ok) showToast(t("common.linkCopied"), { icon: icons.share });
+      });
     },
   );
   shell.append(panel.element);

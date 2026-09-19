@@ -15,7 +15,9 @@
     "exitFullscreen": "Butun ekrandan chiqish",
     "none": "Yo'q",
     "learnMore": "Batafsil",
-    "back": "Awake Clock'ga qaytish"
+    "back": "Awake Clock'ga qaytish",
+    "share": "Havolani nusxalash",
+    "linkCopied": "Havola nusxalandi"
   },
   "awake": {
     "hero": {
@@ -305,7 +307,8 @@
     "intro": "Ishlaganda ekranni yoniq saqlaydigan teskari sanoq va sekundomer. Oddiy sanoq qo'ying, ish va dam olish raundlarini almashtiring, intervallarda qo'ng'iroq chaling yoki shunchaki o'tgan vaqtni kuzating.",
     "mode": {
       "countdown": "Teskari sanoq",
-      "stopwatch": "Sekundomer"
+      "stopwatch": "Sekundomer",
+      "alarm": "Budilnik"
     },
     "type": {
       "simple": "Oddiy",
@@ -329,7 +332,10 @@
       "milliseconds": "Millisekundlar",
       "hoursSuffix": "h",
       "minutesSuffix": "m",
-      "secondsSuffix": "s"
+      "secondsSuffix": "s",
+      "alarmAt": "Signal vaqti",
+      "tone": "Ohang",
+      "volume": "Ovoz balandligi"
     },
     "phase": {
       "work": "FOKUS",
@@ -408,6 +414,16 @@
           }
         ]
       }
+    },
+    "tone": {
+      "beep": "Bip",
+      "chime": "Jaranglash",
+      "bell": "Qo'ng'iroq",
+      "digital": "Raqamli",
+      "pulse": "Puls"
+    },
+    "alarm": {
+      "ringsAt": "{time} da jaringlaydi"
     }
   },
   "legal": {

@@ -15,7 +15,9 @@
     "exitFullscreen": "Salir de pantalla completa",
     "none": "Ninguno",
     "learnMore": "Más información",
-    "back": "Volver a Awake Clock"
+    "back": "Volver a Awake Clock",
+    "share": "Copiar enlace",
+    "linkCopied": "Enlace copiado"
   },
   "awake": {
     "hero": {
@@ -305,7 +307,8 @@
     "intro": "Una cuenta atrás y un cronómetro que mantienen tu pantalla encendida mientras funcionan. Configura una cuenta atrás simple, alterna rondas de trabajo y descanso, haz sonar una campana en intervalos o simplemente mide el tiempo transcurrido.",
     "mode": {
       "countdown": "Cuenta atrás",
-      "stopwatch": "Cronómetro"
+      "stopwatch": "Cronómetro",
+      "alarm": "Alarma"
     },
     "type": {
       "simple": "Simple",
@@ -329,7 +332,10 @@
       "milliseconds": "Milisegundos",
       "hoursSuffix": "h",
       "minutesSuffix": "m",
-      "secondsSuffix": "s"
+      "secondsSuffix": "s",
+      "alarmAt": "Sonar a las",
+      "tone": "Tono",
+      "volume": "Volumen"
     },
     "phase": {
       "work": "CONCENTRACIÓN",
@@ -408,6 +414,16 @@
           }
         ]
       }
+    },
+    "tone": {
+      "beep": "Bip",
+      "chime": "Campanilla",
+      "bell": "Campana",
+      "digital": "Digital",
+      "pulse": "Pulso"
+    },
+    "alarm": {
+      "ringsAt": "Suena a las {time}"
     }
   },
   "legal": {

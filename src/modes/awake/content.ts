@@ -63,19 +63,22 @@ export interface MoreWaysCard {
  * gradients and no external image requests. */
 function cardArt(kind: "digital" | "flip" | "extension"): string {
   const bg = "#12151b";
+  // The clock surface behind the digits. Shared by all three previews so the
+  // flip and extension cards sit on the same background as the digital clock.
+  const screen = "#070a08";
   if (kind === "digital") {
     // A single wide LED-screen tile (bezel + glow digits), matching the
     // tile/badge language the flip and extension previews use.
     return `<svg viewBox="0 0 200 120" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
       <rect width="200" height="120" fill="${bg}"/>
-      <rect x="28" y="30" width="144" height="60" rx="10" fill="#070a08" stroke="rgba(255,255,255,0.08)"/>
+      <rect x="28" y="30" width="144" height="60" rx="10" fill="${screen}" stroke="rgba(255,255,255,0.08)"/>
       <text x="100" y="72" text-anchor="middle" font-family="monospace" font-size="34" font-weight="700" fill="#f0f0f0">09:41</text>
     </svg>`;
   }
   if (kind === "flip") {
     // Four flip-card tiles with a split line, matching the real flip clock.
     const tile = (x: number, digit: string): string =>
-      `<g><rect x="${x}" y="30" width="34" height="60" rx="8" fill="#232a35" stroke="rgba(255,255,255,0.08)"/><line x1="${x}" y1="60" x2="${x + 34}" y2="60" stroke="rgba(0,0,0,0.4)" stroke-width="2"/><text x="${x + 17}" y="72" text-anchor="middle" font-family="monospace" font-size="32" font-weight="700" fill="#f0f0f0">${digit}</text></g>`;
+      `<g><rect x="${x}" y="30" width="34" height="60" rx="8" fill="${screen}" stroke="rgba(255,255,255,0.08)"/><line x1="${x}" y1="60" x2="${x + 34}" y2="60" stroke="rgba(0,0,0,0.4)" stroke-width="2"/><text x="${x + 17}" y="72" text-anchor="middle" font-family="monospace" font-size="32" font-weight="700" fill="#f0f0f0">${digit}</text></g>`;
     return `<svg viewBox="0 0 200 120" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
       <rect width="200" height="120" fill="${bg}"/>
       ${tile(16, "1")}${tile(54, "2")}
@@ -86,7 +89,7 @@ function cardArt(kind: "digital" | "flip" | "extension"): string {
   // Browser extension: a neutral badge tile with a simple clock glyph.
   return `<svg viewBox="0 0 200 120" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
     <rect width="200" height="120" fill="${bg}"/>
-    <rect x="70" y="30" width="60" height="60" rx="10" fill="#232a35" stroke="rgba(255,255,255,0.08)"/>
+    <rect x="70" y="30" width="60" height="60" rx="10" fill="${screen}" stroke="rgba(255,255,255,0.08)"/>
     <circle cx="100" cy="60" r="14" fill="none" stroke="#dfe2e8" stroke-width="3"/>
     <path d="M100 54v6l4 3" stroke="#dfe2e8" stroke-width="3" fill="none" stroke-linecap="round"/>
   </svg>`;

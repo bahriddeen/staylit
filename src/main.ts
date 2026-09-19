@@ -10,6 +10,8 @@
  */
 
 import "@fontsource-variable/inter";
+// Optical-size axis of Fraunces — the soft display serif used for headings.
+import "@fontsource-variable/fraunces/opsz.css";
 import "./styles/tokens.css";
 import "./styles/base.css";
 import "./styles/content.css";

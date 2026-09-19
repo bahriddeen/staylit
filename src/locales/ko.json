@@ -15,7 +15,9 @@
     "exitFullscreen": "전체 화면 종료",
     "none": "없음",
     "learnMore": "자세히 보기",
-    "back": "Awake Clock으로 돌아가기"
+    "back": "Awake Clock으로 돌아가기",
+    "share": "공유 링크 복사",
+    "linkCopied": "링크 복사됨"
   },
   "awake": {
     "hero": {
@@ -305,7 +307,8 @@
     "intro": "실행 중에 화면을 켜진 상태로 유지하는 카운트다운과 스톱워치. 간단한 카운트다운을 설정하거나, 작업과 휴식 라운드를 반복하거나, 인터벌마다 벨을 울리거나, 경과 시간만 측정할 수도 있습니다.",
     "mode": {
       "countdown": "카운트다운",
-      "stopwatch": "스톱워치"
+      "stopwatch": "스톱워치",
+      "alarm": "알람"
     },
     "type": {
       "simple": "간단",
@@ -329,7 +332,10 @@
       "milliseconds": "밀리초",
       "hoursSuffix": "시",
       "minutesSuffix": "분",
-      "secondsSuffix": "초"
+      "secondsSuffix": "초",
+      "alarmAt": "울릴 시각",
+      "tone": "소리",
+      "volume": "음량"
     },
     "phase": {
       "work": "집중",
@@ -408,6 +414,16 @@
           }
         ]
       }
+    },
+    "tone": {
+      "beep": "삐",
+      "chime": "차임",
+      "bell": "종",
+      "digital": "디지털",
+      "pulse": "펄스"
+    },
+    "alarm": {
+      "ringsAt": "{time}에 울림"
     }
   },
   "legal": {

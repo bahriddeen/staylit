@@ -3,6 +3,8 @@ import {
   hmsToMs,
   clampHms,
   clampRounds,
+  clampTimeOfDay,
+  nextAlarmTarget,
   buildIntervalSegments,
   idleValueMs,
   TimerEngine,
@@ -10,8 +12,8 @@ import {
 } from "./logic";
 import { DEFAULT_TIMER_SETTINGS } from "./settings";
 
-vi.mock("./audio", () => ({ playBeep: vi.fn() }));
-import { playBeep } from "./audio";
+vi.mock("./audio", () => ({ playAlarm: vi.fn(), ALARM_TONES: ["beep"] }));
+import { playAlarm } from "./audio";
 
 const settings = (over: Partial<TimerSettings> = {}): TimerSettings => ({
   ...DEFAULT_TIMER_SETTINGS,
@@ -128,7 +130,7 @@ describe("TimerEngine", () => {
   beforeEach(() => {
     vi.useFakeTimers();
     vi.setSystemTime(0);
-    vi.mocked(playBeep).mockClear();
+    vi.mocked(playAlarm).mockClear();
   });
 
   afterEach(() => {
@@ -161,7 +163,7 @@ describe("TimerEngine", () => {
     const finalState = engine.getState();
     expect(finalState.status).toBe("finished");
     expect(finalState.valueMs).toBe(0);
-    expect(playBeep).toHaveBeenCalled();
+    expect(playAlarm).toHaveBeenCalled();
     engine.destroy();
   });
 
@@ -327,11 +329,11 @@ describe("TimerEngine", () => {
     );
     engine.start();
     await vi.advanceTimersByTimeAsync(2100);
-    expect(playBeep).toHaveBeenCalledTimes(1);
+    expect(playAlarm).toHaveBeenCalledTimes(1);
     expect(engine.getState().status).toBe("running");
 
     await vi.advanceTimersByTimeAsync(2000);
-    expect(playBeep).toHaveBeenCalledTimes(2);
+    expect(playAlarm).toHaveBeenCalledTimes(2);
     engine.destroy();
   });
 
@@ -346,7 +348,54 @@ describe("TimerEngine", () => {
     engine.start();
     await vi.advanceTimersByTimeAsync(1100);
     expect(engine.getState().status).toBe("finished");
-    expect(playBeep).not.toHaveBeenCalled();
+    expect(playAlarm).not.toHaveBeenCalled();
     engine.destroy();
+  });
+
+  it("alarm counts down to the target time and rings once", async () => {
+    // System time is 0 (1970-01-01 00:00 local). Target 00:00:02 from now.
+    const target = new Date(0);
+    target.setSeconds(2, 0);
+    const engine = new TimerEngine(
+      settings({
+        mode: "alarm",
+        alarmTime: { hours: target.getHours(), minutes: target.getMinutes() },
+      }),
+    );
+    // Idle preview shows time until the next occurrence (> 0).
+    expect(engine.getState()).toMatchObject({ status: "idle" });
+    expect(engine.getState().valueMs).toBeGreaterThan(0);
+
+    engine.start();
+    expect(engine.getState().status).toBe("running");
+
+    // Not yet at the target minute boundary — still counting down.
+    await vi.advanceTimersByTimeAsync(1000);
+    expect(engine.getState().status).toBe("running");
+    expect(playAlarm).not.toHaveBeenCalled();
+    engine.destroy();
+  });
+});
+
+describe("clampTimeOfDay / nextAlarmTarget", () => {
+  it("clamps hours and minutes to valid ranges", () => {
+    expect(clampTimeOfDay({ hours: 30, minutes: -5 })).toEqual({
+      hours: 23,
+      minutes: 0,
+    });
+  });
+
+  it("returns today's occurrence when it is still in the future", () => {
+    const now = new Date(2026, 0, 1, 6, 0, 0, 0).getTime();
+    const target = nextAlarmTarget(now, { hours: 7, minutes: 0 });
+    expect(new Date(target).getHours()).toBe(7);
+    expect(target - now).toBe(3_600_000);
+  });
+
+  it("rolls to tomorrow when the time has already passed today", () => {
+    const now = new Date(2026, 0, 1, 8, 0, 0, 0).getTime();
+    const target = nextAlarmTarget(now, { hours: 7, minutes: 0 });
+    // 23 hours until tomorrow 07:00.
+    expect(target - now).toBe(23 * 3_600_000);
   });
 });

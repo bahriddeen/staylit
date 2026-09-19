@@ -15,7 +15,9 @@
     "exitFullscreen": "Vollbild beenden",
     "none": "Keine",
     "learnMore": "Mehr erfahren",
-    "back": "Zurück zu Awake Clock"
+    "back": "Zurück zu Awake Clock",
+    "share": "Link kopieren",
+    "linkCopied": "Link kopiert"
   },
   "awake": {
     "hero": {
@@ -305,7 +307,8 @@
     "intro": "Ein Countdown und eine Stoppuhr, die Ihren Bildschirm während des Betriebs wach halten. Stellen Sie einen einfachen Countdown ein, wechseln Sie zwischen Arbeits- und Pausenrunden, lassen Sie in Intervallen eine Glocke läuten oder verfolgen Sie einfach die verstrichene Zeit.",
     "mode": {
       "countdown": "Countdown",
-      "stopwatch": "Stoppuhr"
+      "stopwatch": "Stoppuhr",
+      "alarm": "Wecker"
     },
     "type": {
       "simple": "Einfach",
@@ -329,7 +332,10 @@
       "milliseconds": "Millisekunden",
       "hoursSuffix": "h",
       "minutesSuffix": "m",
-      "secondsSuffix": "s"
+      "secondsSuffix": "s",
+      "alarmAt": "Klingeln um",
+      "tone": "Ton",
+      "volume": "Lautstärke"
     },
     "phase": {
       "work": "FOKUS",
@@ -408,6 +414,16 @@
           }
         ]
       }
+    },
+    "tone": {
+      "beep": "Piep",
+      "chime": "Glockenspiel",
+      "bell": "Glocke",
+      "digital": "Digital",
+      "pulse": "Puls"
+    },
+    "alarm": {
+      "ringsAt": "Klingelt um {time}"
     }
   },
   "legal": {

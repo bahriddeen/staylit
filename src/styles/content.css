@@ -19,15 +19,23 @@
 }
 
 .section__title {
-  font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem);
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 40;
+  font-weight: 460;
+  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.85rem);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
   text-align: center;
 }
 
 .section__subtitle {
   color: var(--text-muted);
-  margin-top: -0.75rem;
+  margin-top: -0.5rem;
   text-align: center;
-  max-width: 56ch;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 52ch;
   margin-inline: auto;
 }
 

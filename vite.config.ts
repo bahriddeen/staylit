@@ -1,4 +1,5 @@
-import { defineConfig } from "vitest/config";
+import { defineConfig } from "vite";
+import { VitePWA } from "vite-plugin-pwa";
 
 // Static, client-only app. Relative base so it works on any static host
 // (Vercel / Netlify / Cloudflare Pages) and from a subpath.
@@ -9,10 +10,40 @@ export default defineConfig({
     cssMinify: true,
     sourcemap: false,
   },
-  test: {
-    environment: "jsdom",
-    globals: true,
-    include: ["src/**/*.test.ts"],
-    setupFiles: ["src/test/setup.ts"],
-  },
+  plugins: [
+    VitePWA({
+      registerType: "autoUpdate",
+      // Precache the app shell so it installs and runs fully offline; the
+      // history-API routes fall back to index.html when offline.
+      includeAssets: ["favicon.svg", "icon-maskable.svg", "og.png"],
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,woff2,svg,png,json,webmanifest}"],
+        navigateFallback: "index.html",
+        cleanupOutdatedCaches: true,
+      },
+      manifest: {
+        name: "Awake Clock",
+        short_name: "Awake",
+        description:
+          "Keep your screen awake in the browser, plus full-screen digital and flip clocks and a timer. No install, no sign-up.",
+        lang: "en",
+        theme_color: "#6678f7",
+        background_color: "#101317",
+        display: "standalone",
+        orientation: "any",
+        start_url: "./",
+        scope: "./",
+        icons: [
+          { src: "icon-192.png", sizes: "192x192", type: "image/png" },
+          { src: "icon-512.png", sizes: "512x512", type: "image/png" },
+          {
+            src: "icon-maskable-512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable",
+          },
+        ],
+      },
+    }),
+  ],
 });

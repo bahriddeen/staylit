@@ -15,7 +15,9 @@
     "exitFullscreen": "退出全屏",
     "none": "无",
     "learnMore": "了解更多",
-    "back": "返回 Awake Clock"
+    "back": "返回 Awake Clock",
+    "share": "复制分享链接",
+    "linkCopied": "链接已复制"
   },
   "awake": {
     "hero": {
@@ -305,7 +307,8 @@
     "intro": "运行时保持屏幕常亮的倒计时和秒表。设置简单倒计时、循环进行工作和休息回合、按间隔响铃，或只是记录已用时间。",
     "mode": {
       "countdown": "倒计时",
-      "stopwatch": "秒表"
+      "stopwatch": "秒表",
+      "alarm": "闹钟"
     },
     "type": {
       "simple": "简单",
@@ -329,7 +332,10 @@
       "milliseconds": "毫秒",
       "hoursSuffix": "时",
       "minutesSuffix": "分",
-      "secondsSuffix": "秒"
+      "secondsSuffix": "秒",
+      "alarmAt": "响铃时间",
+      "tone": "音效",
+      "volume": "音量"
     },
     "phase": {
       "work": "专注",
@@ -408,6 +414,16 @@
           }
         ]
       }
+    },
+    "tone": {
+      "beep": "蜂鸣",
+      "chime": "叮咚",
+      "bell": "铃声",
+      "digital": "电子",
+      "pulse": "脉冲"
+    },
+    "alarm": {
+      "ringsAt": "{time} 响铃"
     }
   },
   "legal": {

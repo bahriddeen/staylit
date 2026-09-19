@@ -15,7 +15,9 @@
     "exitFullscreen": "Quitter le plein écran",
     "none": "Aucun",
     "learnMore": "En savoir plus",
-    "back": "Retour à Awake Clock"
+    "back": "Retour à Awake Clock",
+    "share": "Copier le lien",
+    "linkCopied": "Lien copié"
   },
   "awake": {
     "hero": {
@@ -305,7 +307,8 @@
     "intro": "Un compte à rebours et un chronomètre qui gardent votre écran allumé pendant leur fonctionnement. Réglez un compte à rebours simple, alternez des rounds de travail et de repos, faites sonner une cloche à intervalles, ou suivez simplement le temps écoulé.",
     "mode": {
       "countdown": "Compte à rebours",
-      "stopwatch": "Chronomètre"
+      "stopwatch": "Chronomètre",
+      "alarm": "Alarme"
     },
     "type": {
       "simple": "Simple",
@@ -329,7 +332,10 @@
       "milliseconds": "Millisecondes",
       "hoursSuffix": "h",
       "minutesSuffix": "min",
-      "secondsSuffix": "s"
+      "secondsSuffix": "s",
+      "alarmAt": "Sonner à",
+      "tone": "Sonnerie",
+      "volume": "Volume"
     },
     "phase": {
       "work": "CONCENTRATION",
@@ -408,6 +414,16 @@
           }
         ]
       }
+    },
+    "tone": {
+      "beep": "Bip",
+      "chime": "Carillon",
+      "bell": "Cloche",
+      "digital": "Numérique",
+      "pulse": "Impulsion"
+    },
+    "alarm": {
+      "ringsAt": "Sonne à {time}"
     }
   },
   "legal": {

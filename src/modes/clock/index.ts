@@ -18,6 +18,10 @@ import "@fontsource/space-mono/700.css";
 
 import { Ticker } from "../../core/ticker";
 import { t, tRaw } from "../../core/i18n";
+import { showToast } from "../../ui/toast";
+import { icons } from "../../ui/icons";
+import { clockToParams, clockFromParams, hasClockParams } from "./share";
+import { buildShareUrl, copyToClipboard } from "../../ui/share";
 import {
   toggleFullscreen,
   onFullscreenChange,
@@ -83,6 +87,13 @@ export function mountClockMode(
 
   let view: ClockView = initialView;
   let settings: ClockSettings = sanitize(loadSettings(view), view);
+  // A shared link (/clock?template=… or /flip?…) overrides stored settings for
+  // this visit and is persisted so the look sticks.
+  const urlParams = new URLSearchParams(window.location.search);
+  if (hasClockParams(urlParams)) {
+    settings = clockFromParams(view, settings, urlParams);
+    saveSettings(view, settings);
+  }
   let renderer: ClockRenderer;
   let drawer: SettingsDrawer;
 
@@ -131,13 +142,23 @@ export function mountClockMode(
 
   // ----- Settings drawer -----
   function buildDrawer(): void {
-    drawer = createSettingsDrawer(view, settings, (next) => {
-      settings = next;
-      saveSettings(view, settings);
-      renderer.applySettings(settings);
-      applyBackground();
-      renderNow();
-    });
+    drawer = createSettingsDrawer(
+      view,
+      settings,
+      (next) => {
+        settings = next;
+        saveSettings(view, settings);
+        renderer.applySettings(settings);
+        applyBackground();
+        renderNow();
+      },
+      () => {
+        const url = buildShareUrl(pathFor(view), clockToParams(settings));
+        void copyToClipboard(url).then((ok) => {
+          if (ok) showToast(t("common.linkCopied"), { icon: icons.share });
+        });
+      },
+    );
   }
   buildDrawer();
 

@@ -15,7 +15,9 @@
     "exitFullscreen": "全画面表示を終了",
     "none": "なし",
     "learnMore": "詳細",
-    "back": "Awake Clock に戻る"
+    "back": "Awake Clock に戻る",
+    "share": "共有リンクをコピー",
+    "linkCopied": "リンクをコピーしました"
   },
   "awake": {
     "hero": {
@@ -305,7 +307,8 @@
     "intro": "実行中に画面をオンに保つカウントダウンとストップウォッチ。シンプルなカウントダウンを設定したり、作業と休憩のラウンドを繰り返したり、インターバルごとにベルを鳴らしたり、経過時間を計るだけでも使えます。",
     "mode": {
       "countdown": "カウントダウン",
-      "stopwatch": "ストップウォッチ"
+      "stopwatch": "ストップウォッチ",
+      "alarm": "アラーム"
     },
     "type": {
       "simple": "シンプル",
@@ -329,7 +332,10 @@
       "milliseconds": "ミリ秒",
       "hoursSuffix": "時",
       "minutesSuffix": "分",
-      "secondsSuffix": "秒"
+      "secondsSuffix": "秒",
+      "alarmAt": "鳴らす時刻",
+      "tone": "音",
+      "volume": "音量"
     },
     "phase": {
       "work": "集中",
@@ -408,6 +414,16 @@
           }
         ]
       }
+    },
+    "tone": {
+      "beep": "ビープ",
+      "chime": "チャイム",
+      "bell": "ベル",
+      "digital": "デジタル",
+      "pulse": "パルス"
+    },
+    "alarm": {
+      "ringsAt": "{time} に鳴ります"
     }
   },
   "legal": {

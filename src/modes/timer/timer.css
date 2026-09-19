@@ -231,6 +231,44 @@
   padding: 0.6rem 1.1rem;
 }
 
+/* Alarm tone dropdown + volume slider. */
+.timer-tone-select {
+  appearance: none;
+  height: 38px;
+  padding: 0 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: center;
+  text-align-last: center;
+}
+
+.timer-tone-select option {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.timer-volume {
+  display: flex;
+  align-items: center;
+  min-width: 8rem;
+}
+
+.timer-volume__range {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.timer-share-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
 /* ---------- Below-fold content ---------- */
 
 .timer-below {

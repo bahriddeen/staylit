@@ -15,7 +15,9 @@
     "exitFullscreen": "Exit fullscreen",
     "none": "None",
     "learnMore": "Learn more",
-    "back": "Back to Awake Clock"
+    "back": "Back to Awake Clock",
+    "share": "Copy shareable link",
+    "linkCopied": "Link copied"
   },
   "awake": {
     "hero": {
@@ -305,12 +307,23 @@
     "intro": "A countdown and stopwatch that keeps your screen awake while it runs. Set a simple countdown, cycle work and rest rounds, ring a bell at intervals, or just track elapsed time.",
     "mode": {
       "countdown": "Countdown",
-      "stopwatch": "Stopwatch"
+      "stopwatch": "Stopwatch",
+      "alarm": "Alarm"
     },
     "type": {
       "simple": "Simple",
       "interval": "Interval",
       "bell": "Bell"
+    },
+    "tone": {
+      "beep": "Beep",
+      "chime": "Chime",
+      "bell": "Bell",
+      "digital": "Digital",
+      "pulse": "Pulse"
+    },
+    "alarm": {
+      "ringsAt": "Rings at {time}"
     },
     "fields": {
       "mode": "Mode",
@@ -325,7 +338,10 @@
       "longBreakTime": "Long Break",
       "totalTime": "Total Time",
       "bellInterval": "Interval Bell",
+      "alarmAt": "Ring at",
       "alarmSound": "Alarm Sound",
+      "tone": "Tone",
+      "volume": "Volume",
       "milliseconds": "Milliseconds",
       "hoursSuffix": "h",
       "minutesSuffix": "m",

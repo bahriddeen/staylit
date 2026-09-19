@@ -15,7 +15,9 @@
     "exitFullscreen": "Sair da tela cheia",
     "none": "Nenhum",
     "learnMore": "Saiba mais",
-    "back": "Voltar ao Awake Clock"
+    "back": "Voltar ao Awake Clock",
+    "share": "Copiar link",
+    "linkCopied": "Link copiado"
   },
   "awake": {
     "hero": {
@@ -305,7 +307,8 @@
     "intro": "Uma contagem regressiva e um cronômetro que mantêm sua tela acesa enquanto funcionam. Defina uma contagem regressiva simples, alterne rounds de trabalho e descanso, toque um sino em intervalos, ou apenas acompanhe o tempo decorrido.",
     "mode": {
       "countdown": "Contagem regressiva",
-      "stopwatch": "Cronômetro"
+      "stopwatch": "Cronômetro",
+      "alarm": "Alarme"
     },
     "type": {
       "simple": "Simples",
@@ -329,7 +332,10 @@
       "milliseconds": "Milissegundos",
       "hoursSuffix": "h",
       "minutesSuffix": "m",
-      "secondsSuffix": "s"
+      "secondsSuffix": "s",
+      "alarmAt": "Tocar às",
+      "tone": "Som",
+      "volume": "Volume"
     },
     "phase": {
       "work": "FOCO",
@@ -408,6 +414,16 @@
           }
         ]
       }
+    },
+    "tone": {
+      "beep": "Bipe",
+      "chime": "Toque",
+      "bell": "Sino",
+      "digital": "Digital",
+      "pulse": "Pulso"
+    },
+    "alarm": {
+      "ringsAt": "Toca às {time}"
     }
   },
   "legal": {

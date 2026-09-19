@@ -15,7 +15,9 @@
     "exitFullscreen": "Esci da schermo intero",
     "none": "Nessuno",
     "learnMore": "Scopri di più",
-    "back": "Torna a Awake Clock"
+    "back": "Torna a Awake Clock",
+    "share": "Copia link",
+    "linkCopied": "Link copiato"
   },
   "awake": {
     "hero": {
@@ -305,7 +307,8 @@
     "intro": "Un conto alla rovescia e un cronometro che mantengono lo schermo acceso mentre sono in funzione. Imposta un semplice conto alla rovescia, alterna round di lavoro e riposo, fai suonare una campanella a intervalli, o semplicemente monitora il tempo trascorso.",
     "mode": {
       "countdown": "Conto alla rovescia",
-      "stopwatch": "Cronometro"
+      "stopwatch": "Cronometro",
+      "alarm": "Sveglia"
     },
     "type": {
       "simple": "Semplice",
@@ -329,7 +332,10 @@
       "milliseconds": "Millisecondi",
       "hoursSuffix": "h",
       "minutesSuffix": "m",
-      "secondsSuffix": "s"
+      "secondsSuffix": "s",
+      "alarmAt": "Suona alle",
+      "tone": "Suono",
+      "volume": "Volume"
     },
     "phase": {
       "work": "CONCENTRAZIONE",
@@ -408,6 +414,16 @@
           }
         ]
       }
+    },
+    "tone": {
+      "beep": "Bip",
+      "chime": "Scampanellio",
+      "bell": "Campana",
+      "digital": "Digitale",
+      "pulse": "Impulso"
+    },
+    "alarm": {
+      "ringsAt": "Suona alle {time}"
     }
   },
   "legal": {

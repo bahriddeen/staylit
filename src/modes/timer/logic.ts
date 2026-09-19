@@ -1,12 +1,13 @@
 /**
  * Timer mode logic: pure helpers (duration math, interval segment building)
- * plus a stateful TimerEngine driving Countdown (Simple / Interval / Bell) and
- * Stopwatch. All boundaries are computed from absolute timestamps (Date.now()),
- * the same pattern used by Awake mode's countdown, so a delayed or throttled
- * tick never causes drift — the next tick simply catches up.
+ * plus a stateful TimerEngine driving Countdown (Simple / Interval / Bell),
+ * Stopwatch, and Alarm (count down to a wall-clock time). All boundaries are
+ * computed from absolute timestamps (Date.now()), the same pattern used by
+ * Awake mode's countdown, so a delayed or throttled tick never causes drift —
+ * the next tick simply catches up.
  */
 
-import { playBeep } from "./audio";
+import { playAlarm, type AlarmTone } from "./audio";
 
 export interface HMS {
   hours: number;
@@ -14,7 +15,13 @@ export interface HMS {
   seconds: number;
 }
 
-export type TimerMode = "countdown" | "stopwatch";
+/** Wall-clock time of day for the Alarm mode. */
+export interface TimeOfDay {
+  hours: number;
+  minutes: number;
+}
+
+export type TimerMode = "countdown" | "stopwatch" | "alarm";
 export type CountdownType = "simple" | "interval" | "bell";
 export type TimerStatus = "idle" | "running" | "paused" | "finished";
 export type Phase = "work" | "rest" | "longBreak" | null;
@@ -31,7 +38,13 @@ export interface TimerSettings {
   longBreakTime: HMS;
   totalTime: HMS;
   bellInterval: HMS;
+  /** Wall-clock time the Alarm mode counts down to. */
+  alarmTime: TimeOfDay;
   alarmSound: boolean;
+  /** Which synthesized tone plays; used by countdown alarms and Alarm mode. */
+  alarmTone: AlarmTone;
+  /** Alarm loudness, 0–1. */
+  alarmVolume: number;
   milliseconds: boolean;
 }
 
@@ -84,6 +97,26 @@ export function clampLongBreakEvery(every: number): number {
 
 export function hmsToMs(hms: HMS): number {
   return hms.hours * 3_600_000 + hms.minutes * 60_000 + hms.seconds * 1_000;
+}
+
+export function clampTimeOfDay(time: TimeOfDay): TimeOfDay {
+  return {
+    hours: clampInt(time.hours, 0, 23),
+    minutes: clampInt(time.minutes, 0, 59),
+  };
+}
+
+/**
+ * Absolute timestamp of the next occurrence of `time` (a wall-clock HH:MM) at
+ * or after `now`. If today's occurrence has already passed, rolls to tomorrow.
+ */
+export function nextAlarmTarget(now: number, time: TimeOfDay): number {
+  const { hours, minutes } = clampTimeOfDay(time);
+  const target = new Date(now);
+  target.setHours(hours, minutes, 0, 0);
+  let ts = target.getTime();
+  if (ts <= now) ts += 86_400_000;
+  return ts;
 }
 
 interface Segment {
@@ -164,8 +197,15 @@ export class TimerEngine {
   private stopwatchElapsedFrozen = 0;
   private laps: LapEntry[] = [];
 
+  /** Absolute timestamp the Alarm mode counts down to (0 when not armed). */
+  private alarmTarget = 0;
+
   constructor(initialSettings: TimerSettings) {
     this.settings = initialSettings;
+  }
+
+  private ring(): void {
+    playAlarm(this.settings.alarmTone, this.settings.alarmVolume);
   }
 
   /** Update settings. Only affects display immediately while idle. */
@@ -189,6 +229,22 @@ export class TimerEngine {
       return {
         status: this.status,
         valueMs,
+        phase: null,
+        round: 0,
+        totalRounds: 0,
+      };
+    }
+
+    if (this.settings.mode === "alarm") {
+      // Idle previews time until the next occurrence; running counts down to
+      // the armed target. Finished lands at zero. Alarm has no paused state.
+      const target =
+        this.status === "running"
+          ? this.alarmTarget
+          : nextAlarmTarget(now, this.settings.alarmTime);
+      return {
+        status: this.status,
+        valueMs: this.status === "finished" ? 0 : Math.max(0, target - now),
         phase: null,
         round: 0,
         totalRounds: 0,
@@ -282,6 +338,7 @@ export class TimerEngine {
     this.nextBellAt = Infinity;
     this.stopwatchStart = 0;
     this.stopwatchElapsedFrozen = 0;
+    this.alarmTarget = 0;
     this.laps = [];
     this.emit();
   }
@@ -295,6 +352,10 @@ export class TimerEngine {
     if (this.settings.mode === "stopwatch") {
       this.stopwatchStart = now;
       this.stopwatchElapsedFrozen = 0;
+      return;
+    }
+    if (this.settings.mode === "alarm") {
+      this.alarmTarget = nextAlarmTarget(now, this.settings.alarmTime);
       return;
     }
     this.segments = buildSegments(this.settings);
@@ -346,8 +407,18 @@ export class TimerEngine {
       return;
     }
 
+    if (this.settings.mode === "alarm") {
+      if (now >= this.alarmTarget) {
+        this.status = "finished";
+        this.clearTick();
+        this.ring();
+      }
+      this.emit();
+      return;
+    }
+
     if (this.settings.type === "bell" && now >= this.nextBellAt) {
-      if (this.settings.alarmSound) playBeep();
+      if (this.settings.alarmSound) this.ring();
       const bellMs = hmsToMs(this.settings.bellInterval);
       this.nextBellAt = bellMs > 0 ? this.nextBellAt + bellMs : Infinity;
     }
@@ -366,12 +437,12 @@ export class TimerEngine {
     if (this.segmentIndex >= this.segments.length) {
       this.status = "finished";
       this.clearTick();
-      if (this.settings.alarmSound) playBeep();
+      if (this.settings.alarmSound) this.ring();
       this.emit();
       return;
     }
 
-    if (finishedPhase !== null && this.settings.alarmSound) playBeep();
+    if (finishedPhase !== null && this.settings.alarmSound) this.ring();
     const next = this.segments[this.segmentIndex]!;
     this.segmentEnd = now + next.ms;
     this.emit();

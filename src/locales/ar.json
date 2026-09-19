@@ -15,7 +15,9 @@
     "exitFullscreen": "الخروج من ملء الشاشة",
     "none": "لا شيء",
     "learnMore": "اعرف المزيد",
-    "back": "العودة إلى Awake Clock"
+    "back": "العودة إلى Awake Clock",
+    "share": "نسخ رابط المشاركة",
+    "linkCopied": "تم نسخ الرابط"
   },
   "awake": {
     "hero": {
@@ -305,7 +307,8 @@
     "intro": "عد تنازلي وساعة إيقاف يُبقيان شاشتك مضيئة أثناء التشغيل. اضبط عدًا تنازليًا بسيطًا، وبدّل بين جولات العمل والراحة، أو اقرع جرسًا على فترات، أو تتبّع الوقت المنقضي فقط.",
     "mode": {
       "countdown": "عد تنازلي",
-      "stopwatch": "ساعة إيقاف"
+      "stopwatch": "ساعة إيقاف",
+      "alarm": "منبّه"
     },
     "type": {
       "simple": "بسيط",
@@ -329,7 +332,10 @@
       "milliseconds": "أجزاء الثانية",
       "hoursSuffix": "س",
       "minutesSuffix": "د",
-      "secondsSuffix": "ث"
+      "secondsSuffix": "ث",
+      "alarmAt": "وقت الرنين",
+      "tone": "النغمة",
+      "volume": "مستوى الصوت"
     },
     "phase": {
       "work": "تركيز",
@@ -408,6 +414,16 @@
           }
         ]
       }
+    },
+    "tone": {
+      "beep": "صافرة",
+      "chime": "رنين",
+      "bell": "جرس",
+      "digital": "رقمي",
+      "pulse": "نبض"
+    },
+    "alarm": {
+      "ringsAt": "يرن في {time}"
     }
   },
   "legal": {

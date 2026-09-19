@@ -17,7 +17,10 @@ export const DEFAULT_TIMER_SETTINGS: TimerSettings = {
   longBreakTime: { hours: 0, minutes: 15, seconds: 0 },
   totalTime: { hours: 0, minutes: 30, seconds: 0 },
   bellInterval: { hours: 0, minutes: 5, seconds: 0 },
+  alarmTime: { hours: 7, minutes: 0 },
   alarmSound: true,
+  alarmTone: "beep",
+  alarmVolume: 0.7,
   milliseconds: false,
 };
 

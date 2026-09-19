@@ -22,6 +22,8 @@
   --font-ui:
     "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
     sans-serif;
+  /* Soft display serif for headings — warm and calm, set light and restrained. */
+  --font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
   --nav-h: 56px;
 
   /* Motion — zeroed out under prefers-reduced-motion (see base.css). */
