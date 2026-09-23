@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Awake Clock",
+    "title": "StayLit",
     "tagline": "让你的屏幕保持常亮。"
   },
   "theme": {
@@ -15,7 +15,7 @@
     "exitFullscreen": "退出全屏",
     "none": "无",
     "learnMore": "了解更多",
-    "back": "返回 Awake Clock",
+    "back": "返回 StayLit",
     "share": "复制分享链接",
     "linkCopied": "链接已复制"
   },
@@ -429,15 +429,15 @@
   "legal": {
     "privacy": {
       "seo": {
-        "title": "隐私政策 · Awake Clock",
-        "description": "Awake Clock 如何处理你的数据：没有账户、没有跟踪，一切都留在你的设备上。"
+        "title": "隐私政策 · StayLit",
+        "description": "StayLit 如何处理你的数据：没有账户、没有跟踪，一切都留在你的设备上。"
       },
       "heading": "隐私政策",
-      "intro": "Awake Clock 的设计尽可能少地需要你的数据。本页面准确说明会发生什么，以及不会发生什么。",
+      "intro": "StayLit 的设计尽可能少地需要你的数据。本页面准确说明会发生什么，以及不会发生什么。",
       "sections": [
         {
           "title": "我们收集什么",
-          "body": "什么都不收集。Awake Clock 没有账户、没有分析，也没有跟踪脚本。我们不知道你访问过，也无法知道，因为没有任何内容发送到服务器。"
+          "body": "什么都不收集。StayLit 没有账户、没有分析，也没有跟踪脚本。我们不知道你访问过，也无法知道，因为没有任何内容发送到服务器。"
         },
         {
           "title": "你的设备上存储了什么",
@@ -463,15 +463,15 @@
     },
     "terms": {
       "seo": {
-        "title": "服务条款 · Awake Clock",
-        "description": "使用 Awake Clock 的条款：免费使用，按原样提供，不作担保。"
+        "title": "服务条款 · StayLit",
+        "description": "使用 StayLit 的条款：免费使用，按原样提供，不作担保。"
       },
       "heading": "服务条款",
-      "intro": "这些条款涵盖你对 Awake Clock 的使用。使用本网站即表示你同意这些条款。",
+      "intro": "这些条款涵盖你对 StayLit 的使用。使用本网站即表示你同意这些条款。",
       "sections": [
         {
           "title": "使用服务",
-          "body": "Awake Clock 免费使用，无需账户。你可以将其用于个人或商业用途，包括保持屏幕常亮、运行时钟显示以及使用定时器。"
+          "body": "StayLit 免费使用，无需账户。你可以将其用于个人或商业用途，包括保持屏幕常亮、运行时钟显示以及使用定时器。"
         },
         {
           "title": "不作担保",
@@ -479,7 +479,7 @@
         },
         {
           "title": "可接受的使用",
-          "body": "请勿使用 Awake Clock 违反任何法律、干扰他人的服务或试图干预其运行。"
+          "body": "请勿使用 StayLit 违反任何法律、干扰他人的服务或试图干预其运行。"
         },
         {
           "title": "服务的变更",
@@ -497,24 +497,24 @@
     },
     "contact": {
       "seo": {
-        "title": "联系 · Awake Clock",
-        "description": "就 Awake Clock 联系我们：反馈、错误报告或支持。"
+        "title": "联系 · StayLit",
+        "description": "就 StayLit 联系我们：反馈、错误报告或支持。"
       },
       "heading": "联系",
-      "intro": "Awake Clock 是一个小型独立项目。欢迎提供反馈、错误报告和想法。",
+      "intro": "StayLit 是一个小型独立项目。欢迎提供反馈、错误报告和想法。",
       "emailLabel": "电子邮件",
       "email": "bahriddin.me@gmail.com",
       "supportLabel": "支持本项目",
-      "supportBody": "如果 Awake Clock 对你有用，你可以请我喝杯咖啡来支持它的开发。",
+      "supportBody": "如果 StayLit 对你有用，你可以请我喝杯咖啡来支持它的开发。",
       "supportCta": "请我喝杯咖啡"
     },
     "changelog": {
       "seo": {
-        "title": "更新日志 · Awake Clock",
-        "description": "Awake Clock 的新功能：闹钟、分享链接、离线支持、多语言和时钟主题。"
+        "title": "更新日志 · StayLit",
+        "description": "StayLit 的新功能：闹钟、分享链接、离线支持、多语言和时钟主题。"
       },
       "heading": "更新日志",
-      "intro": "Awake Clock 的新功能与改进。",
+      "intro": "StayLit 的新功能与改进。",
       "entries": [
         {
           "date": "September 19, 2026",
@@ -523,7 +523,7 @@
             "New Alarm mode — set a time and it rings.",
             "Five alarm tones with a volume control.",
             "Copy a shareable link that restores your timer or clock setup.",
-            "Install Awake Clock to your device and use it fully offline.",
+            "Install StayLit to your device and use it fully offline.",
             "Calmer, refreshed landing page design."
           ]
         },

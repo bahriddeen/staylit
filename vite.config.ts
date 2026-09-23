@@ -23,8 +23,8 @@ export default defineConfig({
         cleanupOutdatedCaches: true,
       },
       manifest: {
-        name: "Awake Clock",
-        short_name: "Awake",
+        name: "StayLit",
+        short_name: "StayLit",
         description:
           "Keep your screen awake in the browser, plus full-screen digital and flip clocks and a timer. No install, no sign-up.",
         lang: "en",

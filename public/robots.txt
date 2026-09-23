@@ -1,5 +1,5 @@
-# Awake Clock — allow everything; the whole app is public.
+# StayLit — allow everything; the whole app is public.
 User-agent: *
 Allow: /
 
-Sitemap: https://awake-clock.app/sitemap.xml
+Sitemap: https://staylit.live/sitemap.xml

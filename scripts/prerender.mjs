@@ -19,8 +19,8 @@ import { fileURLToPath } from "node:url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
 
-// Replace with the production domain (must match index.html, robots, sitemap).
-const ORIGIN = "https://awake-clock.app";
+// Must match index.html, robots.txt, and sitemap.xml.
+const ORIGIN = "https://staylit.live";
 
 const en = JSON.parse(
   await readFile(join(root, "src/locales/en.json"), "utf8"),
@@ -32,7 +32,7 @@ const AWAKE_DESC =
 const routes = [
   {
     path: "/",
-    title: "Keep Your Screen On · Awake Clock",
+    title: "Keep Your Screen On · StayLit",
     desc: AWAKE_DESC,
     faq: en.awake.faq.items,
   },

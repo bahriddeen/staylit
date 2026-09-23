@@ -3,7 +3,7 @@ import { t, tRaw } from "./i18n";
 
 describe("i18n.t", () => {
   it("resolves dotted keys from the bundled English locale", () => {
-    expect(t("app.title")).toBe("Awake Clock");
+    expect(t("app.title")).toBe("StayLit");
     expect(t("awake.hero.title")).toBe("Keep Your Screen On");
   });
 

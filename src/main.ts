@@ -32,7 +32,7 @@ import type { LegalPage, LegalPageMount } from "./pages/legal";
 
 type Theme = "light" | "dark";
 
-const AWAKE_TITLE = "Keep Your Screen On · Awake Clock";
+const AWAKE_TITLE = "Keep Your Screen On · StayLit";
 const AWAKE_DESC =
   "Keep your screen awake in the browser. No install, no sign-up. Set a timer or keep your display on indefinitely for downloads, coding, AI sessions, and presentations.";
 

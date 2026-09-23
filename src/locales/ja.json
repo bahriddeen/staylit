@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Awake Clock",
+    "title": "StayLit",
     "tagline": "画面が消えないようにします。"
   },
   "theme": {
@@ -15,7 +15,7 @@
     "exitFullscreen": "全画面表示を終了",
     "none": "なし",
     "learnMore": "詳細",
-    "back": "Awake Clock に戻る",
+    "back": "StayLit に戻る",
     "share": "共有リンクをコピー",
     "linkCopied": "リンクをコピーしました"
   },
@@ -429,15 +429,15 @@
   "legal": {
     "privacy": {
       "seo": {
-        "title": "プライバシーポリシー · Awake Clock",
-        "description": "Awake Clock がデータをどう扱うか：アカウントなし、追跡なし、すべてがデバイスに残ります。"
+        "title": "プライバシーポリシー · StayLit",
+        "description": "StayLit がデータをどう扱うか：アカウントなし、追跡なし、すべてがデバイスに残ります。"
       },
       "heading": "プライバシーポリシー",
-      "intro": "Awake Clock は、あなたのデータをできる限り必要としないように作られています。このページでは、何が行われ、何が行われないかを正確に説明します。",
+      "intro": "StayLit は、あなたのデータをできる限り必要としないように作られています。このページでは、何が行われ、何が行われないかを正確に説明します。",
       "sections": [
         {
           "title": "収集する情報",
-          "body": "何もありません。Awake Clock にはアカウント、アナリティクス、追跡スクリプトがありません。あなたが訪問したことは分かりませんし、サーバーには何も送信されないため、知ることもできません。"
+          "body": "何もありません。StayLit にはアカウント、アナリティクス、追跡スクリプトがありません。あなたが訪問したことは分かりませんし、サーバーには何も送信されないため、知ることもできません。"
         },
         {
           "title": "デバイスに保存される情報",
@@ -463,15 +463,15 @@
     },
     "terms": {
       "seo": {
-        "title": "利用規約 · Awake Clock",
-        "description": "Awake Clock の利用規約：無料で利用でき、現状のまま提供、保証なし。"
+        "title": "利用規約 · StayLit",
+        "description": "StayLit の利用規約：無料で利用でき、現状のまま提供、保証なし。"
       },
       "heading": "利用規約",
-      "intro": "本規約は、あなたによる Awake Clock の利用に適用されます。本サイトを利用することで、これらに同意したものとみなされます。",
+      "intro": "本規約は、あなたによる StayLit の利用に適用されます。本サイトを利用することで、これらに同意したものとみなされます。",
       "sections": [
         {
           "title": "サービスの利用",
-          "body": "Awake Clock は無料で利用でき、アカウントは不要です。画面をオンに保つこと、時計表示を実行すること、タイマーを使用することを含め、個人利用でも商用利用でも使用できます。"
+          "body": "StayLit は無料で利用でき、アカウントは不要です。画面をオンに保つこと、時計表示を実行すること、タイマーを使用することを含め、個人利用でも商用利用でも使用できます。"
         },
         {
           "title": "保証なし",
@@ -479,7 +479,7 @@
         },
         {
           "title": "許容される利用",
-          "body": "法律に違反したり、他者へのサービスを妨害したり、動作を妨げようとするために Awake Clock を使用しないでください。"
+          "body": "法律に違反したり、他者へのサービスを妨害したり、動作を妨げようとするために StayLit を使用しないでください。"
         },
         {
           "title": "サービスの変更",
@@ -497,24 +497,24 @@
     },
     "contact": {
       "seo": {
-        "title": "お問い合わせ · Awake Clock",
-        "description": "Awake Clock についてのご連絡：ご意見、バグ報告、サポート。"
+        "title": "お問い合わせ · StayLit",
+        "description": "StayLit についてのご連絡：ご意見、バグ報告、サポート。"
       },
       "heading": "お問い合わせ",
-      "intro": "Awake Clock は小さな独立プロジェクトです。ご意見、バグ報告、アイデアはすべて歓迎します。",
+      "intro": "StayLit は小さな独立プロジェクトです。ご意見、バグ報告、アイデアはすべて歓迎します。",
       "emailLabel": "メール",
       "email": "bahriddin.me@gmail.com",
       "supportLabel": "プロジェクトを支援する",
-      "supportBody": "Awake Clock が役に立ったら、コーヒー1杯で開発を支援できます。",
+      "supportBody": "StayLit が役に立ったら、コーヒー1杯で開発を支援できます。",
       "supportCta": "コーヒーをおごる"
     },
     "changelog": {
       "seo": {
-        "title": "変更履歴 · Awake Clock",
-        "description": "Awake Clock の新機能：アラーム、共有リンク、オフライン対応、多言語、時計テーマ。"
+        "title": "変更履歴 · StayLit",
+        "description": "StayLit の新機能：アラーム、共有リンク、オフライン対応、多言語、時計テーマ。"
       },
       "heading": "変更履歴",
-      "intro": "Awake Clock の新機能と改善点。",
+      "intro": "StayLit の新機能と改善点。",
       "entries": [
         {
           "date": "September 19, 2026",
@@ -523,7 +523,7 @@
             "New Alarm mode — set a time and it rings.",
             "Five alarm tones with a volume control.",
             "Copy a shareable link that restores your timer or clock setup.",
-            "Install Awake Clock to your device and use it fully offline.",
+            "Install StayLit to your device and use it fully offline.",
             "Calmer, refreshed landing page design."
           ]
         },

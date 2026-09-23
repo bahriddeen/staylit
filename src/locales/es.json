@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Awake Clock",
+    "title": "StayLit",
     "tagline": "Mantén tu pantalla encendida."
   },
   "theme": {
@@ -15,7 +15,7 @@
     "exitFullscreen": "Salir de pantalla completa",
     "none": "Ninguno",
     "learnMore": "Más información",
-    "back": "Volver a Awake Clock",
+    "back": "Volver a StayLit",
     "share": "Copiar enlace",
     "linkCopied": "Enlace copiado"
   },
@@ -429,15 +429,15 @@
   "legal": {
     "privacy": {
       "seo": {
-        "title": "Política de privacidad · Awake Clock",
-        "description": "Cómo trata Awake Clock tus datos: sin cuentas, sin seguimiento, todo se queda en tu dispositivo."
+        "title": "Política de privacidad · StayLit",
+        "description": "Cómo trata StayLit tus datos: sin cuentas, sin seguimiento, todo se queda en tu dispositivo."
       },
       "heading": "Política de privacidad",
-      "intro": "Awake Clock está diseñado para necesitar la menor cantidad posible de tus datos. Esta página explica exactamente qué ocurre y qué no.",
+      "intro": "StayLit está diseñado para necesitar la menor cantidad posible de tus datos. Esta página explica exactamente qué ocurre y qué no.",
       "sections": [
         {
           "title": "Qué recopilamos",
-          "body": "Nada. Awake Clock no tiene cuentas, ni analíticas, ni scripts de seguimiento. No sabemos que nos visitaste, y no podemos, porque no se envía nada a un servidor."
+          "body": "Nada. StayLit no tiene cuentas, ni analíticas, ni scripts de seguimiento. No sabemos que nos visitaste, y no podemos, porque no se envía nada a un servidor."
         },
         {
           "title": "Qué se guarda en tu dispositivo",
@@ -463,15 +463,15 @@
     },
     "terms": {
       "seo": {
-        "title": "Términos del servicio · Awake Clock",
-        "description": "Los términos para usar Awake Clock: de uso gratuito, se ofrece tal cual, sin garantía."
+        "title": "Términos del servicio · StayLit",
+        "description": "Los términos para usar StayLit: de uso gratuito, se ofrece tal cual, sin garantía."
       },
       "heading": "Términos del servicio",
-      "intro": "Estos términos cubren tu uso de Awake Clock. Al usar el sitio, los aceptas.",
+      "intro": "Estos términos cubren tu uso de StayLit. Al usar el sitio, los aceptas.",
       "sections": [
         {
           "title": "Uso del servicio",
-          "body": "Awake Clock es de uso gratuito, sin necesidad de cuenta. Puedes usarlo con fines personales o comerciales, incluido mantener tu pantalla encendida, ejecutar las pantallas de reloj y usar el temporizador."
+          "body": "StayLit es de uso gratuito, sin necesidad de cuenta. Puedes usarlo con fines personales o comerciales, incluido mantener tu pantalla encendida, ejecutar las pantallas de reloj y usar el temporizador."
         },
         {
           "title": "Sin garantía",
@@ -479,7 +479,7 @@
         },
         {
           "title": "Uso aceptable",
-          "body": "No uses Awake Clock para infringir ninguna ley, interrumpir el servicio para otros o intentar interferir en su funcionamiento."
+          "body": "No uses StayLit para infringir ninguna ley, interrumpir el servicio para otros o intentar interferir en su funcionamiento."
         },
         {
           "title": "Cambios en el servicio",
@@ -497,24 +497,24 @@
     },
     "contact": {
       "seo": {
-        "title": "Contacto · Awake Clock",
-        "description": "Ponte en contacto sobre Awake Clock: comentarios, informes de errores o soporte."
+        "title": "Contacto · StayLit",
+        "description": "Ponte en contacto sobre StayLit: comentarios, informes de errores o soporte."
       },
       "heading": "Contacto",
-      "intro": "Awake Clock es un proyecto pequeño e independiente. Los comentarios, informes de errores e ideas son todos bienvenidos.",
+      "intro": "StayLit es un proyecto pequeño e independiente. Los comentarios, informes de errores e ideas son todos bienvenidos.",
       "emailLabel": "Correo electrónico",
       "email": "bahriddin.me@gmail.com",
       "supportLabel": "Apoya el proyecto",
-      "supportBody": "Si Awake Clock te resulta útil, puedes apoyar su desarrollo con un café.",
+      "supportBody": "Si StayLit te resulta útil, puedes apoyar su desarrollo con un café.",
       "supportCta": "Invítame a un café"
     },
     "changelog": {
       "seo": {
-        "title": "Registro de cambios · Awake Clock",
-        "description": "Novedades de Awake Clock: alarmas, enlaces para compartir, soporte sin conexión, idiomas y temas de reloj."
+        "title": "Registro de cambios · StayLit",
+        "description": "Novedades de StayLit: alarmas, enlaces para compartir, soporte sin conexión, idiomas y temas de reloj."
       },
       "heading": "Registro de cambios",
-      "intro": "Novedades y mejoras de Awake Clock.",
+      "intro": "Novedades y mejoras de StayLit.",
       "entries": [
         {
           "date": "September 19, 2026",
@@ -523,7 +523,7 @@
             "New Alarm mode — set a time and it rings.",
             "Five alarm tones with a volume control.",
             "Copy a shareable link that restores your timer or clock setup.",
-            "Install Awake Clock to your device and use it fully offline.",
+            "Install StayLit to your device and use it fully offline.",
             "Calmer, refreshed landing page design."
           ]
         },

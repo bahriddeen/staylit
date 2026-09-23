@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Awake Clock",
+    "title": "StayLit",
     "tagline": "Ekraningiz o'chib qolishiga yo'l qo'ymang."
   },
   "theme": {
@@ -15,7 +15,7 @@
     "exitFullscreen": "Butun ekrandan chiqish",
     "none": "Yo'q",
     "learnMore": "Batafsil",
-    "back": "Awake Clock'ga qaytish",
+    "back": "StayLit'ga qaytish",
     "share": "Havolani nusxalash",
     "linkCopied": "Havola nusxalandi"
   },
@@ -429,15 +429,15 @@
   "legal": {
     "privacy": {
       "seo": {
-        "title": "Maxfiylik siyosati · Awake Clock",
-        "description": "Awake Clock ma'lumotlaringiz bilan qanday ishlaydi: hisoblarsiz, kuzatuvsiz, hammasi qurilmangizda qoladi."
+        "title": "Maxfiylik siyosati · StayLit",
+        "description": "StayLit ma'lumotlaringiz bilan qanday ishlaydi: hisoblarsiz, kuzatuvsiz, hammasi qurilmangizda qoladi."
       },
       "heading": "Maxfiylik siyosati",
-      "intro": "Awake Clock ma'lumotlaringizdan imkon qadar kam foydalanish uchun yaratilgan. Ushbu sahifa nima sodir bo'lishini va nima sodir bo'lmasligini aniq tushuntiradi.",
+      "intro": "StayLit ma'lumotlaringizdan imkon qadar kam foydalanish uchun yaratilgan. Ushbu sahifa nima sodir bo'lishini va nima sodir bo'lmasligini aniq tushuntiradi.",
       "sections": [
         {
           "title": "Biz nimani to'playmiz",
-          "body": "Hech narsa. Awake Clock'da hisoblar, analitika va kuzatuv skriptlari yo'q. Biz sizning tashrifingizni bilmaymiz va bila olmaymiz, chunki hech narsa serverga yuborilmaydi."
+          "body": "Hech narsa. StayLit'da hisoblar, analitika va kuzatuv skriptlari yo'q. Biz sizning tashrifingizni bilmaymiz va bila olmaymiz, chunki hech narsa serverga yuborilmaydi."
         },
         {
           "title": "Qurilmangizda nima saqlanadi",
@@ -463,15 +463,15 @@
     },
     "terms": {
       "seo": {
-        "title": "Foydalanish shartlari · Awake Clock",
-        "description": "Awake Clock'dan foydalanish shartlari: bepul, «qanday bo'lsa shunday», kafolatsiz."
+        "title": "Foydalanish shartlari · StayLit",
+        "description": "StayLit'dan foydalanish shartlari: bepul, «qanday bo'lsa shunday», kafolatsiz."
       },
       "heading": "Foydalanish shartlari",
-      "intro": "Ushbu shartlar Awake Clock'dan foydalanishingizni qamrab oladi. Saytdan foydalanib, siz ularga rozilik bildirasiz.",
+      "intro": "Ushbu shartlar StayLit'dan foydalanishingizni qamrab oladi. Saytdan foydalanib, siz ularga rozilik bildirasiz.",
       "sections": [
         {
           "title": "Xizmatdan foydalanish",
-          "body": "Awake Clock bepul, hisob talab qilinmaydi. Undan shaxsiy yoki tijorat maqsadlarida foydalanishingiz mumkin, jumladan ekranni yoniq saqlash, soat displeylarini ishlatish va taymerdan foydalanish."
+          "body": "StayLit bepul, hisob talab qilinmaydi. Undan shaxsiy yoki tijorat maqsadlarida foydalanishingiz mumkin, jumladan ekranni yoniq saqlash, soat displeylarini ishlatish va taymerdan foydalanish."
         },
         {
           "title": "Kafolat yo'q",
@@ -479,7 +479,7 @@
         },
         {
           "title": "Maqbul foydalanish",
-          "body": "Awake Clock'dan qonunni buzish, boshqalar uchun xizmatni buzish yoki uning ishlashiga aralashishga urinish uchun foydalanmang."
+          "body": "StayLit'dan qonunni buzish, boshqalar uchun xizmatni buzish yoki uning ishlashiga aralashishga urinish uchun foydalanmang."
         },
         {
           "title": "Xizmatdagi o'zgarishlar",
@@ -497,24 +497,24 @@
     },
     "contact": {
       "seo": {
-        "title": "Aloqa · Awake Clock",
-        "description": "Awake Clock haqida bog'laning: fikr-mulohaza, xatolik haqida xabar yoki qo'llab-quvvatlash."
+        "title": "Aloqa · StayLit",
+        "description": "StayLit haqida bog'laning: fikr-mulohaza, xatolik haqida xabar yoki qo'llab-quvvatlash."
       },
       "heading": "Aloqa",
-      "intro": "Awake Clock — kichik, mustaqil loyiha. Fikr-mulohazalar, xatolik haqidagi xabarlar va g'oyalar mamnuniyat bilan qabul qilinadi.",
+      "intro": "StayLit — kichik, mustaqil loyiha. Fikr-mulohazalar, xatolik haqidagi xabarlar va g'oyalar mamnuniyat bilan qabul qilinadi.",
       "emailLabel": "Elektron pochta",
       "email": "bahriddin.me@gmail.com",
       "supportLabel": "Loyihani qo'llab-quvvatlash",
-      "supportBody": "Agar Awake Clock siz uchun foydali bo'lsa, uning rivojlanishini bir chashka qahva bilan qo'llab-quvvatlashingiz mumkin.",
+      "supportBody": "Agar StayLit siz uchun foydali bo'lsa, uning rivojlanishini bir chashka qahva bilan qo'llab-quvvatlashingiz mumkin.",
       "supportCta": "Menga qahva oling"
     },
     "changelog": {
       "seo": {
-        "title": "O'zgarishlar · Awake Clock",
-        "description": "Awake Clock'dagi yangiliklar: budilniklar, ulashish havolalari, oflayn rejim, tillar va soat mavzulari."
+        "title": "O'zgarishlar · StayLit",
+        "description": "StayLit'dagi yangiliklar: budilniklar, ulashish havolalari, oflayn rejim, tillar va soat mavzulari."
       },
       "heading": "O'zgarishlar tarixi",
-      "intro": "Awake Clock'dagi yangiliklar va yaxshilanishlar.",
+      "intro": "StayLit'dagi yangiliklar va yaxshilanishlar.",
       "entries": [
         {
           "date": "September 19, 2026",
@@ -523,7 +523,7 @@
             "New Alarm mode — set a time and it rings.",
             "Five alarm tones with a volume control.",
             "Copy a shareable link that restores your timer or clock setup.",
-            "Install Awake Clock to your device and use it fully offline.",
+            "Install StayLit to your device and use it fully offline.",
             "Calmer, refreshed landing page design."
           ]
         },

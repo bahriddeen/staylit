@@ -1,4 +1,4 @@
-# Awake Clock
+# StayLit
 
 A fast, static, **client-only** web app that keeps your screen awake — with a
 timer-based **Awake** mode, two full-screen clocks (**Digital** and **Flip**),
@@ -137,8 +137,9 @@ downloaded (`unicode-range`).
 
 ## Notes
 
-- **Canonical / OG URLs** use a placeholder origin (`https://awake-clock.app/`) —
-  update to your real domain before deploying (`index.html` + `src/app/seo.ts`).
+- **Canonical / OG URLs** point at `https://staylit.live/` (`index.html`,
+  `public/robots.txt`, `public/sitemap.xml`, `scripts/prerender.mjs`) — update
+  all four if the domain ever changes.
 - **`og.png`** is a branded gradient; swap `public/og.png` for a designed
   1200×630 image when you have one.
 - **Wake Lock fallback:** older iOS Safari lacks the Screen Wake Lock API, so the
