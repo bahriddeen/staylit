@@ -20,6 +20,9 @@ export default defineConfig({
       workbox: {
         globPatterns: ["**/*.{js,css,html,woff2,svg,png,json,webmanifest}"],
         navigateFallback: "index.html",
+        // Let real files (sitemap.xml, robots.txt, og.png, ...) hit the
+        // network when opened directly instead of getting the app shell.
+        navigateFallbackDenylist: [/\.[a-z0-9]+$/i],
         cleanupOutdatedCaches: true,
       },
       manifest: {
