@@ -1,4 +1,4 @@
-# Build the static site, then serve dist/ with nginx.
+# Build the static site, then serve dist/ with Nginx.
 FROM node:22-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
