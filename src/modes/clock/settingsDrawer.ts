@@ -7,7 +7,6 @@
  */
 
 import { t } from "../../core/i18n";
-import { icons } from "../../ui/icons";
 import { createModal, type ModalController } from "../../ui/modal";
 import { createSegmented } from "../../ui/segmented";
 import { createToggle } from "../../ui/toggle";
@@ -33,7 +32,6 @@ export function createSettingsDrawer(
   view: ClockView,
   initial: ClockSettings,
   onChange: (next: ClockSettings) => void,
-  onShare: () => void,
 ): SettingsDrawer {
   let cur: ClockSettings = { ...initial };
   const emit = (): void => onChange({ ...cur });
@@ -103,18 +101,6 @@ export function createSettingsDrawer(
   }
   tplField.append(tplLabel, grid);
   body.append(tplField);
-
-  // Share
-  const shareBtn = document.createElement("button");
-  shareBtn.type = "button";
-  shareBtn.className = "button clock-share-btn";
-  const shareIcon = document.createElement("span");
-  shareIcon.className = "button__icon";
-  shareIcon.setAttribute("aria-hidden", "true");
-  shareIcon.innerHTML = icons.share;
-  shareBtn.append(shareIcon, document.createTextNode(t("common.share")));
-  shareBtn.addEventListener("click", onShare);
-  body.append(shareBtn);
 
   function updateSelection(): void {
     for (const [id, el] of tiles) {

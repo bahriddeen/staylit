@@ -728,6 +728,20 @@ a {
   font-size: 1.15rem;
 }
 
+/* ---------- Third-party widgets ---------- */
+
+/* The Buy Me a Coffee floating button (injected by its own script as
+   #bmc-wbtn with inline styles) is fixed bottom-right at full size on every
+   viewport. On short/narrow phone screens that corner is exactly where the
+   hero's primary "Keep Awake" toggle lands, so the donate button sits on top
+   of it and blocks the tap. It's non-essential, so just hide it below the
+   mobile breakpoint rather than fight its inline positioning. */
+@media (max-width: 640px) {
+  #bmc-wbtn {
+    display: none !important;
+  }
+}
+
 /* ---------- Utilities ---------- */
 
 .visually-hidden {

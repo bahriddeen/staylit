@@ -199,7 +199,6 @@ function volumeSlider(
 export function createTimerSettingsPanel(
   initial: TimerSettings,
   onChange: (next: TimerSettings) => void,
-  onShare: () => void,
 ): TimerSettingsPanel {
   let cur: TimerSettings = { ...initial };
   const emit = (): void => onChange({ ...cur });
@@ -247,17 +246,6 @@ export function createTimerSettingsPanel(
   const dynamic = document.createElement("div");
   dynamic.className = "timer-panel__body";
   body.append(dynamic);
-
-  const shareBtn = document.createElement("button");
-  shareBtn.type = "button";
-  shareBtn.className = "button timer-share-btn";
-  const shareIcon = document.createElement("span");
-  shareIcon.className = "button__icon";
-  shareIcon.setAttribute("aria-hidden", "true");
-  shareIcon.innerHTML = icons.share;
-  shareBtn.append(shareIcon, document.createTextNode(t("common.share")));
-  shareBtn.addEventListener("click", onShare);
-  body.append(shareBtn);
 
   let typeSeg: ReturnType<typeof createSegmented<CountdownType>> | null = null;
 
