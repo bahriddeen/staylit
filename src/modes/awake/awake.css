@@ -86,6 +86,36 @@
   align-self: center;
 }
 
+/* The duration chooser has 6 pills (Always On/10m/30m/1h/2h/Custom), which is
+   one too many for a single-line capsule at phone widths: it wraps inside the
+   shared rounded-pill background, so the wrapped row sits oddly inset with
+   mismatched corners. Below that breakpoint, drop the capsule shell and lay
+   the pills out as their own evenly-sized grid instead. */
+@media (max-width: 480px) {
+  .hero__row .segmented {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0;
+    background: none;
+    border: none;
+  }
+
+  .hero__row .segmented .segmented__pill {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 0.4rem;
+  }
+
+  .hero__row .segmented .segmented__pill--on {
+    background: var(--accent);
+    color: var(--accent-on);
+    border-color: var(--accent);
+  }
+}
+
 .hero__row--toggle {
   padding: 1rem 1.15rem;
   background: color-mix(in srgb, var(--surface-2) 55%, transparent);
