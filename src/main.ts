@@ -18,6 +18,7 @@ import "./styles/content.css";
 import "./app/app.css";
 
 import { createStorage } from "./core/storage";
+import { initAnalytics } from "./core/analytics";
 import { t, tRaw, setLocale } from "./core/i18n";
 import { icons } from "./ui/icons";
 import { applySeo, type FaqEntry } from "./app/seo";
@@ -135,6 +136,7 @@ const content = document.createElement("div");
 content.className = "app-content";
 appEl.append(content);
 
+initAnalytics();
 const session = new AppSession();
 const themeButton = buildThemeButton();
 const languageSelect = buildLanguageSelect();

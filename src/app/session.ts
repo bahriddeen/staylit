@@ -16,6 +16,7 @@ import { Ticker } from "../core/ticker";
 import { t } from "../core/i18n";
 import { icons } from "../ui/icons";
 import { showToast } from "../ui/toast";
+import { track } from "../core/analytics";
 
 export interface SessionState {
   wake: WakeLockState;
@@ -66,6 +67,7 @@ export class AppSession {
   /** Turn keep-awake on. `ms = null` keeps it on indefinitely (no timer). */
   start(ms: number | null): void {
     void this.wakeLock.request();
+    track("wake-on", { timed: ms !== null });
     if (ms !== null) {
       this.endTimestamp = Date.now() + ms;
       this.ticker.start(() => this.onTick());

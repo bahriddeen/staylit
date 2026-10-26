@@ -87,7 +87,7 @@
         {
           "icon": "lock",
           "title": "Privato per progettazione",
-          "description": "Tutto gira localmente sul tuo dispositivo. Nessun tracciamento, nessun dato lascia il browser."
+          "description": "Tutto funziona in locale sul tuo dispositivo. Nessun account, nessun cookie, nessun dato personale."
         },
         {
           "icon": "clock",
@@ -169,7 +169,7 @@
         },
         {
           "question": "Vengono raccolti dei miei dati?",
-          "answer": "No. Tutto gira localmente nel tuo browser. Le tue impostazioni sono salvate sul dispositivo e non vengono mai inviate da nessuna parte."
+          "answer": "Le tue impostazioni restano sul tuo dispositivo e non vengono mai inviate. Contiamo le visite anonime con Umami, uno strumento di analisi senza cookie e rispettoso della privacy. Non raccoglie nulla che ti identifichi."
         }
       ]
     },
@@ -428,14 +428,14 @@
     "privacy": {
       "seo": {
         "title": "Informativa sulla privacy · StayLit",
-        "description": "Come StayLit gestisce i tuoi dati: nessun account, nessun tracciamento, tutto resta sul tuo dispositivo."
+        "description": "Come StayLit gestisce i tuoi dati: nessun account, nessun cookie, solo conteggi d'uso anonimi."
       },
       "heading": "Informativa sulla privacy",
       "intro": "StayLit è costruito per aver bisogno del minor numero possibile dei tuoi dati. Questa pagina spiega esattamente cosa succede e cosa no.",
       "sections": [
         {
           "title": "Cosa raccogliamo",
-          "body": "Niente. StayLit non ha account, né analisi, né script di tracciamento. Non sappiamo che hai visitato il sito, e non possiamo, perché non viene inviato nulla a un server."
+          "body": "StayLit non ha account e non usa cookie. Usiamo Umami, uno strumento di analisi rispettoso della privacy, per contare le visite anonime e quante volte viene attivato lo schermo sempre acceso. Non raccoglie il tuo nome, la tua email o altro che ti identifichi, e rispetta l'impostazione Do Not Track del browser."
         },
         {
           "title": "Cosa viene memorizzato sul tuo dispositivo",
