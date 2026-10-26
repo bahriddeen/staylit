@@ -134,8 +134,10 @@ site is served from `staylit.live` (the site ID is in `src/core/analytics.ts`),
 so local dev, preview deploys and forks send nothing. Set
 `VITE_UMAMI_WEBSITE_ID` at build time to report to a different Umami site on
 any host. It counts page views plus a `wake-on` event (with `timed:
-true|false`) each time keep-awake is turned on. Set `VITE_UMAMI_SCRIPT_URL` to
-use a self-hosted Umami instance instead of Umami Cloud.
+true|false`) each time keep-awake is turned on. The script and its beacon are served
+same-origin (`/s/l.js` and `/api/send`, proxied to Umami Cloud by `nginx.conf`
+and `vercel.json`) so privacy blockers don't drop the anonymous counts. Set
+`VITE_UMAMI_SCRIPT_URL` to load a self-hosted Umami instance directly instead.
 
 ## Fonts
 
