@@ -129,12 +129,13 @@ block keyed on `.digital[data-template="your-id"]` (or `.flip[...]`) in
 
 ## Analytics
 
-Optional, cookieless analytics via [Umami](https://umami.is). It is off unless
-`VITE_UMAMI_WEBSITE_ID` is set at build time (for example in the Vercel project
-settings or a `.env.local` file), so local builds send nothing. When enabled it
-counts page views plus a `wake-on` event (with `timed: true|false`) each time
-keep-awake is turned on. Set `VITE_UMAMI_SCRIPT_URL` to use a self-hosted Umami
-instance instead of Umami Cloud.
+Cookieless analytics via [Umami](https://umami.is). It is on only when the
+site is served from `staylit.live` (the site ID is in `src/core/analytics.ts`),
+so local dev, preview deploys and forks send nothing. Set
+`VITE_UMAMI_WEBSITE_ID` at build time to report to a different Umami site on
+any host. It counts page views plus a `wake-on` event (with `timed:
+true|false`) each time keep-awake is turned on. Set `VITE_UMAMI_SCRIPT_URL` to
+use a self-hosted Umami instance instead of Umami Cloud.
 
 ## Fonts
 

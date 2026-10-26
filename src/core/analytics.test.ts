@@ -1,12 +1,25 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { initAnalytics, track } from "./analytics";
+import { initAnalytics, resolveWebsiteId, track } from "./analytics";
 
 describe("analytics", () => {
   afterEach(() => {
     delete window.umami;
   });
 
-  it("does not inject a script when no website id is configured", () => {
+  it("uses the production site id only on staylit.live", () => {
+    expect(resolveWebsiteId("staylit.live", undefined)).toBe(
+      "ade4e16f-f666-4adf-8eae-95d177e9eaaf",
+    );
+    expect(resolveWebsiteId("localhost", undefined)).toBeUndefined();
+    expect(resolveWebsiteId("my-fork.vercel.app", undefined)).toBeUndefined();
+  });
+
+  it("lets VITE_UMAMI_WEBSITE_ID override the site id on any host", () => {
+    expect(resolveWebsiteId("localhost", "custom-id")).toBe("custom-id");
+    expect(resolveWebsiteId("staylit.live", "custom-id")).toBe("custom-id");
+  });
+
+  it("does not inject a script off the production host", () => {
     initAnalytics();
     expect(document.querySelector("script[data-website-id]")).toBeNull();
   });
