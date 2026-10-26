@@ -87,7 +87,7 @@
         {
           "icon": "lock",
           "title": "Privado por diseño",
-          "description": "Todo se ejecuta localmente en tu dispositivo. Sin seguimiento, y ningún dato sale de tu navegador."
+          "description": "Todo funciona localmente en tu dispositivo. Sin cuentas, sin cookies, sin datos personales."
         },
         {
           "icon": "clock",
@@ -169,7 +169,7 @@
         },
         {
           "question": "¿Se recopila alguno de mis datos?",
-          "answer": "No. Todo se ejecuta localmente en tu navegador. Tus ajustes se guardan en tu dispositivo y nunca se envían a ningún sitio."
+          "answer": "Tus ajustes se quedan en tu dispositivo y nunca se envían a ningún sitio. Contamos visitas anónimas con Umami, una herramienta de analítica sin cookies y respetuosa con la privacidad. No recopila nada que te identifique."
         }
       ]
     },
@@ -428,14 +428,14 @@
     "privacy": {
       "seo": {
         "title": "Política de privacidad · StayLit",
-        "description": "Cómo trata StayLit tus datos: sin cuentas, sin seguimiento, todo se queda en tu dispositivo."
+        "description": "Cómo trata StayLit tus datos: sin cuentas, sin cookies, solo recuentos de uso anónimos."
       },
       "heading": "Política de privacidad",
       "intro": "StayLit está diseñado para necesitar la menor cantidad posible de tus datos. Esta página explica exactamente qué ocurre y qué no.",
       "sections": [
         {
           "title": "Qué recopilamos",
-          "body": "Nada. StayLit no tiene cuentas, ni analíticas, ni scripts de seguimiento. No sabemos que nos visitaste, y no podemos, porque no se envía nada a un servidor."
+          "body": "StayLit no tiene cuentas ni usa cookies. Usamos Umami, una herramienta de analítica respetuosa con la privacidad, para contar visitas anónimas y cuántas veces se activa la pantalla siempre encendida. No recopila tu nombre, tu correo ni nada que te identifique, y respeta la opción Do Not Track de tu navegador."
         },
         {
           "title": "Qué se guarda en tu dispositivo",

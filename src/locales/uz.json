@@ -87,7 +87,7 @@
         {
           "icon": "lock",
           "title": "Dizayni bo'yicha maxfiy",
-          "description": "Hammasi qurilmangizda mahalliy ishlaydi. Kuzatuv yo'q, ma'lumotlar brauzeringizdan chiqmaydi."
+          "description": "Hammasi qurilmangizda mahalliy ishlaydi. Hisoblarsiz, cookie'larsiz, shaxsiy ma'lumotlarsiz."
         },
         {
           "icon": "clock",
@@ -169,7 +169,7 @@
         },
         {
           "question": "Mening ma'lumotlarim to'planadimi?",
-          "answer": "Yo'q. Hammasi brauzeringizda mahalliy ishlaydi. Sozlamalaringiz qurilmangizda saqlanadi va hech qayerga yuborilmaydi."
+          "answer": "Sozlamalaringiz qurilmangizda saqlanadi va hech qayerga yuborilmaydi. Biz anonim tashriflarni Umami yordamida sanaymiz — bu cookie ishlatmaydigan, maxfiylikni hurmat qiladigan analitika. U sizni aniqlaydigan hech narsa to'plamaydi."
         }
       ]
     },
@@ -428,14 +428,14 @@
     "privacy": {
       "seo": {
         "title": "Maxfiylik siyosati · StayLit",
-        "description": "StayLit ma'lumotlaringiz bilan qanday ishlaydi: hisoblarsiz, kuzatuvsiz, hammasi qurilmangizda qoladi."
+        "description": "StayLit ma'lumotlaringiz bilan qanday ishlaydi: hisoblarsiz, cookie'larsiz, faqat anonim statistika."
       },
       "heading": "Maxfiylik siyosati",
       "intro": "StayLit ma'lumotlaringizdan imkon qadar kam foydalanish uchun yaratilgan. Ushbu sahifa nima sodir bo'lishini va nima sodir bo'lmasligini aniq tushuntiradi.",
       "sections": [
         {
           "title": "Biz nimani to'playmiz",
-          "body": "Hech narsa. StayLit'da hisoblar, analitika va kuzatuv skriptlari yo'q. Biz sizning tashrifingizni bilmaymiz va bila olmaymiz, chunki hech narsa serverga yuborilmaydi."
+          "body": "StayLit'da hisoblar yo'q va cookie'lar o'rnatilmaydi. Anonim tashriflarni va ekranni yoqiq saqlash qanchalik tez-tez yoqilishini sanash uchun maxfiylikni hurmat qiladigan Umami analitikasidan foydalanamiz. U ismingiz, email yoki sizni aniqlaydigan hech narsani to'plamaydi va brauzeringizdagi Do Not Track sozlamasini hurmat qiladi."
         },
         {
           "title": "Qurilmangizda nima saqlanadi",

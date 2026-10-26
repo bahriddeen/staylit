@@ -87,7 +87,7 @@
         {
           "icon": "lock",
           "title": "Privado por design",
-          "description": "Tudo roda localmente no seu dispositivo. Sem rastreamento, e nenhum dado sai do seu navegador."
+          "description": "Tudo roda localmente no seu dispositivo. Sem contas, sem cookies, sem dados pessoais."
         },
         {
           "icon": "clock",
@@ -169,7 +169,7 @@
         },
         {
           "question": "Algum dado meu é coletado?",
-          "answer": "Não. Tudo roda localmente no seu navegador. Suas configurações são salvas no seu dispositivo e nunca são enviadas para lugar nenhum."
+          "answer": "Suas configurações ficam no seu dispositivo e nunca são enviadas. Contamos visitas anônimas com o Umami, uma ferramenta de análise sem cookies e que respeita a privacidade. Ela não coleta nada que identifique você."
         }
       ]
     },
@@ -428,14 +428,14 @@
     "privacy": {
       "seo": {
         "title": "Política de Privacidade · StayLit",
-        "description": "Como o StayLit lida com seus dados: sem contas, sem rastreamento, tudo fica no seu dispositivo."
+        "description": "Como o StayLit trata seus dados: sem contas, sem cookies, apenas contagens de uso anônimas."
       },
       "heading": "Política de Privacidade",
       "intro": "O StayLit foi feito para precisar do mínimo possível dos seus dados. Esta página explica exatamente o que acontece e o que não acontece.",
       "sections": [
         {
           "title": "O que coletamos",
-          "body": "Nada. O StayLit não tem contas, nem análises, nem scripts de rastreamento. Não sabemos que você visitou, e não podemos, porque nada é enviado a um servidor."
+          "body": "O StayLit não tem contas e não usa cookies. Usamos o Umami, uma ferramenta de análise que respeita a privacidade, para contar visitas anônimas e quantas vezes a tela sempre ligada é ativada. Ela não coleta seu nome, e-mail ou qualquer coisa que identifique você, e respeita a configuração Do Not Track do navegador."
         },
         {
           "title": "O que é armazenado no seu dispositivo",

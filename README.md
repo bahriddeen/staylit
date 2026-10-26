@@ -127,6 +127,15 @@ CSS is required; if you want a bespoke look beyond the variables, add a scoped
 block keyed on `.digital[data-template="your-id"]` (or `.flip[...]`) in
 `src/modes/clock/clock.css`.
 
+## Analytics
+
+Optional, cookieless analytics via [Umami](https://umami.is). It is off unless
+`VITE_UMAMI_WEBSITE_ID` is set at build time (for example in the Vercel project
+settings or a `.env.local` file), so local builds send nothing. When enabled it
+counts page views plus a `wake-on` event (with `timed: true|false`) each time
+keep-awake is turned on. Set `VITE_UMAMI_SCRIPT_URL` to use a self-hosted Umami
+instance instead of Umami Cloud.
+
 ## Fonts
 
 Self-hosted, no external requests: **Inter** (UI), **DSEG7 Classic** (OFL —

@@ -87,7 +87,7 @@
         {
           "icon": "lock",
           "title": "Privat by Design",
-          "description": "Alles läuft lokal auf Ihrem Gerät. Kein Tracking, keine Daten verlassen Ihren Browser."
+          "description": "Alles läuft lokal auf Ihrem Gerät. Keine Konten, keine Cookies, keine persönlichen Daten."
         },
         {
           "icon": "clock",
@@ -169,7 +169,7 @@
         },
         {
           "question": "Werden Daten von mir erfasst?",
-          "answer": "Nein. Alles läuft lokal in Ihrem Browser. Ihre Einstellungen werden auf Ihrem Gerät gespeichert und nie irgendwohin gesendet."
+          "answer": "Ihre Einstellungen bleiben auf Ihrem Gerät und werden nirgendwohin gesendet. Wir zählen anonyme Besuche mit Umami, einem cookielosen, datenschutzfreundlichen Analysetool. Es erfasst nichts, was Sie identifiziert."
         }
       ]
     },
@@ -428,14 +428,14 @@
     "privacy": {
       "seo": {
         "title": "Datenschutzerklärung · StayLit",
-        "description": "Wie StayLit mit Ihren Daten umgeht: keine Konten, kein Tracking, alles bleibt auf Ihrem Gerät."
+        "description": "Wie StayLit mit Ihren Daten umgeht: keine Konten, keine Cookies, nur anonyme Nutzungszahlen."
       },
       "heading": "Datenschutzerklärung",
       "intro": "StayLit ist so gebaut, dass es so wenig Ihrer Daten wie möglich benötigt. Diese Seite erklärt genau, was passiert und was nicht.",
       "sections": [
         {
           "title": "Was wir erfassen",
-          "body": "Nichts. StayLit hat keine Konten, keine Analyse und keine Tracking-Skripte. Wir wissen nicht, dass Sie da waren, und können es nicht, weil nichts an einen Server gesendet wird."
+          "body": "StayLit hat keine Konten und setzt keine Cookies. Wir nutzen Umami, ein datenschutzfreundliches Analysetool, um anonyme Besuche zu zählen und wie oft Wachhalten eingeschaltet wird. Es erfasst weder Ihren Namen noch Ihre E-Mail oder sonst etwas, das Sie identifiziert, und respektiert die Do-Not-Track-Einstellung Ihres Browsers."
         },
         {
           "title": "Was auf Ihrem Gerät gespeichert wird",

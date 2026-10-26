@@ -87,7 +87,7 @@
         {
           "icon": "lock",
           "title": "Confidentiel par conception",
-          "description": "Tout s'exécute localement sur votre appareil. Aucun suivi, aucune donnée ne quitte votre navigateur."
+          "description": "Tout fonctionne localement sur votre appareil. Pas de compte, pas de cookies, pas de données personnelles."
         },
         {
           "icon": "clock",
@@ -169,7 +169,7 @@
         },
         {
           "question": "Certaines de mes données sont-elles collectées ?",
-          "answer": "Non. Tout s'exécute localement dans votre navigateur. Vos paramètres sont enregistrés sur votre appareil et ne sont jamais envoyés où que ce soit."
+          "answer": "Vos réglages restent sur votre appareil et ne sont jamais envoyés nulle part. Nous comptons les visites anonymes avec Umami, un outil d'analyse sans cookies et respectueux de la vie privée. Il ne collecte rien qui permette de vous identifier."
         }
       ]
     },
@@ -428,14 +428,14 @@
     "privacy": {
       "seo": {
         "title": "Politique de confidentialité · StayLit",
-        "description": "Comment StayLit traite vos données : aucun compte, aucun suivi, tout reste sur votre appareil."
+        "description": "Comment StayLit traite vos données : pas de compte, pas de cookies, uniquement des statistiques d'usage anonymes."
       },
       "heading": "Politique de confidentialité",
       "intro": "StayLit est conçu pour avoir besoin du moins de vos données possible. Cette page explique exactement ce qui se passe et ce qui ne se passe pas.",
       "sections": [
         {
           "title": "Ce que nous collectons",
-          "body": "Rien. StayLit n'a ni comptes, ni analyses, ni scripts de suivi. Nous ne savons pas que vous êtes venu, et nous ne pouvons pas le savoir, car rien n'est envoyé à un serveur."
+          "body": "StayLit n'a pas de compte et ne dépose aucun cookie. Nous utilisons Umami, un outil d'analyse respectueux de la vie privée, pour compter les visites anonymes et la fréquence d'activation du maintien de l'écran allumé. Il ne collecte ni votre nom, ni votre e-mail, ni rien qui vous identifie, et respecte le réglage Do Not Track de votre navigateur."
         },
         {
           "title": "Ce qui est stocké sur votre appareil",

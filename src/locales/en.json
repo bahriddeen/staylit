@@ -87,7 +87,7 @@
         {
           "icon": "lock",
           "title": "Private by design",
-          "description": "Everything runs locally on your device. No tracking, no data leaves your browser."
+          "description": "Everything runs locally on your device. No accounts, no cookies, no personal data."
         },
         {
           "icon": "clock",
@@ -169,7 +169,7 @@
         },
         {
           "question": "Is any of my data collected?",
-          "answer": "No. Everything runs locally in your browser. Your settings are stored on your device and never sent anywhere."
+          "answer": "Your settings stay on your device and are never sent anywhere. We count anonymous visits with Umami, a cookieless, privacy-friendly analytics tool. It collects nothing that identifies you."
         }
       ]
     },
@@ -428,14 +428,14 @@
     "privacy": {
       "seo": {
         "title": "Privacy Policy · StayLit",
-        "description": "How StayLit handles your data: no accounts, no tracking, everything stays on your device."
+        "description": "How StayLit handles your data: no accounts, no cookies, only anonymous usage counts."
       },
       "heading": "Privacy Policy",
       "intro": "StayLit is built to need as little of your data as possible. This page explains exactly what happens, and what does not.",
       "sections": [
         {
           "title": "What we collect",
-          "body": "Nothing. StayLit has no accounts, no analytics, and no tracking scripts. We don't know you visited, and we can't, because nothing is sent to a server."
+          "body": "StayLit has no accounts and sets no cookies. We use Umami, a privacy-friendly analytics tool, to count anonymous visits and how often keep-awake is turned on. It does not collect your name, email, or anything that identifies you, and it respects your browser's Do Not Track setting."
         },
         {
           "title": "What's stored on your device",
