@@ -13,9 +13,11 @@ const ENV_WEBSITE_ID = import.meta.env.VITE_UMAMI_WEBSITE_ID as
 const PRODUCTION_HOST = "staylit.live";
 // Public site ID (it ships in the page anyway); safe to commit.
 const PRODUCTION_WEBSITE_ID = "ade4e16f-f666-4adf-8eae-95d177e9eaaf";
-const SCRIPT_SRC =
-  (import.meta.env.VITE_UMAMI_SCRIPT_URL as string | undefined) ??
-  "https://cloud.umami.is/script.js";
+const ENV_SCRIPT_URL = import.meta.env.VITE_UMAMI_SCRIPT_URL as
+  string | undefined;
+// Same-origin path proxied to Umami Cloud by nginx.conf / vercel.json, so
+// privacy blockers that drop third-party analytics hosts don't skip the count.
+const PROXIED_SCRIPT_PATH = "/s/l.js";
 
 interface Umami {
   track(event: string, data?: Record<string, string | number | boolean>): void;
@@ -44,8 +46,10 @@ export function initAnalytics(): void {
   if (document.querySelector("script[data-website-id]")) return;
   const script = document.createElement("script");
   script.defer = true;
-  script.src = SCRIPT_SRC;
+  script.src = ENV_SCRIPT_URL ?? PROXIED_SCRIPT_PATH;
   script.dataset.websiteId = websiteId;
+  // Send the beacon to this origin's /api/send proxy too.
+  if (!ENV_SCRIPT_URL) script.dataset.hostUrl = location.origin;
   script.dataset.doNotTrack = "true";
   document.head.appendChild(script);
 }
